@@ -141,3 +141,12 @@ Error Handling
 Dictionary
 	similar to Map in Java
 	exDict = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+Built-in functions
+	help() : interactive help guide
+		https://docs.python.org/3/library/functions.html
+	abs() min() max() round() str() int() float()
+OS module
+	file related
+	getcwd() listdir() mkdir() makedirs() rename() rmdir() system()
+
+	
