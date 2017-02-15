@@ -145,8 +145,28 @@ Built-in functions
 	help() : interactive help guide
 		https://docs.python.org/3/library/functions.html
 	abs() min() max() round() str() int() float()
-OS module
-	file related
-	getcwd() listdir() mkdir() makedirs() rename() rmdir() system()
-
-	
+Standard modules
+	os
+		file manipulation
+		getcwd() listdir() mkdir() makedirs() rename() rmdir() system()
+	sys
+		operating system command related?
+		can be used to communicate between different program languages
+		stderr.write() stdout.write() argv
+	urllib
+		internet access
+		access block
+			servers may block connections for protection and efficiency
+			can bypass by using fake User-Agent but not recommended
+			use provided API
+		code
+			import urllib.request, urllib.parse
+			url = '...', site address
+			values = {..}, post parameters
+			myheaders = {}
+			myheaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
+			data = urllib.parse.urlencode(values)
+			data = data.encode('utf-8')
+			req = urllib.request.Request(url, data, headers=myheaders)
+			resp = urllib.request.urlopen(req)
+			respData = resp.read()

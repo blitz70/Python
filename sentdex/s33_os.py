@@ -2,7 +2,6 @@
 
 import os, time
 
-
 #os.system('ipconfig')
 #os.makedirs('d:\\pythontest/dir1/dir2/dir3')
 
