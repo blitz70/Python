@@ -7,14 +7,11 @@ import urllib.parse
 #print(x.read())
 
 try:
-    url = 'http://pythonprogramming.net'
-    values = {
-        's':'basic'
-        ,'submit':'search'
-        }
+    url = 'https://pythonprogramming.net/search'
+    values = {'q':'learning'}
     data = urllib.parse.urlencode(values)
     data = data.encode('utf-8')
-    req = urllib.request.Request(url, data, headers=myheaders)
+    req = urllib.request.Request(url,data)
     resp = urllib.request.urlopen(req)
     respData = resp.read()
     saveFile = open('s35_text1.html','w')

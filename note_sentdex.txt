@@ -118,13 +118,21 @@ module
 		module is a python script with functions defined
 		module file must be in Lib Lib/site-packages or path defined folder, else import don't work
 		use if __name__ == '__main__' for excluding code when used as module
-List & Tuples
+List, Tuple, Dictionary, Zip
 	List : array that can be manupilated
 	Tuple : array that is immutable, can't be changed, handle data fast
 		x = (1,2,3), tuple
 		y = [4,5,6], list
 		y[0] -> 4
 		x[2] -> 3
+	Dictionary : similar to Map in Java , has key and object pairs
+		exDict = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+	Zip : grouped lists with index matched
+		in for loop drops left overs
+		names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
+		ages = ['15', '27', '77', '102']
+		personDict2 = {a:b for a,b in zip(names,ages)}
+		            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
 CSV
 	Code
 		import csv
@@ -138,9 +146,6 @@ Error Handling
 	except Exception as e:
 		...
 		print(e)
-Dictionary
-	similar to Map in Java
-	exDict = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
 Built-in functions
 	help() : interactive help guide
 		https://docs.python.org/3/library/functions.html
@@ -170,3 +175,7 @@ Standard modules
 			req = urllib.request.Request(url, data, headers=myheaders)
 			resp = urllib.request.urlopen(req)
 			respData = resp.read()
+	re
+		regular expression for parsing string, need practice
+		* vs *? : need to think over greedy vs non-greedy counts
+		findall()
