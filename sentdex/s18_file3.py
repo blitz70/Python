@@ -1,6 +1,6 @@
 #   18. Reading from Files
 
-saveFile = open('exampleFile.txt','r')
+saveFile = open('s16.txt', 'r')
 #rd = saveFile.read()
 #rd = saveFile.readline()
 rd = saveFile.readlines()

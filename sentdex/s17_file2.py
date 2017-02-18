@@ -2,6 +2,6 @@
 
 appendMe = '\nNew bit of information'
 
-saveFile = open('exampleFile.txt','a')
+saveFile = open('s16.txt', 'a')
 saveFile.write(appendMe)
 saveFile.close()

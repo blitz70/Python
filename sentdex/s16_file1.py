@@ -2,6 +2,6 @@
 
 text = 'Sample Text to Save\nNew line!'
 
-saveFile = open('exampleFile.txt','w')
+saveFile = open('s16.txt', 'w')
 saveFile.write(text)
 saveFile.close()

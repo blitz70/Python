@@ -179,3 +179,10 @@ Standard modules
 		regular expression for parsing string, need practice
 		* vs *? : need to think over greedy vs non-greedy counts
 		findall()
+    tkinter
+        gui creation
+        tkinter is wrapper around tk which is wrapper around tcl
+        Window
+        Button Menu
+        Event
+        Image Text
