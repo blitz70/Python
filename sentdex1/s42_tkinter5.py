@@ -1,5 +1,6 @@
 #   42. tkinter - images and text
 #   install Pillow module, http://www.lfd.uci.edu/~gohlke/pythonlibs/
+#   pip install pillow
 
 from tkinter import *
 from PIL import Image, ImageTk

@@ -186,3 +186,5 @@ Standard modules
         Button Menu
         Event
         Image Text
+Thread
+	multiple processing
