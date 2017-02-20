@@ -1,0 +1,10 @@
+b'Python 3.6.0\r\n'
+
+b'This is stdout text\r\ns34_sys.py\r\nthis is my\r\nfirst\r\n'
+
+This is stdout text
+s34_sys.py
+this is my
+first
+
+

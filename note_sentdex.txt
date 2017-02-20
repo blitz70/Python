@@ -153,10 +153,11 @@ Built-in functions
 Standard modules
 	os
 		file manipulation
-		getcwd() listdir() mkdir() makedirs() rename() rmdir() system()
+		path:getcwd()
+		listdir() mkdir() makedirs() rename() rmdir() system()
 	sys
 		operating system command related?
-		can be used to communicate between different program languages
+		can used to communicate between programs of different language
 		stderr.write() stdout.write() argv
 	urllib
 		internet access
@@ -179,12 +180,15 @@ Standard modules
 		regular expression for parsing string, need practice
 		* vs *? : need to think over greedy vs non-greedy counts
 		findall()
-    tkinter
-        gui creation
-        tkinter is wrapper around tk which is wrapper around tcl
-        Window
-        Button Menu
-        Event
-        Image Text
+	tkinter
+		gui creation
+		tkinter is wrapper around tk which is wrapper around tcl
+		Window Button Menu Event Image Text
+	subprocess
+		access shell commands
+		can used to communicate between programs of different language
+		complement of sys module?
+		call() check_output()
+		
 Thread
 	multiple processing
