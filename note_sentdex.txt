@@ -189,6 +189,13 @@ Standard modules
 		can used to communicate between programs of different language
 		complement of sys module?
 		call() check_output()
-		
 Thread
 	multiple processing
+Matplotlib
+	gui data plotting
+	matplotlib.pyplot
+		plot() scatter() bar()
+		show() figure() subplot()
+		title() xlabel() ylabel() legend() grid()
+	matplotlib.style
+		use() available
