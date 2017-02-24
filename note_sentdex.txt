@@ -189,6 +189,7 @@ Standard modules
 		can used to communicate between programs of different language
 		complement of sys module?
 		call() check_output()
+	socket
 Thread
 	multiple processing
 Matplotlib
