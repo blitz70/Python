@@ -11,7 +11,7 @@ def portScan(server,port):
         return False
 
 startTime = time.time()
-server = 'pythonprogramming.net'
+server = 'hackthissite.org'
 #server = 'localhost'
 
 s = socket.socket()

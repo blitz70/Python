@@ -190,8 +190,15 @@ Standard modules
 		complement of sys module?
 		call() check_output()
 	socket
+		network related, ftplib ssl
+		encode() decode() bytestrings
+		gethostbyname()
+		socket()
+			connect() accept() close() bind() listen()
+			send() recv() sendall()
 Thread
 	multiple processing
+	threading.Lock()
 Matplotlib
 	gui data plotting
 	matplotlib.pyplot

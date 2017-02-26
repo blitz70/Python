@@ -7,6 +7,7 @@ from queue import Queue
 
 printLock = threading.Lock()
 server = 'hackthissite.org'
+#server = 'localhost'
 
 def portScan(server,myport):#open also checked as closed?
     s = socket.socket()
@@ -15,10 +16,12 @@ def portScan(server,myport):#open also checked as closed?
         with printLock:
             print(myport,'OPEN!!!!')
         con.close()
+        s.close
     except Exception as e:
-        with printLock:
-            print(myport,'closed')
+        #with printLock:
+        #    print(myport,'closed')
         s.close()
+        pass
 
 def threader():
     while True:
@@ -30,12 +33,12 @@ q = Queue()
 startTime = time.time()
 print(server, 'port info...')
 
-for mythreads in range(30):#number of threads
+for mythreads in range(1000):#number of threads
     t = threading.Thread(target=threader)
     t.daemon = True
     t.start()
 
-for myport in range(1,100):#ports to search
+for myport in range(1,70000):#ports to search
     q.put(myport)
 
 q.join()
