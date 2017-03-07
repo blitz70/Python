@@ -2,7 +2,7 @@
 #   need to work directly on web
 import csv
 
-with open('geof.txt') as csvfile:
+with open('time.txt') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=':')
     days = 0
     hrs = 0
