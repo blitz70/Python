@@ -196,6 +196,11 @@ Standard modules
 		socket()
 			connect() accept() close() bind() listen()
 			send() recv() sendall()
+	pickle
+		save python object with compression
+		no security
+		dump() load()
+	
 Thread
 	multiple processing
 	threading.Lock()
@@ -207,3 +212,7 @@ Matplotlib
 		title() xlabel() ylabel() legend() grid()
 	matplotlib.style
 		use() available
+Python 2to3
+	convert python 2 code to 3 code
+	python 2to3.py -w targetfile
+	-w : commit and backup, else show only
