@@ -1,4 +1,10 @@
 #   60. eval
+'''
+[print('test') if False else print('hmm')]
+
+'[1,5,6,2,3]'
+print(eval(eval(x))[2])
+'''
 
 dataStr = '[9,8,7,6,5,4,3,2,1,0]'
 
@@ -9,10 +15,11 @@ print('='*10)
 for dl in dataList:
     print(dl)
 
-print('='*10)
 for i in range(len(dataList)):
     print(dataList[i])
 
-x = input('code:')
+x = input('x:')
 code = eval(input('code:'))
-print(code)
+print('code =',code)
+
+

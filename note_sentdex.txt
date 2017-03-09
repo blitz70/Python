@@ -12,9 +12,12 @@ while loop
 	while condition < 10:
 	    	print (condition)
     		condition += 1
+
 for loop
 	for x in range(1,11):
    		print(x)
+	[print x for x in [5,3,4]]
+
 if
 	x = 5
 	y = 8
@@ -27,6 +30,7 @@ if
 		print('correct')
 	else:
 		print('no period')
+
 if else
 	x = 5
 	y = 8
@@ -34,6 +38,8 @@ if else
  		print('x > y')
 	else:
   		print('x < y')
+	[print('it is true') if False else print('it is false')
+
 if elsif else
 	x = 5
 	y = 10
@@ -47,22 +53,26 @@ if elsif else
 		print('this is true')
 	else:
   		print('no if elif run')
+
 function
 	def example():
  		print('basic function')
 		z = 3+9
 		print(z)
 	example()
+
 function parameter
 	def simple_sub(num1,num2):
 		answer = num1 - num2
 		print(num1,'-',num2,'=',answer)
 	simple_sub(3,5)
 	simple_sub(num1=5,num2=3)
+
 function parameter default
 	def simple(num1,num2=5):
 		print(num1,num2)
 	simple(3)
+
 global, local variable
 	x = 6
 	y = 11
@@ -73,21 +83,25 @@ global, local variable
 		x += 1
 		print('x=',x)
 	example()
+
 file write
 	text = 'Sample Text to Save\nNew line!'
 	saveFile = open('exampleFile.txt','w')
 	saveFile.write(text)
 	saveFile.close()
+
 file append
 	appendMe = '\nNew bit of information'
 	saveFile = open('exampleFile.txt','a')
 	saveFile.write(appendMe)
 	saveFile.close()
+
 file read
 	saveFile = open('exampleFile.txt','r')
 	rd = saveFile.readlines()
 	saveFile.close()
 	print(rd)
+
 class
 	class calculator:
 		def add(x,y):
@@ -105,8 +119,10 @@ class
 	calculator.mult(3,5)
 	calculator.sub(5,13)
 	calculator.div(1,3)
+
 user input
 	x = input ('What is your name? ')
+
 module
 	install
 		http://www.lfd.uci.edu/~gohlke/pythonlibs/
@@ -118,6 +134,7 @@ module
 		module is a python script with functions defined
 		module file must be in Lib Lib/site-packages or path defined folder, else import don't work
 		use if __name__ == '__main__' for excluding code when used as module
+
 List, Tuple, Dictionary, Zip
 	List : array that can be manupilated
 	Tuple : array that is immutable, can't be changed, handle data fast
@@ -133,6 +150,7 @@ List, Tuple, Dictionary, Zip
 		ages = ['15', '27', '77', '102']
 		personDict2 = {a:b for a,b in zip(names,ages)}
 		            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
+
 CSV
 	Code
 		import csv
@@ -140,16 +158,20 @@ CSV
     			readCSV = csv.reader(csvfile, delimiter=',')
 	Note
 		when file is used, can't use?
+
 Error Handling
 	try:
 		...
 	except Exception as e:
 		...
 		print(e)
+
 Built-in functions
 	help() : interactive help guide
 		https://docs.python.org/3/library/functions.html
 	abs() min() max() round() str() int() float()
+	eval()
+
 Standard modules
 	os
 		file manipulation
@@ -204,6 +226,7 @@ Standard modules
 Thread
 	multiple processing
 	threading.Lock()
+
 Matplotlib
 	gui data plotting
 	matplotlib.pyplot
@@ -212,6 +235,7 @@ Matplotlib
 		title() xlabel() ylabel() legend() grid()
 	matplotlib.style
 		use() available
+
 Python 2to3
 	convert python 2 code to 3 code
 	python 2to3.py -w targetfile
