@@ -22,4 +22,15 @@ x = input('x:')
 code = eval(input('code:'))
 print('code =',code)
 
+#code = eval('x=10')
+#print(code, x)
+
+#code = eval('''
+#def mycode():
+#    print('hello')
+#mycode()
+#''')
+#print(code)
+
+
 

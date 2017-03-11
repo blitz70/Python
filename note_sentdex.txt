@@ -54,7 +54,7 @@ if elsif else
 	else:
   		print('no if elif run')
 
-function
+function definition
 	def example():
  		print('basic function')
 		z = 3+9
@@ -170,7 +170,10 @@ Built-in functions
 	help() : interactive help guide
 		https://docs.python.org/3/library/functions.html
 	abs() min() max() round() str() int() float()
-	eval()
+	eval() : evaluate a string and returns its content's meaning, no security
+		used for string form object conversion
+	exec() : eval+ version, evaluate a string and compile&execute its content meaning, no security
+		can define variables and functions
 
 Standard modules
 	os
