@@ -225,6 +225,22 @@ Standard modules
 		save python object with compression
 		no security
 		dump() load()
+	sqlite3
+		local SQL database, database per file, no server & users & permissions
+		unlike MySQL is sensitive to casing
+		connect to database and get cursor
+			conn = sqlite3.connect('...')
+			c = conn.cursor()
+		execute SQL query
+			c.execute()
+			c.execute('CREATE TABLE IF NOT EXISTS ...')
+			c.execute('INSERT INTO ...')
+			c.execute('''INSERT INTO ...(...) VALUES (?...)''', (...))
+		update db
+			conn.commit()
+		close connection
+    			c.close()
+    			conn.close()		
 	
 Thread
 	multiple processing
