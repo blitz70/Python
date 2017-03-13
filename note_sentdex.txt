@@ -231,11 +231,12 @@ Standard modules
 		connect to database and get cursor
 			conn = sqlite3.connect('...')
 			c = conn.cursor()
-		execute SQL query
-			c.execute()
-			c.execute('CREATE TABLE IF NOT EXISTS ...')
-			c.execute('INSERT INTO ...')
-			c.execute('''INSERT INTO ...(...) VALUES (?...)''', (...))
+		execute SQL query : c.execute()
+			create table : c.execute('CREATE TABLE IF NOT EXISTS ...')
+			write data : c.execute('''INSERT INTO ...(...) VALUES (?...)''', (...))
+			read data
+				c.execute('SELECT * FROM ...')
+				c.fetchall()
 		update db
 			conn.commit()
 		close connection
