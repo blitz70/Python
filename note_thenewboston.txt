@@ -1,7 +1,20 @@
-type() : type of object
-dir() : list of objects in workspace (IDLE?)
-// : divide with integer answer, rounded down, 5//3 = 1
-** : power, 2**4 = 16
-r'...' : treat string as raw, special character turned off, except ' " '''
-string* : add string multiple times, 'hello'*3 = 'hellohellohello'
-ALT+P ALT+N : IDLE command history
+General
+	// : divide with integer answer, rounded down, 5//3 = 1
+	** : power, 2**4 = 16
+	r'...' : treat string as raw, special character turned off, except ' " '''
+	string* : add string multiple times, 'hello'*3 = 'hellohellohello'
+
+IDLE
+	type() : type of object
+	dir() : list of objects in workspace (IDLE?)
+	ALT+P ALT+N : command history
+
+Loop
+	for x in y : loop through y, y = List or number range, x= element of y
+	while x : loop if condition x is true
+	range(a,b,c) : range of numbers from a to b-1 of interval c
+	break : break out of current loop
+	continue : skip current and jump to next iteration of loop
+
+Function
+	return : function returns something
