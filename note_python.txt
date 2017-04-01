@@ -1,23 +1,39 @@
-﻿print
+﻿General
+	// : divide with integer answer, rounded down, 5//3 = 1
+	** : power, 2**4 = 16
+	r'...' : treat string as raw, special character turned off, except ' " '''
+	string* : add string multiple times, 'hello'*3 = 'hellohellohello'
+	type() : type of object
+	dir() : list of objects in workspace (IDLE?)
+	ALT+P ALT+N : command history (IDLE)
+
+print
 	print('Hi '+str(5))
 	print('''
 	This is a simple
 	multi-line print
 	pretty cool!
 	''')
+	print('Hello,','my name is','John Doh')
 
+Loop
+	for loop
+		for x in y : ...
+			loop x in y, y = List or number range, x= element of y
+		[print x for x in [5,3,4]]
+			oneline
+		for i, x in y : get index i, value x, in y
+			List : y = enumerate(z)
+			Dictionary : y = z.items()
+			Numpy array : y = np.nditer(z)
+	while loop
+		while x : ...
+		loop if condition x is true
+	related
+		range(a,b,c) : range of numbers from a to b-1 of interval c
+		break : break out of current loop
+		continue : skip current and jump to next iteration of loop
 	
-while loop
-	condition = 1
-	while condition < 10:
-	    	print (condition)
-    		condition += 1
-
-for loop
-	for x in range(1,11):
-   		print(x)
-	[print x for x in [5,3,4]]
-
 if
 	x = 5
 	y = 8
@@ -54,24 +70,41 @@ if elsif else
 	else:
   		print('no if elif run')
 
-function definition
-	def example():
- 		print('basic function')
-		z = 3+9
-		print(z)
-	example()
-
-function parameter
-	def simple_sub(num1,num2):
-		answer = num1 - num2
-		print(num1,'-',num2,'=',answer)
-	simple_sub(3,5)
-	simple_sub(num1=5,num2=3)
-
-function parameter default
-	def simple(num1,num2=5):
-		print(num1,num2)
-	simple(3)
+Function
+	definition
+		def example():
+ 			print('basic function')
+			z = 3+9
+			print(z)
+		example()
+	parameter
+		def simple_sub(num1,num2):
+			answer = num1 - num2
+			print(num1,'-',num2,'=',answer)
+		simple_sub(3,5)
+		simple_sub(num1=5,num2=3)
+	parameter default
+		def simple(num1,num2=5):
+			print(num1,num2)
+		simple(3)
+	return
+		function returns something
+	flexible number of parameters
+		function with number of parameters that can vary
+		def add(*args):
+			total=0
+			for arg in args:
+				total += arg
+			print(total)	
+		add(2,5,3)
+	unpacking parameters
+		pass parameters to function as list
+		def person_desc(name, age, job, home):
+		    desc = name + ' is ' + str(age) + ' years old, and lives in ' + home
+    			print(desc)
+		person_desc('John', 48, 'programmer', 'USA')
+		person = ['Jane', 24,'nurse','Brazil']
+		person_desc(*person)
 
 global, local variable
 	x = 6
@@ -135,16 +168,24 @@ module
 		module file must be in Lib Lib/site-packages or path defined folder, else import don't work
 		use if __name__ == '__main__' for excluding code when used as module
 
-List, Tuple, Dictionary, Zip
-	List : array that can be manupilated
-	Tuple : array that is immutable, can't be changed, handle data fast
-		x = (1,2,3), tuple
-		y = [4,5,6], list
-		y[0] -> 4
-		x[2] -> 3
-	Dictionary : similar to Map in Java , has key and object pairs
-		exDict = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
-	Zip : grouped lists with index matched
+Data structures
+	Object containing multiple data with different ways of manipulation
+	List
+		Container of data, data is mutable(manupilated)
+		my_list = ['John', 'Bob','Henry','Bob']
+		print(my_list) -> ['John', 'Bob', 'Henry', 'Bob']
+	Set
+		Data must be unique, can't be repeated
+		my_set = {'John', 'Bob','Henry','Bob'}
+		print(my_set) -> {'Bob', 'Henry', 'John'}
+	Tuple
+		Data is immutable(unchangable), handle data fast
+		my_tuple = (1,2,3)
+	Dictionary
+		Container of pairs of data, key and value
+		my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+	Zip
+		grouped lists with index matched
 		in for loop drops left overs
 		names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
 		ages = ['15', '27', '77', '102']
