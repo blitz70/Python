@@ -1,0 +1,10 @@
+IDLE
+	type() : type of object
+	dir() : list of objects in workspace (IDLE?)
+	ALT+P ALT+N : command history
+
+Loop
+	for i, x in y : get index i, value x in y
+		List : y = enumerate(z)
+		Dictionary : y = z.items()
+		Numpy array : y = np.nditer(z)

@@ -4,13 +4,8 @@ General
 	r'...' : treat string as raw, special character turned off, except ' " '''
 	string* : add string multiple times, 'hello'*3 = 'hellohellohello'
 
-IDLE
-	type() : type of object
-	dir() : list of objects in workspace (IDLE?)
-	ALT+P ALT+N : command history
-
 Loop
-	for x in y : loop through y, y = List or number range, x= element of y
+	for x in y : loop x in y, y = List or number range, x= element of y
 	while x : loop if condition x is true
 	range(a,b,c) : range of numbers from a to b-1 of interval c
 	break : break out of current loop
