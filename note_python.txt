@@ -6,6 +6,9 @@
 	type() : type of object
 	dir() : list of objects in workspace (IDLE?)
 	ALT+P ALT+N : command history (IDLE)
+	split() : split string to list
+		my_list = 'some\nstring'.split('\n')
+		print(my_list)
 
 print
 	print('Hi '+str(5))
@@ -43,25 +46,29 @@ Condition
 		print('else if x and y is both false print this')
 
 Function
-	definition
+	Definition
 		def example():
  			print('basic function')
 			z = 3+9
 			print(z)
 		example()
-	parameter
+	Parameter
 		def simple_sub(num1,num2):
 			answer = num1 - num2
 			print(num1,'-',num2,'=',answer)
 		simple_sub(3,5)
 		simple_sub(num1=5,num2=3)
-	parameter default
+	Parameter default
 		def simple(num1,num2=5):
 			print(num1,num2)
 		simple(3)
-	return
+	Return
 		function returns something
-	flexible number of parameters
+		def example(a, b):
+ 			c = a + b
+			return c
+		print(example(5,3))
+	Flexible number of parameters
 		function with number of parameters that can vary
 		def add(*args):
 			total=0
@@ -69,7 +76,7 @@ Function
 				total += arg
 			print(total)	
 		add(2,5,3)
-	unpacking parameters
+	Unpacking parameters
 		pass parameters to function as list
 		def person_desc(name, age, job, home):
 		    desc = name + ' is ' + str(age) + ' years old, and lives in ' + home
@@ -78,7 +85,7 @@ Function
 		person = ['Jane', 24,'nurse','Brazil']
 		person_desc(*person)
 
-global, local variable
+Variable scope : global, local
 	x = 6
 	y = 11
 	def example():
@@ -89,23 +96,21 @@ global, local variable
 		print('x=',x)
 	example()
 
-file write
-	text = 'Sample Text to Save\nNew line!'
-	saveFile = open('exampleFile.txt','w')
-	saveFile.write(text)
-	saveFile.close()
-
-file append
-	appendMe = '\nNew bit of information'
-	saveFile = open('exampleFile.txt','a')
-	saveFile.write(appendMe)
-	saveFile.close()
-
-file read
-	saveFile = open('exampleFile.txt','r')
-	rd = saveFile.readlines()
-	saveFile.close()
-	print(rd)
+File manipulation
+	Open file : open()
+		'w':write, 'a':append, 'r':read
+		writefile = open('exampleFile.txt','w')
+	Write file
+		write() : write to file
+			open with 'w':overwrite, 'a': add at end
+		writefile.write('some text')
+	Read file
+		read() : read from file, open() with 'r'
+		readlines()
+		text = readfile.read()
+	Close file
+		close() : close file and free memory
+		writefile.close()
 
 class
 	class calculator:
