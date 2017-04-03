@@ -34,41 +34,13 @@ Loop
 		break : break out of current loop
 		continue : skip current and jump to next iteration of loop
 	
-if
-	x = 5
-	y = 8
-	z = 5
-	a = 3
-	if z < y > x > a:
-  		print('y is greater than z and greater than x and a')
-	list = ['This', 'is', 'a', 'sentence','.']
-	if '.' in list:
-		print('correct')
+Condition
+	if x:
+		print('if condition x is true print this')
+	elif y:
+		print('else if condition y is true print this')
 	else:
-		print('no period')
-
-if else
-	x = 5
-	y = 8
-	if x > y:
- 		print('x > y')
-	else:
-  		print('x < y')
-	[print('it is true') if False else print('it is false')
-
-if elsif else
-	x = 5
-	y = 10
-	z = 22
-
-	if x > y:
-  		print('x > y')
-	elif x < z:
-		print('x < z')
-	elif 5 > 2:
-		print('this is true')
-	else:
-  		print('no if elif run')
+		print('else if x and y is both false print this')
 
 Function
 	definition
@@ -216,6 +188,24 @@ Built-in functions
 	exec() : eval+ version, evaluate a string and compile&execute its content meaning, no security
 		can define variables and functions
 
+urllib
+	Standard module, internet access
+	Access block
+		Servers may block connections for protection and efficiency
+		Can bypass by using fake User-Agent but not recommended
+		Use provided API
+	urllib.request.urlretrieve(url,savename) : get file(picture only?) from internet
+	urllib.request, urllib.parse
+		url = '...', site address
+		values = {..}, post parameters
+		myheaders = {}
+		myheaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
+		data = urllib.parse.urlencode(values)
+		data = data.encode('utf-8')
+		req = urllib.request.Request(url, data, headers=myheaders)
+		resp = urllib.request.urlopen(req)
+		respData = resp.read()
+
 Standard modules
 	os
 		file manipulation
@@ -225,23 +215,6 @@ Standard modules
 		operating system command related?
 		can used to communicate between programs of different language
 		stderr.write() stdout.write() argv
-	urllib
-		internet access
-		access block
-			servers may block connections for protection and efficiency
-			can bypass by using fake User-Agent but not recommended
-			use provided API
-		code
-			import urllib.request, urllib.parse
-			url = '...', site address
-			values = {..}, post parameters
-			myheaders = {}
-			myheaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
-			data = urllib.parse.urlencode(values)
-			data = data.encode('utf-8')
-			req = urllib.request.Request(url, data, headers=myheaders)
-			resp = urllib.request.urlopen(req)
-			respData = resp.read()
 	re
 		regular expression for parsing string, need practice
 		* vs *? : need to think over greedy vs non-greedy counts
@@ -271,8 +244,8 @@ Thread
 	multiple processing
 	threading.Lock()
 
-Matplotlib
-	gui data plotting
+matplotlib
+	Standard module, gui data plotting
 	matplotlib.pyplot
 		plot() scatter() bar()
 		show() figure() subplot()
