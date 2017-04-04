@@ -1,26 +1,36 @@
 ﻿General
+	ALT+P ALT+N : command history (IDLE)
+	comment : # single line, '''multi line'''
 	// : divide with integer answer, rounded down, 5//3 = 1
 	** : power, 2**4 = 16
-	r'...' : treat string as raw, special character turned off, except ' " '''
-	string* : add string multiple times, 'hello'*3 = 'hellohellohello'
+	string
+		'...',"...",'''...''' for multi-line
+		r'...' : treat string as raw, special character turned off, except ' " '''
+		string* : add string multiple times, 'hello'*3 = 'hellohellohello'
+
+built-in functions
+	print() : print to console
+		print('Hi '+str(5))
+		print('''
+			This is a simple
+			multi-line print
+			pretty cool!''')
+		print('Hello,','my name is','John Doh')
+	help() : interactive help guide
+		https://docs.python.org/3/library/functions.html
 	type() : type of object
 	dir() : list of objects in workspace (IDLE?)
-	ALT+P ALT+N : command history (IDLE)
+	eval() : evaluate a string and returns its content's meaning, no security
+		used for string form object conversion
+	exec() : eval+ version, evaluate a string and compile&execute its content meaning, no security
+		can define variables and functions
 	split() : split string to list
 		my_list = 'some\nstring'.split('\n')
 		print(my_list)
-	max(a,b) : return greater value
+	min() max() : return lesser/greater value
+	abs() round() str() int() float()
 
-print
-	print('Hi '+str(5))
-	print('''
-	This is a simple
-	multi-line print
-	pretty cool!
-	''')
-	print('Hello,','my name is','John Doh')
-
-Loop
+loop
 	for loop
 		for x in y : ...
 			loop x in y, y = List or number range, x= element of y
@@ -38,7 +48,7 @@ Loop
 		break : break out of current loop
 		continue : skip current and jump to next iteration of loop
 	
-Condition
+condition
 	if x:
 		print('if condition x is true print this')
 	elif y:
@@ -46,30 +56,30 @@ Condition
 	else:
 		print('else if x and y is both false print this')
 
-Function
-	Definition
+function
+	definition
 		def example():
  			print('basic function')
 			z = 3+9
 			print(z)
 		example()
-	Parameter
+	parameter
 		def simple_sub(num1,num2):
 			answer = num1 - num2
 			print(num1,'-',num2,'=',answer)
 		simple_sub(3,5)
 		simple_sub(num1=5,num2=3)
-	Parameter default
+	parameter default
 		def simple(num1,num2=5):
 			print(num1,num2)
 		simple(3)
-	Return
+	return
 		function returns something
 		def example(a, b):
  			c = a + b
 			return c
 		print(example(5,3))
-	Flexible number of parameters
+	flexible number of parameters
 		function with number of parameters that can vary
 		def add(*args):
 			total=0
@@ -77,7 +87,7 @@ Function
 				total += arg
 			print(total)	
 		add(2,5,3)
-	Unpacking parameters
+	unpacking parameters
 		pass parameters to function as list
 		def person_desc(name, age, job, home):
 		    desc = name + ' is ' + str(age) + ' years old, and lives in ' + home
@@ -86,7 +96,7 @@ Function
 		person = ['Jane', 24,'nurse','Brazil']
 		person_desc(*person)
 
-Variable scope : global, local
+variable scope : global, local
 	x = 6
 	y = 11
 	def example():
@@ -97,19 +107,19 @@ Variable scope : global, local
 		print('x=',x)
 	example()
 
-File manipulation
-	Open file : open()
+file manipulation
+	open file : open()
 		'w':write, 'a':append, 'r':read
 		writefile = open('exampleFile.txt','w')
-	Write file
+	write file
 		write() : write to file
 			open with 'w':overwrite, 'a': add at end
 		writefile.write('some text')
-	Read file
+	read file
 		read() : read from file, open() with 'r'
 		readlines()
 		text = readfile.read()
-	Close file
+	close file
 		close() : close file and free memory
 		writefile.close()
 
@@ -146,23 +156,23 @@ module
 		module file must be in Lib Lib/site-packages or path defined folder, else import don't work
 		use if __name__ == '__main__' for excluding code when used as module
 
-Data structures
-	Object containing multiple data with different ways of manipulation
-	List
-		Container of data, data is mutable(manupilated)
+data structures
+	object containing multiple data with different ways of manipulation
+	list
+		container of data, data is mutable(manupilated)
 		my_list = ['John', 'Bob','Henry','Bob']
 		print(my_list) -> ['John', 'Bob', 'Henry', 'Bob']
-	Set
-		Data must be unique, can't be repeated
+	set
+		data must be unique, can't be repeated
 		my_set = {'John', 'Bob','Henry','Bob'}
 		print(my_set) -> {'Bob', 'Henry', 'John'}
-	Tuple
-		Data is immutable(unchangable), handle data fast
+	tuple
+		data is immutable(unchangable), handle data fast
 		my_tuple = (1,2,3)
-	Dictionary
-		Container of pairs of data, key and value
+	dictionary
+		container of pairs of data, key and value
 		my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
-	Zip
+	zip
 		grouped lists with index matched
 		in for loop drops left overs
 		names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
@@ -170,126 +180,26 @@ Data structures
 		personDict2 = {a:b for a,b in zip(names,ages)}
 		            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
 
-CSV
-	Code
+csv
+	code
 		import csv
 		with open('s28.csv') as csvfile:
     			readCSV = csv.reader(csvfile, delimiter=',')
-	Note
+	note
 		when file is used, can't use?
 
-Error Handling
+error handling
 	try:
 		...
 	except Exception as e:
 		...
 		print(e)
-
-Built-in functions
-	help() : interactive help guide
-		https://docs.python.org/3/library/functions.html
-	abs() min() max() round() str() int() float()
-	eval() : evaluate a string and returns its content's meaning, no security
-		used for string form object conversion
-	exec() : eval+ version, evaluate a string and compile&execute its content meaning, no security
-		can define variables and functions
-
-urllib
-	Standard module, internet access
-	Access block
-		Servers may block connections for protection and efficiency
-		Can bypass by using fake User-Agent but not recommended
-		Use provided API
-	urllib.request.urlretrieve(url,savename) : get file(picture only?) from internet
-	urllib.request, urllib.parse
-		url = '...', site address
-		values = {..}, post parameters
-		myheaders = {}
-		myheaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
-		data = urllib.parse.urlencode(values)
-		data = data.encode('utf-8')
-		req = urllib.request.Request(url, data, headers=myheaders)
-		resp = urllib.request.urlopen(req)
-		respData = resp.read()
-
-Standard modules
-	os
-		file manipulation
-		path:getcwd()
-		listdir() mkdir() makedirs() rename() rmdir() system()
-	sys
-		operating system command related?
-		can used to communicate between programs of different language
-		stderr.write() stdout.write() argv
-	re
-		regular expression for parsing string, need practice
-		* vs *? : need to think over greedy vs non-greedy counts
-		findall()
-	tkinter
-		gui creation
-		tkinter is wrapper around tk which is wrapper around tcl
-		Window Button Menu Event Image Text
-	subprocess
-		access shell commands
-		can used to communicate between programs of different language
-		complement of sys module?
-		call() check_output()
-	socket
-		network related, ftplib ssl
-		encode() decode() bytestrings
-		gethostbyname()
-		socket()
-			connect() accept() close() bind() listen()
-			send() recv() sendall()
-	pickle
-		save python object with compression
-		no security
-		dump() load()
 	
-Thread
+thread
 	multiple processing
 	threading.Lock()
 
-matplotlib
-	Standard module, gui data plotting
-	matplotlib.pyplot
-		plot() scatter() bar()
-		show() figure() subplot()
-		title() xlabel() ylabel() legend() grid()
-	matplotlib.style
-		use() available
-
-Python 2to3
+python 2to3
 	convert python 2 code to 3 code
 	python 2to3.py -w targetfile
 	-w : commit and backup, else show only
-
-sqlite3
-	Overview
-		standard module,
-		local SQL database, database per file, no server & users & permissions
-		unlike MySQL is sensitive to casing
-	connect to database and get cursor
-		conn = sqlite3.connect('...')
-		c = conn.cursor()
-	execute SQL query : c.execute()
-		create table
-			c.execute('CREATE TABLE IF NOT EXISTS ...')
-		read data
-			c.execute("SELECT ... FROM ...")
-			c.fetchall()
-		modify data : permanent so take care! (rollback)
-			write data : c.execute('''INSERT INTO ...(...) VALUES (?...)''', (...))
-			update data : c.execute("UPDATE ...SET ... WHERE ...")
-			delete data : c.execute("DELETE FROM ... WHERE ...")
-	update db : insert, update, delete
-		conn.commit()
-	close connection
-		c.close()
-		conn.close()		
-
-numpy
-	Standard module, number crunching
-	numpy.random : random generation
-		seed() : same seed gives same sequence of generated numbers per execution
-		rand()  randint() : generate random numbers

@@ -1,0 +1,97 @@
+urllib
+	overview
+		standard module, internet access
+		access block
+			servers may block connections for protection and efficiency
+			can bypass by using fake User-Agent but not recommended
+			use provided API
+	urllib.request.urlretrieve(url,savename) : get file(picture only?) from internet
+	urllib.request, urllib.parse
+		url = '...', site address
+		values = {..}, post parameters
+		myheaders = {}
+		myheaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
+		data = urllib.parse.urlencode(values)
+		data = data.encode('utf-8')
+		req = urllib.request.Request(url, data, headers=myheaders)
+		resp = urllib.request.urlopen(req)
+		respData = resp.read()
+matplotlib
+	overview
+		standard module, gui data plotting
+	matplotlib.pyplot
+		plot() scatter() bar() hist()
+		show() figure() subplot() clf()
+		title() xlabel() ylabel() legend() grid()
+	matplotlib.style
+		use() available
+
+sqlite3
+	overview
+		standard module, sql database
+		local SQL database, database per file, no server & users & permissions
+		unlike MySQL is sensitive to casing
+	connect to database and get cursor
+		conn = sqlite3.connect('...')
+		c = conn.cursor()
+	execute SQL query : c.execute()
+		create table
+			c.execute('CREATE TABLE IF NOT EXISTS ...')
+		read data
+			c.execute("SELECT ... FROM ...")
+			c.fetchall()
+		modify data : permanent so take care! (rollback)
+			write data : c.execute('''INSERT INTO ...(...) VALUES (?...)''', (...))
+			update data : c.execute("UPDATE ...SET ... WHERE ...")
+			delete data : c.execute("DELETE FROM ... WHERE ...")
+	update db : insert, update, delete
+		conn.commit()
+	close connection
+		c.close()
+		conn.close()		
+
+numpy
+	overview
+		number crunching
+	numpy
+		array() : convert list to numpy array
+		transpose() : transpose narray
+	numpy.random : random generation
+		seed() : same seed gives same sequence of generated numbers per execution
+		rand()  randint() : generate random numbers
+
+pandas
+
+standard module
+	os
+		file manipulation
+		path:getcwd()
+		listdir() mkdir() makedirs() rename() rmdir() system()
+	sys
+		operating system command related?
+		can used to communicate between programs of different language
+		stderr.write() stdout.write() argv
+	re
+		regular expression for parsing string, need practice
+		* vs *? : need to think over greedy vs non-greedy counts
+		findall()
+	tkinter
+		gui creation
+		tkinter is wrapper around tk which is wrapper around tcl
+		Window Button Menu Event Image Text
+	subprocess
+		access shell commands
+		can used to communicate between programs of different language
+		complement of sys module?
+		call() check_output()
+	socket
+		network related, ftplib ssl
+		encode() decode() bytestrings
+		gethostbyname()
+		socket()
+			connect() accept() close() bind() listen()
+			send() recv() sendall()
+	pickle
+		save python object with compression
+		no security
+		dump() load()
