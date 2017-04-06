@@ -1,4 +1,4 @@
-# Python ([notes](https://github.com/blitz70/Python/blob/master/note_python.txt))
+# Python ([notes](https://github.com/blitz70/Python/blob/master/note_python.txt), [module](https://github.com/blitz70/Python/blob/master/note_module.txt))
 
 <hr/>
 
