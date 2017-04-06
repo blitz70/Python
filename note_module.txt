@@ -16,6 +16,7 @@ urllib
 		req = urllib.request.Request(url, data, headers=myheaders)
 		resp = urllib.request.urlopen(req)
 		respData = resp.read()
+
 matplotlib
 	overview
 		standard module, gui data plotting
@@ -50,17 +51,23 @@ sqlite3
 		c.close()
 		conn.close()		
 
-numpy
-	overview
-		number crunching
-	numpy
-		array() : convert list to numpy array
-		transpose() : transpose narray
-	numpy.random : random generation
-		seed() : same seed gives same sequence of generated numbers per execution
-		rand()  randint() : generate random numbers
+data science module : data analytics
+	numpy : number crunching
+		numpy
+ 			array() : convert list to numpy array
+			transpose() : transpose narray
+		numpy.random : random generation
+			seed() : same seed gives same sequence of generated numbers per execution
+			rand()  randint() : generate random numbers
+	pandas
 
-pandas
+web module : web analytics
+	requests
+		source = requests.get() : get web source
+		text = source.text : convert web source to text
+	bs4 : BeautifulSoup
+		soup = BeautifulSoup() : convert web text to object
+		soup.findAll() : search through web object
 
 standard module
 	os
