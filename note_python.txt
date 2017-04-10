@@ -123,23 +123,37 @@ file manipulation
 		close() : close file and free memory
 		writefile.close()
 
-class
-	class calculator:
-		def add(x,y):
-			result = x+y
-			print(result)
-		def sub(x,y):
-			result = x-y
-			print(result)
-		def mult(x,y):
-			result = x*y
-			print(result)
-		def div(x,y):
-			result = x/y
-			print(result)
-	calculator.mult(3,5)
-	calculator.sub(5,13)
-	calculator.div(1,3)
+class and object
+	overview
+		class groups functions and variables, like file directory
+		object is an copy of a class
+		objects of a class are independent of each other
+	code1
+		class Calculator1:
+			def add(x,y):
+				result = x+y
+				print(result)
+			def sub(x,y):
+				result = x-y
+				print(result)
+		Calculator1.add(3,5)
+		Calculator1.sub(5,13)
+	code2
+		class Calculator2:
+			param1 = 0
+			param2 = 0
+			def param(self, x, y):
+				self.param1 = x
+				self.param2 = y
+			def add(self):
+				print(self.param1 + self.param2)
+			def sub(self):
+				print(self.param1 - self.param2)
+
+		calc = Calculator2()
+		calc.param(2, 5)
+		calc.add()
+		calc.sub()
 
 user input
 	x = input ('What is your name? ')
@@ -188,13 +202,20 @@ csv
 	note
 		when file is used, can't use?
 
-error handling
-	try:
-		...
-	except Exception as e:
-		...
-		print(e)
-	
+error/exception handling
+	overview
+		process non sytax errors
+		do code1, if error in code1 do code2, always do code3
+		'except' can process error as whole or specific errors
+		'finally' logic will always be done
+	code
+		try:
+			code1
+		except:
+			code2
+		finally:
+			code3
+
 thread
 	multiple processing
 	threading.Lock()
