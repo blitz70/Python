@@ -123,37 +123,77 @@ file manipulation
 		close() : close file and free memory
 		writefile.close()
 
-class and object
-	overview
-		class groups functions and variables, like file directory
-		object is an copy of a class
-		objects of a class are independent of each other
-	code1
-		class Calculator1:
+class and OOP
+	class : groups functions and variables, like file directory
+		class Calculator:
 			def add(x,y):
 				result = x+y
 				print(result)
 			def sub(x,y):
 				result = x-y
 				print(result)
-		Calculator1.add(3,5)
-		Calculator1.sub(5,13)
-	code2
-		class Calculator2:
-			param1 = 0
-			param2 = 0
-			def param(self, x, y):
-				self.param1 = x
-				self.param2 = y
-			def add(self):
-				print(self.param1 + self.param2)
-			def sub(self):
-				print(self.param1 - self.param2)
+		Calculator.add(3,5)
+		Calculator.sub(5,13)
+	object : copy of a class, objects from same class are independent to each other
+		class Enemy:
+			life = 6
+			def attack(self):
+				self.life -= 1
+				print('Outch!')
+			def check_life(self):
+				if self.life <= 0:
+					print("I'm dead!")
+				else:
+					print(self.life, "left.")
+		enemy1 = Enemy()
+		enemy2 = Enemy()
+		enemy1.attack()
+		enemy1.attack()
+		enemy1.check_life()
+		enemy2.check_life()
+	constructor : function(__init__) that is executed during object creation, initialization
+		class Enemy:
+			def __init__(self, name, hp):
+				self.name = name
+				self.hp = hp
+			def info(self):
+				print(self.name + ' has', self.hp, 'hp')
+		enemy1 = Enemy('Minion', 5)
+		enemy2 = Enemy('Boss', 100)
+		enemy1.info()
+		enemy2.info()
+	class vs instance variable(?)
+		class variable : within class but outside class method, shared by objects of class
+		instance variable : within class method
+	inheritance : passing characteristics of a class(parent) to another class(child), method overide, multiple inheritance
+		class Parent:
+			def last_name(self):
+				return 'Kim'
+			def first_name(self):
+				return 'SK'
+		class Child(Parent):
+			def first_name(self):
+				return 'Curie'
 
-		calc = Calculator2()
-		calc.param(2, 5)
-		calc.add()
-		calc.sub()
+		p1 = Parent()
+		p2 = Child()
+		print(p1.first_name(), p1.last_name())
+		print(p2.first_name(), p2.last_name())
+		class Sense:
+			def eye(self):
+				print('I can see')
+		class Action:
+			def leg(self):
+				print('I can run')
+		class Human:
+			def brain(self):
+				print('I can understand')
+		class Person(Sense, Action, Human):
+			pass
+		p1 = Person()
+		p1.eye()
+		p1.arm()
+		p1.brain()
 
 user input
 	x = input ('What is your name? ')
