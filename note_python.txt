@@ -256,9 +256,19 @@ error/exception handling
 		finally:
 			code3
 
-thread
+threading
 	multiple processing
 	threading.Lock()
+	using class : class with threading.Thread as parent can be processed as threads
+		import threading
+		class Messenger(threading.Thread):
+			def run(self):
+				for _ in range(20):
+					print(threading.current_thread().getName())
+		th1 = Messenger(name='Sender------->')
+		th2 = Messenger(name='----->Receiver')
+		th1.start()
+		th2.start()
 
 python 2to3
 	convert python 2 code to 3 code

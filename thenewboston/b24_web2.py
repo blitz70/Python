@@ -1,3 +1,5 @@
+#web : download file
+
 import urllib.request as rq
 
 goog_url = 'http://chart.finance.yahoo.com/table.csv?s=GOOG&a=2&b=4&c=2017&d=3&e=4&f=2017&g=d&ignore=.csv'

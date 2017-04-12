@@ -1,3 +1,5 @@
+#web : download pics
+
 import random as rd
 import urllib.request as rq
 

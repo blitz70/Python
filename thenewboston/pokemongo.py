@@ -1,3 +1,5 @@
+#web : web crawler, pokemongo.inven.co.kr scrape
+
 import requests
 from bs4 import BeautifulSoup
 
