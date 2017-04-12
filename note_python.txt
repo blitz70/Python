@@ -28,6 +28,11 @@ built-in functions
 		my_list = 'some\nstring'.split('\n')
 		print(my_list)
 	min() max() : return lesser/greater value
+	replace() : replace part of string to another
+	sorted() : with operator module, can be used to sort dictionary
+		import operator
+		old = {...}
+		new = sorted(old.items(),key=operator.itemgetter(1))
 	abs() round() str() int() float()
 
 loop
@@ -47,7 +52,7 @@ loop
 		range(a,b,c) : range of numbers from a to b-1 of interval c
 		break : break out of current loop
 		continue : skip current and jump to next iteration of loop
-	
+
 condition
 	if x:
 		print('if condition x is true print this')
@@ -79,7 +84,7 @@ function
  			c = a + b
 			return c
 		print(example(5,3))
-	flexible number of parameters
+	elastic parameters
 		function with number of parameters that can vary
 		def add(*args):
 			total=0
@@ -211,28 +216,39 @@ module
 		use if __name__ == '__main__' for excluding code when used as module
 
 data structures
-	object containing multiple data with different ways of manipulation
-	list
-		container of data, data is mutable(manupilated)
-		my_list = ['John', 'Bob','Henry','Bob']
-		print(my_list) -> ['John', 'Bob', 'Henry', 'Bob']
-	set
-		data must be unique, can't be repeated
-		my_set = {'John', 'Bob','Henry','Bob'}
-		print(my_set) -> {'Bob', 'Henry', 'John'}
-	tuple
-		data is immutable(unchangable), handle data fast
-		my_tuple = (1,2,3)
-	dictionary
-		container of pairs of data, key and value
-		my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
-	zip
-		grouped lists with index matched
-		in for loop drops left overs
-		names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
-		ages = ['15', '27', '77', '102']
-		personDict2 = {a:b for a,b in zip(names,ages)}
-		            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
+	overview
+		object containing multiple data with different ways of manipulation
+	type
+		list
+			container of data, data is mutable(manupilated)
+			my_list = ['John', 'Bob','Henry','Bob']
+			print(my_list) -> ['John', 'Bob', 'Henry', 'Bob']
+		set
+			data must be unique, can't be repeated
+			my_set = {'John', 'Bob','Henry','Bob'}
+			print(my_set) -> {'Bob', 'Henry', 'John'}
+		tuple
+			data is immutable(unchangable), handle data fast
+			my_tuple = (1,2,3)
+		dictionary
+			container of pairs of data, key and value
+			my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+		zip
+			grouped lists with index matched
+			in for loop drops left overs
+			names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
+			ages = ['15', '27', '77', '102']
+			personDict2 = {a:b for a,b in zip(names,ages)}
+			            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
+	unpacking : splitting data structure to multiple variables, element count must match
+		my_list = ['Blitz', 'Programmer', 48]
+		name, job, age = my_list
+	elastic size : data structure with unfixed size, used in making functions
+		def my_avg(grades):
+			first, *middle, last = grades
+			print(middle)
+		my_avg([5, 23, 55, 27, 90])
+		my_avg([45, 66, 28, 5, 23, 55, 27, 90, 28])
 
 csv
 	code

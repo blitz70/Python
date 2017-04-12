@@ -31,15 +31,13 @@ def count_words(word_list):
             word_count_dictionary[word] += 1
         else:
             word_count_dictionary[word] = 1
-    '''for key, value in sorted(word_count_dictionary.items(), key=operator.itemgetter(1)):
-        print(key, value)'''
     return word_count_dictionary
 
 def analayze(url):
     extracted_list = extract_words(url)
     clean_list = clean_up(extracted_list)
     result = count_words(clean_list)
-    [print(key, value) for key, value in sorted(result.items(), key=operator.itemgetter(1))]
+    [print(key, value) for key, value in sorted(result.items(), key=operator.itemgetter(1), reverse=True)]
 
 url = "https://thenewboston.com/forum/"
 analayze(url)
