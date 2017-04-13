@@ -51,6 +51,18 @@ sqlite3
 		c.close()
 		conn.close()		
 
+PIL
+	Image related
+	PIL.Image
+		open() : access image file
+		img = ....open(...)
+			show() : show image using OS default viewer
+			size format mode
+			crop() : return cropped image, area = 4 coordinate tuple leftop rightbottom
+			paste() : return combined image, image to add and target area of original image
+			split() : split image into channels, r g b tuple
+		merge() : merge channels
+
 data science module : data analytics
 	numpy : number crunching
 		numpy

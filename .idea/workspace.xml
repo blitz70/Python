@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41fb8f73-2856-40da-9706-f7dadd4510fa" name="Default" comment="code update : thenewboston">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b39_zip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/pic_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/pic_death.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/pic_land.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/pic_rgb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/pic_small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b40_lambda.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b41_sort_dictionary.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b42_image1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b45_image2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b46_image3.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note_module.txt" afterPath="$PROJECT_DIR$/note_module.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note_python.txt" afterPath="$PROJECT_DIR$/note_python.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thenewboston/b35_word_counter.py" afterPath="$PROJECT_DIR$/thenewboston/b35_word_counter.py" />
     </list>
@@ -23,28 +32,7 @@
     <favorites_list name="Python" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="b38_unpack_elastic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="b39_zip.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/thenewboston/b39_zip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,7 +44,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>user-n</find>
+      <find>P</find>
+      <find>PIL</find>
+      <find>Image</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\CODE\GIT\Python\sentdex_basics</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -88,10 +82,16 @@
         <option value="$PROJECT_DIR$/thenewboston/b24_web2.py" />
         <option value="$PROJECT_DIR$/thenewboston/b25_web_crawl.py" />
         <option value="$PROJECT_DIR$/thenewboston/pokemongo.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b35_word_counter.py" />
         <option value="$PROJECT_DIR$/thenewboston/b38_elastic_list.py" />
         <option value="$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py" />
         <option value="$PROJECT_DIR$/thenewboston/b39_zip.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b35_word_counter.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b40_lambda.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b41_sort_dictionary.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b42_pillow.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b42_image1.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b45_image2.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b46_image3.py" />
       </list>
     </option>
   </component>
@@ -118,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -148,6 +147,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,26 +166,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.b39_zip">
-    <configuration default="false" name="b34_threading" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.b46_image3">
+    <configuration default="false" name="s42_tkinter5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sentdex_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b34_threading.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sentdex_basics/s42_tkinter5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b35_word_counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="b42_pillow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -197,13 +197,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b35_word_counter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b42_pillow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b25_web_crawl" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="b42_image1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -215,13 +215,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b25_web_crawl.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b42_image1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b38_elastic_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="b45_image2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -233,13 +233,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="D:\CODE\GIT\Python\thenewboston\b38_unpack_elastic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b45_image2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b39_zip" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="b46_image3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -251,7 +251,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b39_zip.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b46_image3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -354,19 +354,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.b34_threading" />
-      <item index="1" class="java.lang.String" itemvalue="Python.b35_word_counter" />
-      <item index="2" class="java.lang.String" itemvalue="Python.b25_web_crawl" />
-      <item index="3" class="java.lang.String" itemvalue="Python.b38_elastic_list" />
-      <item index="4" class="java.lang.String" itemvalue="Python.b39_zip" />
+      <item index="0" class="java.lang.String" itemvalue="Python.s42_tkinter5" />
+      <item index="1" class="java.lang.String" itemvalue="Python.b42_pillow" />
+      <item index="2" class="java.lang.String" itemvalue="Python.b42_image1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.b45_image2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.b46_image3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.b39_zip" />
-        <item index="1" class="java.lang.String" itemvalue="Python.b38_elastic_list" />
-        <item index="2" class="java.lang.String" itemvalue="Python.b35_word_counter" />
-        <item index="3" class="java.lang.String" itemvalue="Python.b25_web_crawl" />
-        <item index="4" class="java.lang.String" itemvalue="Python.b34_threading" />
+        <item index="0" class="java.lang.String" itemvalue="Python.b46_image3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.b45_image2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.b42_image1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.b42_pillow" />
+        <item index="4" class="java.lang.String" itemvalue="Python.s42_tkinter5" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -445,13 +445,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="648" y="0" width="720" height="740" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27014926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33731344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3558776" sideWeight="0.506006" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3510467" sideWeight="0.493994" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3542673" sideWeight="0.493994" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26426426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -466,6 +465,32 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -483,94 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thenewboston/b24_web2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b22_web1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/note_sentdex.txt" />
-    <entry file="file://$PROJECT_DIR$/sentdex1/s43_threading.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3249">
-          <caret line="173" column="14" lean-forward="true" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21470">
-          <caret line="1136" column="8" lean-forward="false" selection-start-line="1136" selection-start-column="8" selection-end-line="1136" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex1/s42_tkinter5.py" />
-    <entry file="file://$PROJECT_DIR$/sentdex1/s37_parse.py" />
-    <entry file="file://$PROJECT_DIR$/note_sentdex.txt" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2016.3/system/python_stubs/-1120166012/_thread.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3249">
-          <caret line="173" column="14" lean-forward="false" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21470">
-          <caret line="1136" column="8" lean-forward="false" selection-start-line="1136" selection-start-column="8" selection-end-line="1136" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex1/s43_threading.py" />
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s22_module1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s23_module2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s24_module3a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s24_module3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/387.jpg" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/780.jpg" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/b21.py" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/b21_tuna.py" />
     <entry file="file://$PROJECT_DIR$/thenewboston/sample.txt" />
     <entry file="file://$PROJECT_DIR$/thenewboston/b23.py" />
     <entry file="file://$PROJECT_DIR$/thenewboston/goog.csv" />
@@ -725,26 +662,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thenewboston/b35_word_counter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#34#49#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="241">
+          <caret line="40" column="81" lean-forward="false" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s36_regex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s41_tkinter4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s40_tkinter3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s39_tkinter2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s38_tkinter1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s42.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/p_defend.jpg" />
+    <entry file="file://$PROJECT_DIR$/thenewboston/p_attack.jpg" />
     <entry file="file://$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thenewboston/b39_zip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b40_lambda.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b41_sort_dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentdex_basics/s42_tkinter5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b42_pillow.py" />
+    <entry file="file://$PROJECT_DIR$/thenewboston/pokemon.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/t.bmp">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/pic_big.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/rgb.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/pic_rgb.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/pic_small.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b42_image1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b45_image2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b46_image3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>

@@ -100,6 +100,16 @@ function
 		person_desc('John', 48, 'programmer', 'USA')
 		person = ['Jane', 24,'nurse','Brazil']
 		person_desc(*person)
+	lambda
+		function without name, small and normally for single use
+		lam1 = lambda x: x*3
+		lam2 = lambda x: print(x*3)
+		lam3 = lambda x: 'Typed input is ' + str(x)
+		lam4 = lambda x: print('Typed input is ' + str(x))
+		print(lam1(3))
+		lam2('==')
+		print(lam3('HELLO'))
+		lam4(1970)
 
 variable scope : global, local
 	x = 6
@@ -229,17 +239,23 @@ data structures
 			print(my_set) -> {'Bob', 'Henry', 'John'}
 		tuple
 			data is immutable(unchangable), handle data fast
+			often is result of data structure manipulation
 			my_tuple = (1,2,3)
 		dictionary
 			container of pairs of data, key and value
-			my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+				my_dictionary = {'Jack':15,'Alice':12,'Bob':22,'Kevin':17}
+				my_dictionary.keys() : list of keys
+				my_dictionary.values() : list of values
+			key must be string, value can be another data structure
+			not ordered but can be sorted using zip() and sorted()
+				sorted(zip(....values(), ....keys()))
 		zip
-			grouped lists with index matched
-			in for loop drops left overs
-			names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
-			ages = ['15', '27', '77', '102']
-			personDict2 = {a:b for a,b in zip(names,ages)}
-			            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
+			combine two lists with index matched
+			drops left overs
+				names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
+				ages = ['15', '27', '77', '102']
+				personDict2 = {a:b for a,b in zip(names,ages)}
+				            = {'Jessica': '15', 'Daniel': '27', 'Edward': '77', 'Oscar': '102'}
 	unpacking : splitting data structure to multiple variables, element count must match
 		my_list = ['Blitz', 'Programmer', 48]
 		name, job, age = my_list

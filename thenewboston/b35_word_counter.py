@@ -37,7 +37,8 @@ def analayze(url):
     extracted_list = extract_words(url)
     clean_list = clean_up(extracted_list)
     result = count_words(clean_list)
-    [print(key, value) for key, value in sorted(result.items(), key=operator.itemgetter(1), reverse=True)]
+    #[print(key, value) for key, value in sorted(result.items(), key=operator.itemgetter(1), reverse=True)]
+    [print(key, value) for key, value in sorted(result.items(), key=lambda v:v[1], reverse=True)]
 
 url = "https://thenewboston.com/forum/"
 analayze(url)
