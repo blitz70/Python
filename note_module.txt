@@ -19,7 +19,7 @@ urllib
 
 matplotlib
 	overview
-		standard module, gui data plotting
+		gui data plotting
 	matplotlib.pyplot
 		plot() scatter() bar() hist()
 		show() figure() subplot() clf()
@@ -79,6 +79,19 @@ data science module : data analytics
 		numpy.random : random generation
 			seed() : same seed gives same sequence of generated numbers per execution
 			rand()  randint() : generate random numbers
+	heapq
+		smaller version of pandas?
+		nlargest() nsmallest() : find n largest/smallest item in complex list
+		top_three = heapq.nlargest(3, [32, 44, 76, 89, 67, 26, 92, 54])
+		print(top_three) -> [92, 89, 76]
+		stocks = [
+			{'ticker': 'AAPL', 'price': 291},
+			{'ticker': 'GOOG', 'price': 800},
+			{'ticker': 'F', 'price': 54},
+			{'ticker': 'MSFT', 'price': 313}
+		]
+		bottom_two = heapq.nsmallest(2, stocks, key=lambda x: x['price'])
+		print(bottom_two) -> [{'ticker': 'F', 'price': 54}, {'ticker': 'AAPL', 'price': 291}]
 	pandas
 
 web module : web analytics
@@ -122,3 +135,9 @@ standard module
 		save python object with compression
 		no security
 		dump() load()
+	struct
+		convert data to/from bytes format, used in network
+		pack() unpack() calculate()
+	collections
+		get statistics about data structure
+		Counter()

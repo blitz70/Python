@@ -24,16 +24,16 @@ built-in functions
 		used for string form object conversion
 	exec() : eval+ version, evaluate a string and compile&execute its content meaning, no security
 		can define variables and functions
+	str() int() float() bin() : change to string/integer/float/binary data type
 	split() : split string to list
 		my_list = 'some\nstring'.split('\n')
 		print(my_list)
 	min() max() : return lesser/greater value
 	replace() : replace part of string to another
-	sorted() : with operator module, can be used to sort dictionary
-		import operator
-		old = {...}
-		new = sorted(old.items(),key=operator.itemgetter(1))
-	abs() round() str() int() float()
+	sorted() : sort iterable
+	list() : create empty list or from iterable
+	map() : perform function on iterable
+	abs() round() 
 
 loop
 	for loop
@@ -247,8 +247,6 @@ data structures
 				my_dictionary.keys() : list of keys
 				my_dictionary.values() : list of values
 			key must be string, value can be another data structure
-			not ordered but can be sorted using zip() and sorted()
-				sorted(zip(....values(), ....keys()))
 		zip
 			combine two lists with index matched
 			drops left overs
@@ -265,6 +263,15 @@ data structures
 			print(middle)
 		my_avg([5, 23, 55, 27, 90])
 		my_avg([45, 66, 28, 5, 23, 55, 27, 90, 28])
+	search/sort
+		heapq : for complex list
+			nlargest() nsmallest()
+		zip() + sorted() + lambda/operator : for dictionary
+			for multi keys
+				sorted(list, key=operator.itemgetter(key1, key2,...))
+				sorted(list, key=lambda x:(x[key1], x[key2],...))
+		collections
+			Counter()
 
 csv
 	code
@@ -306,3 +313,15 @@ python 2to3
 	convert python 2 code to 3 code
 	python 2to3.py -w targetfile
 	-w : commit and backup, else show only
+
+binary operation
+	bin() : convert number to binary string
+	and(&)
+		b1 = 50       # 110010
+		b2 = 25       # 011001
+		b3 = b1 & b2  # 010000
+	or(|)
+		b4 = b1 | b2  # 111011
+	shift(>>right, <<left)
+		b5 = 138      # 10001010
+		b6 = b5>>2    # 00100010
