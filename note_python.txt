@@ -272,6 +272,9 @@ data structures
 				sorted(list, key=lambda x:(x[key1], x[key2],...))
 		collections
 			Counter()
+		custom object
+			sorted(list, key=operator.attrgetter('u_id'))
+			sorted(users, key=lambda x: (x.u_sex, x.u_age))
 
 csv
 	code

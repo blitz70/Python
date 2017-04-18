@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41fb8f73-2856-40da-9706-f7dadd4510fa" name="Default" comment="code update : thenewboston">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b49_struct.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b50_map.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b51_binary_op.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b52_search_sort1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b53_search_sort2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b54_search_sort3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note_module.txt" afterPath="$PROJECT_DIR$/note_module.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note_python.txt" afterPath="$PROJECT_DIR$/note_python.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b41_sort_dictionary.py" afterPath="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +21,7 @@
     <favorites_list name="Python" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,6 +98,7 @@
         <option value="$PROJECT_DIR$/thenewboston/b54_search_sort3.py" />
         <option value="$PROJECT_DIR$/thenewboston/b52_search_sort1.py" />
         <option value="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" />
+        <option value="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
       </list>
     </option>
   </component>
@@ -131,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -145,22 +138,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thenewboston" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,25 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.b55_search_sort4">
-    <configuration default="false" name="b52_search_sort" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="D:\CODE\GIT\Python\thenewboston\b52_search_sort1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.b56_search_sort5">
     <configuration default="false" name="b52_search_sort1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,6 +235,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="b56_search_sort5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -375,19 +355,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.b52_search_sort" />
-      <item index="1" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
+      <item index="0" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.b56_search_sort5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.b52_search_sort" />
+        <item index="0" class="java.lang.String" itemvalue="Python.b56_search_sort5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
+        <item index="2" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -467,7 +447,7 @@
   <component name="ToolWindowManager">
     <frame x="648" y="0" width="720" height="740" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36865672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37910447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3558776" sideWeight="0.506006" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -529,13 +509,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s43_threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sentdex_basics/s53_network2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -745,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-1120166012/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="3632" column="9" lean-forward="false" selection-start-line="3632" selection-start-column="9" selection-end-line="3632" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/heapq.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -792,31 +758,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b55_dictionary_sort2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b55_dictionary_sort2.py" />
     <entry file="file://$PROJECT_DIR$/thenewboston/b52_search_sort1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b55_search_sort4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,6 +780,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b55_search_sort4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-1120166012/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="794" column="8" lean-forward="false" selection-start-line="794" selection-start-column="8" selection-end-line="794" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thenewboston/b56_search_sort5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
