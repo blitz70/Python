@@ -2,9 +2,116 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41fb8f73-2856-40da-9706-f7dadd4510fa" name="Default" comment="code update : thenewboston">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask/nb01.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask/static/nb.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask/templates/nb_files.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask/templates/nb_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Flask/templates/nb_urls.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/note_flask.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s02.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s03.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s04.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s05_while.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s06_for.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s07_if1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s08_if2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s09_if3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s10_function1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s11_function2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s12_function3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s13_global.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s16_file1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s17_file2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s18_file3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s19_class.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s20_1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s20_2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s21_input.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s22_module1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s23_module2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s24_module3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s24_module3a.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s25_list1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s26_list2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s27_list3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s28.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s28_csv.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s29_error.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s30.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s31_dictionary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s32_builtin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s33_os.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s34_sys.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s35_urllib.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s36_regex.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s37_parse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s38_tkinter1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s39_tkinter2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s40_tkinter3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s41_tkinter4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s42_tkinter5.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s43_threading.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s44_exe.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s45.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s45_subprocess.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s46.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s46_matplotlib1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s52_network1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s53_network2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s54_network3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s55_network4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s56_network5.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s58_2to3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s58_2to3.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s59.pickle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s59_pickle.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s60_eval.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentdex_basics/s61_exec.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note_python.txt" afterPath="$PROJECT_DIR$/note_python.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/note_python.txt" afterPath="$PROJECT_DIR$/note_core.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sentdex_sqlite3/s01_intro.py" afterPath="$PROJECT_DIR$/Core/sqlite3/s01_intro.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sentdex_sqlite3/s02_insert.py" afterPath="$PROJECT_DIR$/Core/sqlite3/s02_insert.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sentdex_sqlite3/s03_select.py" afterPath="$PROJECT_DIR$/Core/sqlite3/s03_select.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sentdex_sqlite3/s04_data_visualization.py" afterPath="$PROJECT_DIR$/Core/sqlite3/s04_data_visualization.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sentdex_sqlite3/s05_update_delete.py" afterPath="$PROJECT_DIR$/Core/sqlite3/s05_update_delete.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b10.py" afterPath="$PROJECT_DIR$/Core/basics/b10.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b13_return.py" afterPath="$PROJECT_DIR$/Core/basics/b13_return.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b17_arg_number.py" afterPath="$PROJECT_DIR$/Core/basics/b17_arg_number.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b18_arg_unpack.py" afterPath="$PROJECT_DIR$/Core/basics/b18_arg_unpack.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b22_web1.py" afterPath="$PROJECT_DIR$/Core/basics/b22_web1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b24_web2.py" afterPath="$PROJECT_DIR$/Core/basics/b24_web2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b25_web_crawl.py" afterPath="$PROJECT_DIR$/Core/basics/b25_web_crawl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b28_exception.py" afterPath="$PROJECT_DIR$/Core/basics/b28_exception.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b29_class1.py" afterPath="$PROJECT_DIR$/Core/basics/b29_class1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b30_class2.py" afterPath="$PROJECT_DIR$/Core/basics/b30_class2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b31_class3.py" afterPath="$PROJECT_DIR$/Core/basics/b31_class3.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b32_class4.py" afterPath="$PROJECT_DIR$/Core/basics/b32_class4.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b33_class5.py" afterPath="$PROJECT_DIR$/Core/basics/b33_class5.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b34_threading.py" afterPath="$PROJECT_DIR$/Core/basics/b34_threading.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b35_word_counter.py" afterPath="$PROJECT_DIR$/Core/basics/b35_word_counter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py" afterPath="$PROJECT_DIR$/Core/basics/b38_unpack_elastic.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b39_zip.py" afterPath="$PROJECT_DIR$/Core/basics/b39_zip.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b40_lambda.py" afterPath="$PROJECT_DIR$/Core/basics/b40_lambda.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b42_image1.py" afterPath="$PROJECT_DIR$/Core/basics/b42_image1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b45_image2.py" afterPath="$PROJECT_DIR$/Core/basics/b45_image2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b47_image3.py" afterPath="$PROJECT_DIR$/Core/basics/b47_image3.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b48_image4.py" afterPath="$PROJECT_DIR$/Core/basics/b48_image4.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b49_struct.py" afterPath="$PROJECT_DIR$/Core/basics/b49_struct.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b50_map.py" afterPath="$PROJECT_DIR$/Core/basics/b50_map.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b51_binary_op.py" afterPath="$PROJECT_DIR$/Core/basics/b51_binary_op.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b52_search_sort1.py" afterPath="$PROJECT_DIR$/Core/basics/b52_search_sort1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b53_search_sort2.py" afterPath="$PROJECT_DIR$/Core/basics/b53_search_sort2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b54_search_sort3.py" afterPath="$PROJECT_DIR$/Core/basics/b54_search_sort3.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" afterPath="$PROJECT_DIR$/Core/basics/b55_search_sort4.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" afterPath="$PROJECT_DIR$/Core/basics/b56_search_sort5.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/pic_big.jpg" afterPath="$PROJECT_DIR$/Core/basics/pic_big.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/pic_death.jpg" afterPath="$PROJECT_DIR$/Core/basics/pic_death.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/pic_land.jpg" afterPath="$PROJECT_DIR$/Core/basics/pic_land.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/pic_rgb.jpg" afterPath="$PROJECT_DIR$/Core/basics/pic_rgb.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/thenewboston/pic_small.jpg" afterPath="$PROJECT_DIR$/Core/basics/pic_small.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,6 +134,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -38,6 +146,7 @@
       <find>Image</find>
       <find>BLUR</find>
       <find>map</find>
+      <find>title</find>
     </findStrings>
     <dirStrings>
       <dir>D:\CODE\GIT\Python\sentdex_basics</dir>
@@ -54,16 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sentdex1/s43_threading.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b21_tuna.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b21.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b22.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b23.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b24.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b25.py" />
-        <option value="$PROJECT_DIR$/thenewboston/b25.txt" />
-        <option value="$PROJECT_DIR$/thenewboston/b25_webcrawler.py" />
-        <option value="$PROJECT_DIR$/note_module.txt" />
         <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/thenewboston/b28_exception.py" />
         <option value="$PROJECT_DIR$/thenewboston/b29_classes_objects.py" />
@@ -99,13 +198,29 @@
         <option value="$PROJECT_DIR$/thenewboston/b52_search_sort1.py" />
         <option value="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" />
         <option value="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
+        <option value="$PROJECT_DIR$/Flask/nb_01.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Flask/nb01_routing_variables.py" />
+        <option value="$PROJECT_DIR$/Flask/nb02_passing_variables.py" />
+        <option value="$PROJECT_DIR$/Flask/nb03_get_post.py" />
+        <option value="$PROJECT_DIR$/Flask/templates/google.html" />
+        <option value="$PROJECT_DIR$/Flask/templates/naver.html" />
+        <option value="$PROJECT_DIR$/Flask/nb04_html_templates.py" />
+        <option value="$PROJECT_DIR$/Flask/static/style.css" />
+        <option value="$PROJECT_DIR$/Flask/templates/profile.html" />
+        <option value="$PROJECT_DIR$/Flask/nb04_html_files.py" />
+        <option value="$PROJECT_DIR$/Flask/templates/thenewboston.html" />
+        <option value="$PROJECT_DIR$/Flask/templates/thenewboston2.html" />
+        <option value="$PROJECT_DIR$/Flask/templates/nb_files.html" />
+        <option value="$PROJECT_DIR$/Flask/nb01.py" />
+        <option value="$PROJECT_DIR$/Flask/templates/nb_list.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="648" />
     <option name="width" value="720" />
-    <option name="height" value="740" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,7 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,19 +255,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CODE\GIT\Python\thenewboston" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CODE\GIT\Python\Core\basics" />
+      <recent name="D:\CODE\GIT\Python\Core" />
       <recent name="D:\CODE\GIT\Python\me" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODE\GIT\Python\Flask\templates" />
+      <recent name="D:\CODE\GIT\Python\Flask" />
+      <recent name="D:\CODE\GIT\Python\thenewboston" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -167,92 +287,92 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.b56_search_sort5">
-    <configuration default="false" name="b52_search_sort1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.nb01">
+    <configuration default="false" name="nb02_passing_variables" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b52_search_sort1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flask/nb02_passing_variables.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b54_search_sort3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="nb03_get_post" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b54_search_sort3.py" />
+      <option name="SCRIPT_NAME" value="D:\CODE\GIT\Python\Flask\nb03_http_methods.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b53_search_sort2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="nb04_html_templates" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b53_search_sort2.py" />
+      <option name="SCRIPT_NAME" value="D:\CODE\GIT\Python\Flask\nb04_html_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b55_search_sort4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="nb04_html_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b55_search_sort4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flask/nb04_html_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="b56_search_sort5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="nb01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thenewboston" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thenewboston/b56_search_sort5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flask/nb01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,19 +475,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
-      <item index="2" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
-      <item index="4" class="java.lang.String" itemvalue="Python.b56_search_sort5" />
+      <item index="0" class="java.lang.String" itemvalue="Python.nb02_passing_variables" />
+      <item index="1" class="java.lang.String" itemvalue="Python.nb03_get_post" />
+      <item index="2" class="java.lang.String" itemvalue="Python.nb04_html_templates" />
+      <item index="3" class="java.lang.String" itemvalue="Python.nb04_html_files" />
+      <item index="4" class="java.lang.String" itemvalue="Python.nb01" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.b56_search_sort5" />
-        <item index="1" class="java.lang.String" itemvalue="Python.b55_search_sort4" />
-        <item index="2" class="java.lang.String" itemvalue="Python.b54_search_sort3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.b53_search_sort2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.b52_search_sort1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.nb01" />
+        <item index="1" class="java.lang.String" itemvalue="Python.nb04_html_files" />
+        <item index="2" class="java.lang.String" itemvalue="Python.nb04_html_templates" />
+        <item index="3" class="java.lang.String" itemvalue="Python.nb03_get_post" />
+        <item index="4" class="java.lang.String" itemvalue="Python.nb02_passing_variables" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -445,18 +565,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="648" y="0" width="720" height="740" extended-state="0" />
+    <frame x="648" y="0" width="720" height="741" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37910447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40149254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3558776" sideWeight="0.506006" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3488746" sideWeight="0.493994" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33172303" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3494364" sideWeight="0.493994" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26426426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -509,75 +629,19 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s53_network2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b34_threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b22_web1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s36_regex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s42.jpg">
+    <entry file="file://$PROJECT_DIR$/Core/basics/pic_small.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/p_defend.jpg" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/p_attack.jpg" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/b40_lambda.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b42_pillow.py" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/pokemon.jpg" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/t.bmp" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/pic_big.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/rgb.gif" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/pic_rgb.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/pic_small.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b24_web2.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b24_web2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
           <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b25_web_crawl.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b25_web_crawl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-285">
           <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
@@ -599,7 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b42_image1.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b42_image1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -613,14 +677,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b45_image2.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b45_image2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b47_image3.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b47_image3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -634,35 +698,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b48_image4.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b48_image4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s38_tkinter1.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/s38_tkinter1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s39_tkinter2.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/s39_tkinter2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-145">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s40_tkinter3.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/s40_tkinter3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-273">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s41_tkinter4.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/s41_tkinter4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-520">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -676,7 +740,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentdex_basics/s42_tkinter5.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/s42_tkinter5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
@@ -704,14 +768,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b38_unpack_elastic.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b38_unpack_elastic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b39_zip.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b39_zip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -726,28 +790,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thenewboston/b41_sort_dictionary.py" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/b35_word_counter.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b35_word_counter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="40" column="81" lean-forward="false" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b49_struct.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b49_struct.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b50_map.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b50_map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b51_binary_op.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b51_binary_op.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -762,47 +826,158 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thenewboston/b55_dictionary_sort2.py" />
-    <entry file="file://$PROJECT_DIR$/thenewboston/b52_search_sort1.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b52_search_sort1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b54_search_sort3.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b54_search_sort3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b53_search_sort2.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b53_search_sort2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b55_search_sort4.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b55_search_sort4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="43" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-1120166012/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="794" column="8" lean-forward="false" selection-start-line="794" selection-start-column="8" selection-end-line="794" selection-end-column="8" />
+        <state relative-caret-position="199">
+          <caret line="475" column="4" lean-forward="false" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thenewboston/b56_search_sort5.py">
+    <entry file="file://$PROJECT_DIR$/Core/basics/b56_search_sort5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="437">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note_core.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/flask/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/templates/naver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="2" column="1273" lean-forward="false" selection-start-line="2" selection-start-column="1273" selection-end-line="2" selection-end-column="1273" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/templates/google.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/nb02_passing_variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/nb03_http_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/nb04_html_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/static/nb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/templates/nb_files.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="77" lean-forward="false" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/templates/nb_urls.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/templates/nb_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Flask/nb01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="51" column="60" lean-forward="true" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note_flask.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

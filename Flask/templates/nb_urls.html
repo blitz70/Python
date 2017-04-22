@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% if logged_name %}
+<title>{{logged_name}}'s home</title>
+<h1>{{logged_name}} Welcome back!</h1>
+{% else %}
+<title>Not logged</title>
+<h1>Please log in</h1>
+{% endif %}

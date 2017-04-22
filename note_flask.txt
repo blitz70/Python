@@ -1,0 +1,59 @@
+pip install flask
+
+intro
+	from flask import Flask
+	app = Flask(__name__)
+	...
+	routed functions
+	...
+	if __name__ == '__main__':
+		app.run(debug=True)
+
+routing : link url to a function
+	@app.route('/author')
+	def author():
+    	return '<h2>Blitz love Python!</h2>'
+
+passing variables : url with variable
+	@app.route('/post/<int:post_id>')
+	def post(post_id):
+		return "This is the contend of post {}".format(post_id)
+
+HTTP methods : post get
+	from flask import Flask, request
+	@app.route('/methods', methods=['GET', 'POST'])
+	def methods():
+		if request.method == 'POST':
+			return "Your request method is POST"
+		else:
+			return '''Your request method is GET
+			<form action='/methods' method='POST'>
+				Press OK!<br>
+				<input type='submit' value='OK'/>
+			</form>'''
+
+HTML files: web file rendering
+[code]
+	from flask import Flask, render_template
+	@app.route('/profile/<name>')
+	def profile(name):
+		return render_template("profile.html", name=name)
+[templates/profile.html]
+	<!DOCTYPE html>
+	<title>{{name}}'s home</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<h1>{{name}}</h1>
+	<h2>Welcome back!</h2>
+[static/style.css]
+	h2 {color: deepskyblue;}
+
+HTML scripting
+	{{ ... }} : variable passed from python to html
+	{% ... %} : Python code in html
+		{% if ... %}
+		...html...
+		{% else %}
+		{% endif %}
+		{% for ... %}
+		...html...
+		{% endfor %}
