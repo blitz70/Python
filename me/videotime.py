@@ -9,8 +9,12 @@ with open('time.txt') as csvfile:
     mins = 0
     secs = 0
     for t in readCSV:
+        # skip blank line and comments
         if not t:
-           pass #skip blank line
+            pass
+        elif t[0][0] == '#':
+            pass
+        # count time
         else:
             if len(t)>2:
                 hrs += int(t[0])
