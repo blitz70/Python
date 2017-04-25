@@ -32,21 +32,21 @@ HTTP methods : post get
 				<input type='submit' value='OK'/>
 			</form>'''
 
-HTML files: web file rendering
-[code]
+[HTML files]
+web file rendering
+code
 	from flask import Flask, render_template
 	@app.route('/profile/<name>')
 	def profile(name):
 		return render_template("profile.html", name=name)
-[templates/profile.html]
+templates/profile.html
 	<!DOCTYPE html>
 	<title>{{name}}'s home</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 	<h1>{{name}}</h1>
 	<h2>Welcome back!</h2>
-[static/style.css]
+static/style.css
 	h2 {color: deepskyblue;}
-
 HTML scripting
 	{{ ... }} : variable passed from python to html
 	{% ... %} : Python code in html
@@ -57,3 +57,7 @@ HTML scripting
 		{% for ... %}
 		...html...
 		{% endfor %}
+
+Hosting
+	https://pythonprogramming.net/creating-first-flask-web-app/
+	https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps

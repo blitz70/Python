@@ -1,74 +1,9 @@
+# Python thenewboston 6h 13m
+# Python sendtex 8h 50m
+# Python K-MOOC 13h 34m
+# Python Boot Camp 11h 4m
 # Django sendtex 2h 54m
 # Django thenewboston 4h 56m
-# Flask sentdex 8h 42m
-
-13:49
-
-20:42
-
-19:17
-
-22:24
-
-15:55
-
-14:52
-
-12:55
-
-16:53
-
-11:10
-
-11:52
-
-17:16
-
-14:14
-
-12:57
-
-7:18
-
-12:57
-
-20:25
-
-17:14
-
-10:39
-
-12:36
-
-11:38
-
-13:48
-
-17:02
-
-18:13
-
-9:58
-
-13:03
-
-11:18
-
-19:00
-
-16:55
-
-15:51
-
-6:06
-
-12:56
-
-17:18
-
-11:11
-
-33:14
-
-9:54
-
+# Flask sentdex 2h 4m, 8h 42m
+# Flask thenewboston 44m
+# Flask Pretty Printed 15h 3m
