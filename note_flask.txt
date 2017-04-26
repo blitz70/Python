@@ -32,32 +32,56 @@ HTTP methods : post get
 				<input type='submit' value='OK'/>
 			</form>'''
 
-[HTML files]
-web file rendering
-code
-	from flask import Flask, render_template
-	@app.route('/profile/<name>')
-	def profile(name):
-		return render_template("profile.html", name=name)
-templates/profile.html
-	<!DOCTYPE html>
-	<title>{{name}}'s home</title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-	<h1>{{name}}</h1>
-	<h2>Welcome back!</h2>
-static/style.css
-	h2 {color: deepskyblue;}
-HTML scripting
-	{{ ... }} : variable passed from python to html
-	{% ... %} : Python code in html
-		{% if ... %}
-		...html...
-		{% else %}
-		{% endif %}
-		{% for ... %}
-		...html...
-		{% endfor %}
+HTML files
+	code
+		from flask import Flask, render_template
+		@app.route('/profile/<name>')
+		def profile(name):
+			return render_template("profile.html", name=name)
+	templates/profile.html
+		<!DOCTYPE html>
+		<title>{{name}}'s home</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+		<h1>{{name}}</h1>
+		<h2>Welcome back!</h2>
+	static/style.css
+		h2 {color: deepskyblue;}
+	HTML scripting
+		{{ ... }} : variable passed from python to html
+		{% ... %} : Python code in html
+			{% if ... %}
+			...html...
+			{% else %}
+			{% endif %}
+			{% for ... %}
+			...html...
+			{% endfor %}
 
 Hosting
-	https://pythonprogramming.net/creating-first-flask-web-app/
-	https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+	Tools
+		PuTTY
+		Win-SCP : Advanced-Environment-SCP/Shell-Shell sudo su -
+	Default
+		sudo apt-get update
+		sudo apt-get upgrade
+		sudo apt-get install apache2 mysql-client mysql-server
+	Python3
+		sudo apt-get install python3 python3-pip libapache2-mod-wsgi-py3
+		sudo ln -s /usr/bin/python3 /usr/bin/python
+		sudo a2enmod wsgi
+	Flask-local : Flask in virtual environment at localhost
+		make project directory /var/www/FlaskApp/FlaskApp
+			FlaskApp static templates __init__.py
+		sudo pip3 install --upgrade pip
+		sudo pip3 install virtualenv
+		sudo virtualenv venv
+		sudo chown -R ubuntu:ubuntu venv
+		source venv/bin/activate
+		pip3 install Flask
+		python __init__.py
+	Flask-web : when Flask-local works
+		deactivate
+		sudo nano /etc/apache2/sites-available/FlaskApp.conf
+		sudo nano /var/www/FlaskApp/flaskapp.wsgi
+		sudo service apache2 restart
+		check public ip on browser
