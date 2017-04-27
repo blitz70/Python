@@ -59,8 +59,13 @@ HTML files
 
 Hosting
 	Tools
-		PuTTY
-		Win-SCP : Advanced-Environment-SCP/Shell-Shell sudo su -
+		PuTTY, Win-SCP
+	Note
+		File encoding : utf-8
+		Win-SCP permission
+			Advanced-Environment-SCP/Shell-Shell sudo su -
+		Code change server auto reload
+			app.config.update(TEMPLATES_AUTO_RELOAD = True)
 	Default
 		sudo apt-get update
 		sudo apt-get upgrade

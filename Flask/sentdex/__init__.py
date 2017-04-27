@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
+app.config.update(TEMPLATES_AUTO_RELOAD = True)
 
 @app.route('/')
 def homepage():
-    return "Hello Python3 Flask on AWS! by BLITZ"
+    return render_template('main.html')
 
 
 if __name__ == "__main__":
