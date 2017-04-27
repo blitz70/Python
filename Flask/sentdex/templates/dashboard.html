@@ -1,0 +1,30 @@
+{% extends 'header.html' %}
+
+{% block body %}
+
+<div>
+
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#Basics" aria-controls="Basics" role="tab" data-toggle="tab">Basics</a></li>
+		<li role="presentation"><a href="#webdev" aria-controls="webdev" role="tab" data-toggle="tab">Web Development</a></li>
+		<li role="presentation"><a href="#dataanal" aria-controls="dataanal" role="tab" data-toggle="tab">Data Analysis</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="Basics">
+			<ul>
+				<li>Basics 1</li>
+				<li>Basics 2</li>
+				<li>Basics 3</li>
+				<li>Basics 4</li>
+			</ul>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="webdev">Web Development content...</div>
+		<div role="tabpanel" class="tab-pane fade" id="dataanal">Data Analysis content...</div>
+	</div>
+
+</div>
+
+{% endblock %}
