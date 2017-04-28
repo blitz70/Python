@@ -23,90 +23,34 @@
 				<div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
 					<h5>
 					<a href="/support-donate/"> <span class="glyphicon glyphicon-heart"></span> Support   </a>	
-					<a role="presentation" data-toggle="modal" data-target="#exampleModal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login   </a>
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-									<h4 class="modal-title" id="exampleModalLabel">Login</h4>
-								</div>
-								<div class="modal-body">
-									<div class="container-fluid">
-										<form action="" class="form-inline" method="post">
-											<input type="text" class="form-control" placeholder="Username" name="username" value="">
-											<input type="password" class="form-control" placeholder="Password" name="password" value="">
-											<input class="btn btn-primary" type="submit" value="Login">
-										</form>
-										<div class="container">
-											<br>
-											<p>No account? <a href='/register'>Register here</a>.</p>
-											<br>
-										 </div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a role="presentation" class="active" data-toggle="modal" data-target="#register" href="#"><span class="glyphicon glyphicon-pencil"></span> Sign up</a><h5>
-					<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-									<h4 class="modal-title" id="exampleModalLabel">Register</h4>
-								</div>
-								<div class="modal-body">
-									<div class="container">
-										<form method=post action="/register">
-										<dl>
-							
-  <dt><label for="username">Username</label>
-  <dd><input id="username" name="username" type="text" value="">
-  
-  </dd>
-
-							
-  <dt><label for="email">Email Address</label>
-  <dd><input id="email" name="email" type="text" value="">
-  
-  </dd>
-
-							
-  <dt><label for="password">New Password</label>
-  <dd><input id="password" name="password" type="password" value="">
-  
-  </dd>
-
-							
-  <dt><label for="confirm">Repeat Password</label>
-  <dd><input id="confirm" name="confirm" type="password" value="">
-  
-  </dd>
-
-							
-  <dt><label for="accept_tos">I accept the <a href="/about/tos" target="blank">Terms of Service</a> and <a href="/about/privacy-policy" target="blank">Privacy Notice</a> (updated Jan 22, 2015)</label>
-  <dd><input id="accept_tos" name="accept_tos" type="checkbox" value="y">
-  
-  </dd>
-
-										</dl>
-										<p><input type=submit value=Register>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login   </a>
+					<a href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a><h5>
 				</div>
 			</ul>
 		</div>
 	</header>
 	<body>
 		<h1 align="center">Python3+Flask+AWS by BLITZ !!!</h1>
-		<div class="container-fluid" style="height:100%">
+		<div class="container-fluid" style="min-height:100% width:80%">
+
+{% with flash_msgs = get_flashed_messages() %}
+	{% if flash_msgs %}
+		{% for msg in flash_msgs%}
+
+			<div class="container-fluid alert alert-success alert-dismissible" role="alert" style="width:50%">
+				<button type="button" class="close" data-dismiss = "alert">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				</button>
+				{{ msg }}
+			</div>
+		
+		{% endfor%}
+	{% endif%}
+{% endwith %}
+		
 {% block body %}
 {% endblock %}
+
 		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
