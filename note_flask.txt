@@ -56,11 +56,16 @@ HTML files
 			{% for ... %}
 			...html...
 			{% endfor %}
+	Page extension/inheritance
+		Get other page add extra and use it1
+		{% extends 'parent.html' %} : get and use parent.html template as child template
+		{% block body %} : use parent code before block
+		child html : use child code within block
+		{% endblock %} : use parent code after block
 
 Hosting
 	Tools
 		PuTTY, Win-SCP
-		bootstrap, jQuery
 	Note
 		File encoding : utf-8
 		Win-SCP permission
@@ -70,6 +75,8 @@ Hosting
 		Routing
 			End URL with '/' : accepts URL request both with or without ending '/'
 			Multi routing : can route multiple URL to same function
+		Import
+			When importing modules add '.' infront of module name
 	Default
 		sudo apt-get update
 		sudo apt-get upgrade
@@ -94,3 +101,7 @@ Hosting
 		sudo nano /var/www/FlaskApp/flaskapp.wsgi
 		sudo service apache2 restart
 		check public ip on browser
+
+Bootstrap
+	Front end, CSS & JavaScript framework by Twitter
+	Used to spice up webpage

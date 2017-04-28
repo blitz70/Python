@@ -10,4 +10,4 @@
 ## Flask ([notes](https://github.com/blitz70/Python/blob/master/note_flask.txt))
 
 * [thenewboston](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_)
-
+* [sentdex](https://www.youtube.com/playlist?list=PLQVvvaa0QuDc_owjTbIY4rbgXOFkUYOUB)
