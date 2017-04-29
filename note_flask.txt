@@ -38,6 +38,15 @@ HTTP methods : post get
 				<input type='submit' value='OK'/>
 			</form>'''
 
+Redirect : sending user to another URL
+	from flask import Flask, redirect, url_for
+	@app.route('/jumped/')
+	def landed():
+		return 'I jumped!'
+	@app.route('/jump/')
+	def jump_page():
+		return redirect(url_for('landed'))
+
 HTML files
 	code
 		from flask import Flask, render_template
@@ -121,6 +130,23 @@ Hosting
 		sudo nano /var/www/FlaskApp/flaskapp.wsgi
 		sudo service apache2 restart
 		check public ip on browser
+	MySQL : database for storing data
+		Login : sudo mysql -u root -p
+		Reset root password
+			https://support.rackspace.com/how-to/mysql-resetting-a-lost-mysql-root-password/
+		DB
+			SHOW DATABASES;
+			CREATE DATABASE pythonprogramming;
+			USE pythonprogramming
+			CREATE TABLE users (uid INT(11) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), password VARCHAR(100), email VARCHAR(50), settings VARCHAR(32500), tracking VARCHAR(32500), rank INT(3));
+			DESCRIBE users;
+		Python
+			Install PyMySQL in virtualenv
+			import pymysql
+			def connect():
+				conn = pymysql.connect(host='localhost', user='root', password='mysql', db='pythonprogramming')
+				c = conn.cursor()
+				return c, conn
 
 Bootstrap
 	Overview
