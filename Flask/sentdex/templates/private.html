@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+
+{% block body %}
+
+<div class="container-fluid" align="center">
+	<h1>Home of {{ user }}</h1>
+	<br>
+	<a href="/dashboard/">
+		<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-off" aria-hidden="true"></span> Dashboard
+		</button>
+	</a>
+	<a href="/logout/">
+		<button type="button" class="btn btn-warning">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Log-out
+		</button>
+	</a>
+</div>
+
+
+{% endblock %}

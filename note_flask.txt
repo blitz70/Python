@@ -92,10 +92,6 @@ Flash
 		{% endif%}
 		{% endwith %}
 
-flask_wtf : flask form module
-	from wtforms import Form, validators, BooleanField, StringField, PasswordField
-	create custom class with Form as parent
-
 Hosting
 	Tools
 		PuTTY, Win-SCP
@@ -130,11 +126,11 @@ Hosting
 			pip3 install ...
 			deactivate
 		Packages
-			Flask : web framework
-			PyMySQL : database conncector module, MySQL Python3 
-			flask-WTF : flask form module
-			passlib : security module, password encryption
-				Flask-local : check Flask working in venv
+			Flask
+			PyMySQL 
+			flask-WTF
+			passlib
+	Flask-local : check Flask working in venv
 		Files
 			/var/www/FlaskApp/FlaskApp
 				static/ templates/ __init__.py
@@ -155,12 +151,37 @@ Hosting
 			USE pythonprogramming
 			CREATE TABLE users (uid INT(11) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), password VARCHAR(100), email VARCHAR(50), settings VARCHAR(32500), tracking VARCHAR(32500), rank INT(3));
 			DESCRIBE users;
-		Python
+	Modules/packages : modules used when hosting web server
+		PyMySQL : database conncector module, MySQL Python3
 			import pymysql
 			def connect():
-				conn = pymysql.connect(host='localhost', user='root', password='mysql', db='pythonprogramming')
+				conn = pymysql.connect(...)
 				c = conn.cursor()
 				return c, conn
+		flask_WTF : flask form module, http://flask.pocoo.org/docs/0.10/patterns/wtforms/
+			from wtforms import Form, validators, BooleanField, StringField, PasswordField
+			class RegisterForm(Form):
+				...
+		passlib : security module, password encryption
+			from passlib.hash import sha256_crypt
+			hash = sha256_crypt.encrypt(password)
+			sha256_crypt.verify(hash, password)
+
+		functools : wrapper
+			from functools import wraps
+			def login_required(f):
+				@wraps(f)
+				def wrap(*args, **kwargs):
+					if session['logged'] is True:
+						return f(*args, **kwargs)
+					else:
+						flash('Members only, login please')
+						return redirect(url_for('login'))
+				return wrap
+			@app.route('/private/')
+			@login_required
+			def private():
+				return render_template('private.html', user=session['user'])
 
 Bootstrap
 	Overview

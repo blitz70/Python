@@ -1,9 +1,11 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 
 from wtforms import Form, validators, BooleanField, StringField, PasswordField
-from passlib.hash import sha256_crypt
-from pymysql import escape_string
+from passlib.hash import sha256_crypt as en
+from pymysql import escape_string as es
 import gc
+
+from functools import wraps
 
 from .content_management import content
 from .db_connect import connect
@@ -20,25 +22,33 @@ def homepage():
 @app.route('/dashboard/')
 def dashboard():
     topics_dict = content()
-    return render_template('dashboard.html', topics_dict=topics_dict)
+    return render_template('dashboard.html', topics_dict=topics_dict, user=session['user'])
 
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     try:
         if request.method == 'POST':
-            user_name = request.form['username']
-            user_password = request.form['userpassword']
-            if user_name == 'admin' and user_password == 'pass':
-                flash(' '.join(['N:', str(user_name), ', P:', str(user_password)]))
-                return redirect(url_for('dashboard'))
-            else:
-                flash(' '.join(['N:', str(user_name), ', P:', str(user_password)]))
-                return render_template('login.html', error='Wrong credentials, try again.')
-        else:
-            return render_template('login.html')
+            user_name = es(request.form['username'])
+            user_password = es(request.form['userpassword'])
+            c, conn = connect()
+            data_e = c.execute("SELECT * FROM users WHERE username = (%s)", (user_name, ))
+            data_f = c.fetchone()
+            c.close()
+            conn.close()
+            gc.collect()
+            if data_e > 0:
+                if en.verify(user_password, data_f[2]):
+                    session['logged'] = True
+                    session['user'] = user_name
+                    flash(''.join(['Welcome back ', str(user_name), '!']))
+                    # return redirect(str(data_f[5]))
+                    return redirect(url_for('dashboard'))
+            flash('Wrong credentials, try again please.')
+        return render_template('login.html')
     except Exception as e:
-        return render_template('login.html', error=e)
+        flash(' '.join(['Login error : ', str(e)]))
+        return render_template('login.html')
 
 
 class RegisterForm(Form):
@@ -58,24 +68,27 @@ def register():
     form = RegisterForm(request.form)
     try:
         if request.method == 'POST' and form.validate():
-            user_name = escape_string(form.user_name.data)
-            user_email = escape_string(form.user_email.data)
-            user_password = sha256_crypt.encrypt(escape_string(form.user_password.data))
+            user_name = es(form.user_name.data)
+            user_email = es(form.user_email.data)
+            user_password = en.encrypt(es(form.user_password.data))
             c, conn = connect()
-            sql = c.execute("SELECT * FROM users WHERE username = '{}'".format(user_name))
+            # sql = c.execute("SELECT * FROM users WHERE username = '{}'".format(user_name))
+            sql = c.execute("SELECT * FROM users WHERE username = %s", (user_name, ))
             if sql > 0:  # user exits
                 flash('That username is taken, choose another please.')
                 return render_template('register.html', form=form)
             else:  # register user
-                c.execute("INSERT INTO users (username, password, email, tracking) VALUES ('{0}', '{1}', '{2}', '{3}')".
-                    format(user_name, user_password, user_email, '/introduction-to-python-programming/'))
+                # c.execute("INSERT INTO users (username, password, email, tracking) VALUES ('{0}', '{1}', '{2}', '{3}')".
+                #    format(user_name, user_password, user_email, '/introduction-to-python-programming/'))
+                c.execute("INSERT INTO users (username, password, email, tracking) VALUES (%s, %s, %s, %s)",
+                          (user_name, user_password, user_email, '/introduction-to-python-programming/'))
                 conn.commit()
                 c.close()
                 conn.close()
                 gc.collect()
-                flash('Thank you for joining, enjoy!')
                 session['logged'] = True
                 session['user'] = user_name
+                flash('Thank you for joining, enjoy!')
                 return redirect(url_for('pp1'))
         return render_template('register.html', form=form)
     except Exception as e:
@@ -83,8 +96,31 @@ def register():
         return render_template('register.html', form=form)
 
 
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if session['logged'] is True:
+            return f(*args, **kwargs)
+        else:
+            flash('Members only, login please')
+            return redirect(url_for('login'))
+    return wrap
 
 
+@app.route('/private/')
+@login_required
+def private():
+    return render_template('private.html', user=session['user'])
+
+
+@app.route('/logout/')
+@login_required
+def logout():
+    flash(''.join(['Goodbye ', session['user']]))
+    session['user'] = False
+    session['logged'] = False
+    gc.collect()
+    return redirect(url_for('dashboard'))
 
 
 
@@ -126,7 +162,9 @@ def jump_page():
 
 @app.route('/introduction-to-python-programming/')
 def pp1():
-    return 'introduction-to-python-programming'
+    return '''
+    <h1>Welcome!</h1>
+    <a href='/'>Back to home</a>'''
 
 if __name__ == "__main__":
     app.run()

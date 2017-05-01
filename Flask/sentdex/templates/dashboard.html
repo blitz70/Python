@@ -17,9 +17,7 @@
 			<ul>
 
 {% for topic in topics_dict['Python Basics'] %}
-
 				<li><a href="{{ topic[1] }}">{{ topic[0] }}</a></li>
-
 {% endfor %}
 
 			</ul>
@@ -27,6 +25,14 @@
 		<div role="tabpanel" class="tab-pane fade" id="webdevelopment">Web Development content...</div>
 		<div role="tabpanel" class="tab-pane fade" id="dataanalysis">Data Analysis content...</div>
 	</div>
+
+{% if user %}
+	<a href="/private/">
+		<button type="button" class="btn btn-success">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ user }}
+		</button>
+	</a>
+{% endif %}
 
 </div>
 
