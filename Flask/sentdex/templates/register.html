@@ -2,18 +2,36 @@
 
 {% block body %}
 
+
 <body>
 	<div class="container">
 		<br>
-		<form action="" method="post" class="form-inline">
-			<input type="text" class="form-control" placeholder="User name" name="username" value="{{ request.form.username }}" />
-			<input type="password" class="form-control" placeholder="Password" name="password" value="{{ request.form.password }}">
-			<input type="submit" class="btn btn-default" name="submit" value="Login">
+		<h4>Register:</h3>
+		<br>
+		<form action="/register/" method="post">
+			<dl>
+				{{ render_field(form.user_name) }}
+				{{ render_field(form.user_email) }}
+				{{ render_field(form.user_password) }}
+				{{ render_field(form.confirm_password) }}
+				{{ render_field(form.accept_tos) }}
+			</dl>
+			<input type="submit" class="btn btn-primary" name="submit" value="Join!">
 		</form>
-
-		<p>{{ msg }}</p>
-		<p>{{ error }}</p>
 	</div>
 </body>
 
 {% endblock %}
+
+{% macro render_field(field) %}
+<dt>{{ field.label }}</dt>
+<dd>{{ field(**kwargs)|safe }}
+	{% if field.errors %}
+	<ul class='errors'>
+		{% for error in field.errors %}
+		<li>{{ error }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</dd>
+{% endmacro %}
