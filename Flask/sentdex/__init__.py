@@ -7,7 +7,7 @@ import gc
 
 from functools import wraps
 
-from .content_management import content
+from .content_management import Content
 from .db_connect import connect
 
 app = Flask(__name__)
@@ -16,13 +16,16 @@ app.config.update(TEMPLATES_AUTO_RELOAD=True)
 
 @app.route('/')
 def homepage():
-    return render_template('main.html')
+    if session['logged'] is None:
+        session['user'] = False
+        session['logged'] = False
+    return render_template('home.html')
 
 
 @app.route('/dashboard/')
 def dashboard():
-    topics_dict = content()
-    return render_template('dashboard.html', topics_dict=topics_dict, user=session['user'])
+    topics_dict = Content()
+    return render_template('dashboard.html', topics_dict=topics_dict)
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -120,7 +123,7 @@ def logout():
     session['user'] = False
     session['logged'] = False
     gc.collect()
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('homepage'))
 
 
 

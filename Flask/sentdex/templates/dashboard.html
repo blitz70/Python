@@ -2,37 +2,28 @@
 
 {% block body %}
 
+
 <div>
 
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#pythonbasics" aria-controls="pythonbasics" role="tab" data-toggle="tab">Python Basics</a></li>
-		<li role="presentation"><a href="#webdevelopment" aria-controls="webdevelopment" role="tab" data-toggle="tab">Web Development</a></li>
-		<li role="presentation"><a href="#dataanalysis" aria-controls="dataanalysis" role="tab" data-toggle="tab">Data Analysis</a></li>
+{% for key in topics_dict %}
+		<li role="presentation"><a href="#{{ key.replace(' ', '').replace('(', '').replace(')', '') }}" aria-controls="{{ key }}" role="tab" data-toggle="tab">{{ key }}</a></li>
+{% endfor %}
 	</ul>
 
 	<!-- Tab panes -->
 	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane fade in active" id="pythonbasics">
+{% for key in topics_dict %}
+		<div role="tabpanel" class="tab-pane fade in active" id="{{ key.replace(' ', '').replace('(', '').replace(')', '') }}">
 			<ul>
-
-{% for topic in topics_dict['Python Basics'] %}
+{% for topic in topics_dict[key] %}
 				<li><a href="{{ topic[1] }}">{{ topic[0] }}</a></li>
 {% endfor %}
-
 			</ul>
 		</div>
-		<div role="tabpanel" class="tab-pane fade" id="webdevelopment">Web Development content...</div>
-		<div role="tabpanel" class="tab-pane fade" id="dataanalysis">Data Analysis content...</div>
+{% endfor %}
 	</div>
-
-{% if user %}
-	<a href="/private/">
-		<button type="button" class="btn btn-success">
-			<span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ user }}
-		</button>
-	</a>
-{% endif %}
 
 </div>
 
