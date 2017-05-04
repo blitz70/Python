@@ -12,6 +12,7 @@ from .db_connect import connect
 
 app = Flask(__name__)
 app.config.update(TEMPLATES_AUTO_RELOAD=True)
+topics_dict = Content()
 
 
 @app.route('/')
@@ -24,7 +25,6 @@ def homepage():
 
 @app.route('/dashboard/')
 def dashboard():
-    topics_dict = Content()
     return render_template('dashboard.html', topics_dict=topics_dict)
 
 
@@ -124,6 +124,13 @@ def logout():
     session['logged'] = False
     gc.collect()
     return redirect(url_for('homepage'))
+
+
+
+
+
+
+
 
 
 
