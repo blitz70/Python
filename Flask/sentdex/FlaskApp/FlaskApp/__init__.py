@@ -12,20 +12,25 @@ from .db_connect import connect
 
 app = Flask(__name__)
 app.config.update(TEMPLATES_AUTO_RELOAD=True)
+
 topics_dict = Content()
+root_path = '/FlaskTutorials'
 
 
 @app.route('/')
 def homepage():
-    if session['logged'] is None:
-        session['user'] = False
-        session['logged'] = False
-    return render_template('home.html')
+    try:
+        if session['logged'] is None:
+            session['user'] = False
+            session['logged'] = False
+    except:
+        pass
+    return render_template('home.html', root_path=root_path)
 
 
 @app.route('/dashboard/')
 def dashboard():
-    return render_template('dashboard.html', topics_dict=topics_dict)
+    return render_template('dashboard.html', topics_dict=topics_dict, root_path=root_path)
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -48,10 +53,10 @@ def login():
                     # return redirect(str(data_f[5]))
                     return redirect(url_for('dashboard'))
             flash('Wrong credentials, try again please.')
-        return render_template('login.html')
+        return render_template('login.html', root_path=root_path)
     except Exception as e:
         flash(' '.join(['Login error : ', str(e)]))
-        return render_template('login.html')
+        return render_template('login.html', root_path=root_path)
 
 
 class RegisterForm(Form):
@@ -93,10 +98,10 @@ def register():
                 session['user'] = user_name
                 flash('Thank you for joining, enjoy!')
                 return redirect(url_for('pp1'))
-        return render_template('register.html', form=form)
+        return render_template('register.html', form=form, root_path=root_path)
     except Exception as e:
         flash(' '.join(['Registration error : ', str(e)]))
-        return render_template('register.html', form=form)
+        return render_template('register.html', form=form, root_path=root_path)
 
 
 def login_required(f):
@@ -113,7 +118,7 @@ def login_required(f):
 @app.route('/private/')
 @login_required
 def private():
-    return render_template('private.html', user=session['user'])
+    return render_template('private.html', user=session['user'], root_path=root_path)
 
 
 @app.route('/logout/')
@@ -139,17 +144,17 @@ def logout():
 
 @app.errorhandler(404)
 def error_404(error):
-    return render_template('error.html', error=error, error_msg="Opps that page doesn't exist. [404]")
+    return render_template('error.html', error=error, error_msg="Opps that page doesn't exist. [404]", root_path=root_path)
 
 
 @app.errorhandler(405)
 def error_405(error):
-    return render_template('error.html', error=error, error_msg="Wrong method mate. [405]")
+    return render_template('error.html', error=error, error_msg="Wrong method mate. [405]", root_path=root_path)
 
 
 @app.errorhandler(500)
 def error_500(error):
-    return render_template('error.html', error=error, error_msg="Server is confused right now. [500]")
+    return render_template('error.html', error=error, error_msg="Server is confused right now. [500]", root_path=root_path)
 
 
 @app.route('/flashboard/')
@@ -157,7 +162,7 @@ def flashboard():
     flash('This is the')
     flash('2nd line of')
     flash('flash messages!!')
-    return render_template('flashboard.html')
+    return render_template('flashboard.html', root_path=root_path)
 
 
 @app.route('/jumped/')
@@ -174,7 +179,7 @@ def jump_page():
 def pp1():
     return '''
     <h1>Welcome!</h1>
-    <a href='/'>Back to home</a>'''
+    <a href='FlaskTutorials/'>Back to home</a>'''
 
 if __name__ == "__main__":
     app.run()

@@ -18,7 +18,7 @@
 		<div role="tabpanel" class="tab-pane fade in active" id="{{ key.replace(' ', '').replace('(', '').replace(')', '') }}">
 			<ul>
 {% for topic in topics_dict[key] %}
-				<li><a href="{{ topic[1] }}">{{ topic[0] }}</a></li>
+				<li><a href="{{ root_path + topic[1] }}">{{ topic[0] }}</a></li>
 {% endfor %}
 			</ul>
 		</div>

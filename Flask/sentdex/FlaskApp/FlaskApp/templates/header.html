@@ -9,12 +9,12 @@
 	</head>
 	<header>
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/">
+			<a class="navbar-brand" href="{{ root_path }}/">
 				<img alt="Brand" src="{{ url_for('static', filename='images/logo.jpg') }}" style="max-width:50px;margin-top:-10px">
 			</a>
 		</div>
 		<div class="container-fluid">
-			<a href="/dashboard/">
+			<a href="{{ root_path }}/dashboard/">
 				<button type="button" class="btn btn-primary" aria-label="Left Align" style="height:50px;margin-top:5px;margin-left:-10px">
 					<span class="glyphicon glyphicon-off" aria-hidden="true"></span> Start Learning
 				</button>
@@ -22,17 +22,17 @@
 			<ul class="nav navbar-nav navbar-right">
 				<div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
 					<h5>
-						<a href="/support-donate/"><span class="glyphicon glyphicon-heart"></span> Support&nbsp;&nbsp;&nbsp;</a>
+						<a href="{{ root_path }}/support-donate/"><span class="glyphicon glyphicon-heart"></span> Support&nbsp;&nbsp;&nbsp;</a>
 {% if session.logged %}
-						<a href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Log-out&nbsp;&nbsp;&nbsp;</a>
-						<a href="/private/">
+						<a href="{{ root_path }}/logout/"><span class="glyphicon glyphicon-log-out"></span> Log-out&nbsp;&nbsp;&nbsp;</a>
+						<a href="{{ root_path }}/private/">
 							<button type="button" class="btn btn-success">
 								<span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ session.user }}
 							</button>
 						</a>
 {% else %}
-						<a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Log-in&nbsp;&nbsp;&nbsp;</a>
-						<a href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up&nbsp;&nbsp;</a>
+						<a href="{{ root_path }}/login/"><span class="glyphicon glyphicon-log-in"></span> Log-in&nbsp;&nbsp;&nbsp;</a>
+						<a href="{{ root_path }}/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up&nbsp;&nbsp;</a>
 {% endif %}
 					</h5>
 				</div>

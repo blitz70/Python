@@ -7,7 +7,7 @@
 		<br>
 		<h4>Please Login:</h3>
 		<br>
-		<form action="/login/" method="post" class="form-inline">
+		<form action="{{ root_path }}/login/" method="post" class="form-inline">
 			<input type="text" class="form-control" placeholder="User name" name="username" value="{{ request.form.username }}" />
 			<input type="password" class="form-control" placeholder="User password" name="userpassword" value="{{ request.form.userpassword }}">
 			<input type="submit" class="btn btn-default" name="submit" value="Login">
