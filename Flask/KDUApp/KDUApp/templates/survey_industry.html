@@ -1,0 +1,23 @@
+{% extends 'kdu_template.html' %}
+
+{% block body %}
+
+<form action="{{ root_path }}/survey_industry/" method="post">
+	<div class="container" align="left">
+		{% for question in questions %}
+		<div class="btn-default">
+			<h3>{{ question[0] }}. {{ question[1] }}</h3>
+			{{ question[2] }}
+		</div>
+		{% endfor %}
+	</div>
+	<div class="container" align="center">
+		<input type="text" class="form-control" placeholder="User name" name="username" value="{{ request.form.username }}" />
+		<br>
+		<input type="password" class="form-control" placeholder="User password" name="userpassword" value="{{ request.form.userpassword }}">
+		<br>
+		<input type="submit" class="btn btn-primary" name="submit" value="제출">
+	</div>
+</form>
+
+{% endblock %}
