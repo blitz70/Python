@@ -2,22 +2,29 @@
 
 {% block body %}
 
-<form action="{{ root_path }}/survey_industry/" method="post">
-	<div class="container" align="left">
-		{% for question in questions %}
-		<div class="btn-default">
-			<h3>{{ question[0] }}. {{ question[1] }}</h3>
-			{{ question[2] }}
-		</div>
-		{% endfor %}
+<div class="container" align="center">
+	<br>
+	<h3><strong>2017학년도 산업체 대상 교육수요자 만족도 조사</strong></h3>	
+	<div class="btn-default" align="left">
+		안녕하십니까?<br>
+		본 설문지는 극동대학교의 교육과정이 사회 및 산업 수요를 잘 반영하고 있는지를 점검하고, 이를 보완하고자 실시하는 만족도 조사입니다.<br> 
+		작성하신 답변은 사회가 필요로 하는 극동대학교 인재 양성 체계 구축을 위하여 활용될 예정입니다.<br>
+		후학 양성의 극진한 마음으로 성심성의껏 응답해 주시기를 부탁드립니다.<br> 
+		작성하신 답변 내용은 철저한 비밀 유지가 보장되며 극동대학교의 교육 혁신 목적으로만 사용됨을 약속드립니다.<br>
+		감사합니다.<br>
 	</div>
-	<div class="container" align="center">
-		<input type="text" class="form-control" placeholder="User name" name="username" value="{{ request.form.username }}" />
-		<br>
-		<input type="password" class="form-control" placeholder="User password" name="userpassword" value="{{ request.form.userpassword }}">
-		<br>
-		<input type="submit" class="btn btn-primary" name="submit" value="제출">
+	<div align="right">
+		2017년  4월<br>
+		극동대학교 특성화사업단 드림
 	</div>
-</form>
+	<br>
+	<img alt="극동대학교" src="{{ url_for('static', filename='images/kdu.png') }}">
+	<br><br>
+	<a href="{{ root_path }}/survey_start/">
+		<button type="button" class="btn btn-primary btn-lg">
+			<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><strong> &nbsp;설문 시작&nbsp;</strong>
+		</button>
+	</a>
+</div>
 
 {% endblock %}

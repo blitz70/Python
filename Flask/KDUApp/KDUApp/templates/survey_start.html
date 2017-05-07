@@ -1,0 +1,1894 @@
+{% extends 'kdu_template.html' %}
+
+{% block body %}
+
+<form action="{{ root_path }}/survey_start/" method="post">
+	<div class="container" align="left">
+		<h4><strong><bold>1. 선발요건 우선순위</bold></strong></h4>
+		<p>
+			신입사원 평가(선발) 시 귀하의 조직에서 중요하게 생각하는 항목을 다음 [보기]를 참고하여 순위별로 기입해 주십시오. 
+			단, 학교, 학위, 전공은 동일하다는 점을 생각하시고 대학생이 스스로 경력 개발 할 수 있는 활동중심으로 고려해주시기 바랍니다.
+		</p>
+		<pre class="btn-default">
+① 학점				② 단정한 용모				③ 관련 자격증 취득 여부
+④ 인턴십 경험			⑤ 기업/기관 프로그램 참여경험		⑥ 봉사활동
+⑦ 제2 외국어 자격		⑧ 아르바이트 활동			⑨ 어학점수
+⑩ 기타</pre>
+		<p>[참고] 제 2외국어의 경우 어느 언어를 우선적으로 고려하는지 구체적으로 적어주시면 됩니다.</p>
+		<table class="table table-bordered">
+			<tr class>
+				<th class="col-xs-2">순위</th>
+				<th class="col-xs-5">항목</th>
+				<th>기타 (*제외된 항목 있는 경우)</th>
+			</tr>
+			<tr>
+				<td>1순위</td>
+				<td>
+					<select name="answer_1_1_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_1_2" value="{{ request.form.answer_1_1_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>2순위</td>
+				<td>
+					<select name="answer_1_2_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_2_2" value="{{ request.form.answer_1_2_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>3순위</td>
+				<td>
+					<select name="answer_1_3_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_3_2" value="{{ request.form.answer_1_3_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>4순위</td>
+				<td>
+					<select name="answer_1_4_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_4_2" value="{{ request.form.answer_1_4_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>5순위</td>
+				<td>
+					<select name="answer_1_5_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_5_2" value="{{ request.form.answer_1_5_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>6순위</td>
+				<td>
+					<select name="answer_1_6_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_6_2" value="{{ request.form.answer_1_6_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>7순위</td>
+				<td>
+					<select name="answer_1_7_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_7_2" value="{{ request.form.answer_1_7_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>8순위</td>
+				<td>
+					<select name="answer_1_8_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_8_2" value="{{ request.form.answer_1_8_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>9순위</td>
+				<td>
+					<select name="answer_1_9_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_9_2" value="{{ request.form.answer_1_9_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+			<tr>
+				<td>10순위</td>
+				<td>
+					<select name="answer_1_10_1" class="form-control">
+					  <option value="1">학점</option>
+					  <option value="2">단정한 용모</option>
+					  <option value="3">관련 자격증 취득 여부</option>
+					  <option value="4">인턴십 경험</option>
+					  <option value="5">기업/기관 프로그램 참여경험</option>
+					  <option value="6">봉사활동</option>
+					  <option value="7">제2 외국어 자격</option>
+					  <option value="8">아르바이트 활동</option>
+					  <option value="9">어학점수</option>
+					  <option value="10" selected>기타</option>
+					</select>
+				</td>
+				<td>
+					<input name="answer_1_10_2" value="{{ request.form.answer_1_10_2 }}" type="text" class="form-control">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" align="left">
+		<h4><strong>2. 요구되는 역량</strong></h4>
+		<p>
+			다음은 대학교 전공과목과 교양과목을 통해 개발할 수 있는 역량입니다. 
+			각 역량들 중 귀사에서 요구되는 수준과 극동대학교 학생의 수준을 체크해 주시기 바랍니다.
+		</p>
+		<table class="table table-bordered">
+			<tr>
+				<th>항목</th>
+				<th>
+					요구도<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+				<th>
+					학생 수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td title="기본적인 듣기, 말하기, 읽기, 쓰기 등의 훈련을 통해 자신의 생각과 정보를 바르게 표현하는 능력">
+					의사소통 능력
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_1_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td title="산업분야에서 요구되는 관련 지식 학습과 실무 훈련 등을 통해 관련 업무를 원활하게 수행하는 능력">
+					실무 능력
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_2_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td title="전공학습, 독서 및 역사 인식 등을 통해 상황에 대한 바른 인식과 더불어 문제해결 및 의사결정을 효율적으로 할 수 있는 능력">
+					종합적 사고력
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_3_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td title="인간에 대한 이해와 인간관계 및 소통에 필요한  인간의 이해와 훈련을 통해 자신의 감정을 조절하고 타인과의 관계를 유지 증진시키는 능력">
+					대인관계 능력
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_4_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="직업인으로서 필요한 마음가짐, 용모, 체력 등을 관리하고 자신에 대해 정확하게 인식하는 능력">
+					자기관리 능력
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_5_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="외국어 구사 능력을 갖추고 타문화에 대해 이해하고  수용하는 능력">
+					글로벌 역량
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_6_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="개척정신과 모험심을 기반으로 위험 감수와 과감한 시도로 미래 목표를 실현하고 변화를 선도할 수 있는 능력">
+					도전 정신
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_7_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="자신의 분야에 대한 전문성과 더불어 투명하고  일관성 있는 경향을 보이며 상대방을 존중하는  윤리적 태도를 가지고 서로 믿고 의지 할 수 있는 효과적인 협업 관계와 환경을 구축할 수 있는 능력">
+					신뢰성
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_8_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="여러 학문의 경계를 넘나드는 포용력과 통합력으로 다양한 가치를 창출하여 학문과 사회 공동체 전반에 확산시킬 수 있는 융합적 역량">
+					융합역량
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_9_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td title="창의적인 사고와 문제의식으로 독창적이고 새로우며  유용한 아이디어와 산출물을 만들어 개인의 발전과  사회에 공헌하는 능력">
+					창의성
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_1" value="5">5
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_2" value="3">3
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_2" value="4">4
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_2_10_2" value="5">5
+						</label>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+	</div>
+	<div class="container" align="left">
+		<h4><strong>3. 자격/취득 사항</strong></h4>
+		<p>
+			귀하의 조직에서 신입사원 선발 시 고려가능 한 자격/취득 항목입니다. 해당 항목에 체크해 주십시오.
+		</p>
+		<table class="table table-bordered">
+			<tr>
+				<th class="col-xs-3">
+					자격증<br>
+					<input name="answer_3_1" value="{{ request.form.answer_3_1 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;개면 충분
+				</th>
+				<th>신입사원 평가시 고려여부</th>
+				<th>
+					필요수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>컴퓨터 활용 능력</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_1_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>전공 관련 자격증</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_2_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+		<table class="table table-bordered">
+			<tr>
+				<th class="col-xs-3">
+					어학성적  ※토익 기준<br>
+					<input name="answer_3_2" value="{{ request.form.answer_3_2 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;점 이상
+				</th>
+				<th>신입사원 평가시 고려여부</th>
+				<th>
+					필요수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>최상 (토익 950 이상)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_3_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>상 (토익 920-950)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_4_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>중 (토익 820-915)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_5_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>중하 (토익 700-815)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_6_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>하 (토익 700 이하)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_3_7_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" align="left">
+		<h4><strong>4. 대외활동</strong></h4>
+		<p>
+			귀하의 조직에서 신입사원 선발 시 고려가능 한 대외활동 항목입니다. 해당 항목에 체크해 주십시오.
+		</p>
+		<table class="table table-bordered">
+			<tr>
+				<th class="col-xs-3">
+					실습활동<br>
+					<input name="answer_4_1" value="{{ request.form.answer_4_1 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;주 이상
+				</th>
+				<th>신입사원 선발 시 고려여부</th>
+				<th>
+					필요수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>해외인턴십 참여</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_1_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>국내인턴십 참여</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_2_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>전공실습</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_3_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>취업연수</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_4_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td class="col-xs-3">
+					<input name="answer_4_5_0" value="{{ request.form.answer_4_5_0 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;기타
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_5_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+		<table class="table table-bordered">
+			<tr>
+				<th class="col-xs-3">
+					봉사활동<br>
+					<input name="answer_4_2" value="{{ request.form.answer_4_2 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;시간 이상
+				</th>
+				<th>신입사원 선발 시 고려여부</th>
+				<th>
+					필요수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>구호활동</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_6_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>재능기부</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_7_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>행사진행/운영</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_8_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>기부후원</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_9_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td class="col-xs-3">
+					<input name="answer_4_10_0" value="{{ request.form.answer_4_10_0 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;기타
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_10_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+		<table class="table table-bordered">
+			<tr>
+				<th class="col-xs-3">
+					기업/기관 프로그램<br>
+					<input name="answer_4_3" value="{{ request.form.answer_4_3 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;시간 이상
+				</th>
+				<th>신입사원 선발 시 고려여부</th>
+				<th>
+					필요수준<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>인재양성/취업캠프</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_11_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>행사/강좌/특강</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_12_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>홍보단</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_13_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>프로젝트 참여</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_14_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td class="col-xs-3">
+					<input name="answer_4_15_0" value="{{ request.form.answer_4_15_0 }}" class="col-xs-5" type="text" class="form-control">&nbsp;&nbsp;기타
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_1" value="1">고려
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_1" value="2">미고려
+						</label>
+					</div>
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_4_15_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	<div class="container" align="left">
+		<h4><strong>5. 극동대학교 참여 경험 및 향후 참여 의향</strong></h4>
+		<table class="table table-bordered">
+			<tr>
+				<th>항목</th>
+				<th>
+					참여 경험<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+				<th>
+					향후  참 여  의향<br>
+					매우낮음 낮음 보통 높음 매우높음
+				</th>
+			</tr>
+			<tr>
+				<td>졸업생 채용</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_1_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>현장실습 수용</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_2_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>인턴실습 수용</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_3_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>직원 위탁교육(계약학과 개설)</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_4_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>특성화 교육과정의 협력체계</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_5_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>공동연구/연구위탁</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_6_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td>대학발전기금 등 기부 프로그램</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_1" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_1" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_1" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_1" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_1" value="5">5
+						</label>		
+					</div>	
+				</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_2" value="1">1
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_2" value="2">2
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_2" value="3">3
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_2" value="4">4
+						</label>		
+						<label class="radio-inline">
+							<input type="radio" name="answer_5_7_2" value="5">5
+						</label>		
+					</div>	
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" align="left">
+		<h4><strong>6. 만족도</strong></h4>
+		<p>지금까지 평가하신 모든 항목을 고려할 때, 극동대학교의 교육에 대해 전반적으로 얼마나 만족하십니까?</p>
+		<div class="btn-default" align="center">
+			<label class="radio-inline">
+				<input type="radio" name="answer_6" value="1">매우불만족
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="answer_6" value="2">불만족
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="answer_6" value="3">보통 
+			</label>		
+			<label class="radio-inline">
+				<input type="radio" name="answer_6" value="4">만족 
+			</label>		
+			<label class="radio-inline">
+				<input type="radio" name="answer_6" value="5">매우만족
+			</label>		
+		</div>		
+	</div>
+	<div class="container" align="left">
+		<h4><strong>7. 자유 기술</strong></h4>
+		<textarea name="answer_7" value="{{ request.form.answer_7 }}" class="form-control" align="center" rows="3" placeholder="극동대학교에 도움이 되는 조언 또는 건의사항을 자유롭게 기술해주시기 바랍니다."></textarea>
+	</div>
+	<div class="container" align="left">
+		<h4><strong>◎ 귀사의 일반적인 사항에 대한 질문입니다. 해당하는 곳에 표시해 주시기 바랍니다.</strong></h4>
+		<table class="table table-bordered" align="center">
+			<tr>
+				<td class="col-xs-2">소재지</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="1">서울
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="2">인천
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="3">대전
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="4">광주
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">부산
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">울산
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">대구
+						</label>
+					</div>	
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">경기도
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">강원도
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">경상도
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">충청도
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">전라도
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">제주도
+						</label>
+					</div>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_1_1" value="5">기타
+						</label>
+						<label class="radio-inline">
+							<input name="answer_8_1_2" value="{{ request.form.answer_8_1_2 }}" class="col-xs-5" type="text" class="form-control">
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="col-xs-2">직원 수</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_2_1" value="1">50명 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_2_1" value="2">50명 이상 ~　100명 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_2_1" value="3">100명 이상 ~ 300명 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_2_1" value="4">300명 이상 ~ 500명 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_2_1" value="5">500명 이상
+						</label>
+					</div>	
+				</td>
+			</tr>
+			<tr>
+				<td class="col-xs-2">교류기간</td>
+				<td>
+					<div class="btn-default">
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_3_1" value="1">1년 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_3_1" value="2">1년 이상 ~ 2년 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_3_1" value="3">2년 이상 ~ 3년 미만
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="answer_8_3_1" value="4">3년 이상
+						</label>
+					</div>	
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" align="center">
+		<input type="submit" class="btn btn-primary btn-lg" name="submit" value="★ 설문에 응해주셔서 대단히 감사합니다 ★">
+	</div>
+</form>
+
+{% endblock %}

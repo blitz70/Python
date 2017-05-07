@@ -5,14 +5,25 @@
 <br>
 <h4>설문에 응해주셔서 감사합니다!</h3>
 <br>
-설물 결과
+설물 결과 dict
 <br>
 {% for item in survey_result %}
-{{ item }}:{{ survey_result[item] }}<br>
+{{ item }}: {{ survey_result[item] }}<br>
+{% endfor %}
+<br>
+설물 결과 list
+<br>
+{% for item in survey_result2 %}
+{{ item[0] }}: {{ item[1] }}<br>
 {% endfor %}
 <a href="{{ root_path }}/">
 	<button type="button" class="btn btn-success">
 		<span class="glyphicon glyphicon-home" aria-hidden="true"></span> 처음으로 가기
+	</button>
+</a>
+<a href="http://inhappy.kr/mc/?id=KDUBMLS">
+	<button type="button" class="btn btn-success">
+		<span class="glyphicon glyphicon-home" aria-hidden="true"></span> 청첩장
 	</button>
 </a>
 

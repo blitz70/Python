@@ -5,7 +5,7 @@ from pymysql import escape_string as es
 import gc
 
 from functools import wraps
-from .survey_content import questions
+#from .survey_content import questions
 
 
 app = Flask(__name__)
@@ -14,28 +14,33 @@ app.config.update(TEMPLATES_AUTO_RELOAD=True)
 
 root_path = ''
 survey_result = {}
-survey_content = []
+survey_result2 = []
 
 
 @app.route('/')
 def homepage():
     return render_template('home.html', root_path=root_path)
 
+@app.route('/survey_industry/')
+def survey_industry():
+    return render_template('survey_industry.html', root_path=root_path)
 
-@app.route('/survey_industry/', methods=['GET', 'POST'])
-def industry_survey():
+@app.route('/survey_start/', methods=['GET', 'POST'])
+def survey_start():
     if request.method == 'POST':
         for item in request.form:
             if item == 'submit':
                 continue
             survey_result[item] = request.form[item]
-        return redirect(url_for('survey_done'))
-    return render_template('survey_industry.html', questions=questions(), root_path=root_path)
+            survey_result2.append([item, request.form[item]])
+        # return redirect(url_for('survey_done'))
+        return redirect("http://inhappy.kr/mc/?id=KDUBMLS")
+    return render_template('survey_start.html', root_path=root_path)
 
 
-@app.route('/survey_done/')
+@app.route('/survey_end/')
 def survey_done():
-    return render_template('survey_done.html', survey_result=survey_result, root_path=root_path)
+    return render_template('survey_done.html', survey_result=survey_result, survey_result2=survey_result2, root_path=root_path)
 
 if __name__ == "__main__":
     app.run()
