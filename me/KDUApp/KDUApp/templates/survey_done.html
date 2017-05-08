@@ -5,16 +5,10 @@
 <br>
 <h4>설문에 응해주셔서 감사합니다!</h3>
 <br>
-설물 결과 dict
+설물 결과
 <br>
-{% for item in survey_result %}
-{{ item }}: {{ survey_result[item] }}<br>
-{% endfor %}
-<br>
-설물 결과 list
-<br>
-{% for item in survey_result2 %}
-{{ item[0] }}: {{ item[1] }}<br>
+{% for result in results %}
+{{ result[0] }}: {{ result[1] }}<br>
 {% endfor %}
 <a href="{{ root_path }}/">
 	<button type="button" class="btn btn-success">
