@@ -3,12 +3,15 @@
 {% block body %}
 
 <br>
-<h4>설문에 응해주셔서 감사합니다!</h3>
+<h4>설문 결과</h3>
 <br>
-설물 결과
-<br>
+
 {% for result in results %}
-{{ result[0] }}: {{ result[1] }}<br>
+설문 {{ results.index(result)+1 }} ==========<br>
+{% for item in result %}
+{{ item[0] }}: {{ item[1] }}<br>
+{% endfor %}
+<br>
 {% endfor %}
 <a href="{{ root_path }}/">
 	<button type="button" class="btn btn-success">
@@ -20,5 +23,6 @@
 		<span class="glyphicon glyphicon-home" aria-hidden="true"></span> 청첩장
 	</button>
 </a>
+
 
 {% endblock %}
