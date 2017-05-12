@@ -1,0 +1,1 @@
+print("Cron job example")

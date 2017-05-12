@@ -74,11 +74,14 @@ HTML files
 			{% with ... %}
 			{% endwith %}
 	Page extension/inheritance
-		Get other page add extra and use it1
+		Get other page add extra and use it as current page
 		{% extends 'parent.html' %} : get and use parent.html template as child template
 		{% block body %} : use parent code before block
 		child html : use child code within block
 		{% endblock %} : use parent code after block
+	Page include
+		Insert another page into current page
+		{% include 'include.html' %}
 
 Flash
 	.py
@@ -108,6 +111,13 @@ Hosting
 			When importing modules add '.' infront of module name
 		Pip
 			pip search ...
+		Cron
+			Server scheduler, performs commands automatically
+			crontab -e : edit setup file
+			0 */12 * * * means every 5hrs (0 0,12 * * *)
+		service reload vs restart
+			reload : faster, configuration update while keeping server running 
+			restart : slower, server stop -> start
 	Default
 		sudo apt-get update
 		sudo apt-get upgrade

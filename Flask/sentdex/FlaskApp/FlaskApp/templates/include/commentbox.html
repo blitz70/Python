@@ -1,0 +1,22 @@
+{% block body %}
+
+{% if session['logged'] %}
+<form action="" class="form" method="post" id="reply_form">
+	<label for="post">Reply:</label>
+	<textarea class="form-control" rows="4" cols="50" name="reply_content" form="reply_form"></textarea> 
+	<br>
+	<input class="btn btn-primary" type="submit" value="submit">
+	<br>
+	<br>
+</form>
+{% else %}
+<p>You must be <a href="{{ root_path }}/login/">logged in</a> to post!</p>
+{% endif%}
+
+{% for reply in replies %}
+<div class="well">
+	<p>{{ reply }} : {{ replies[reply] }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

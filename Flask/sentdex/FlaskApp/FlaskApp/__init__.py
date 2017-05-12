@@ -181,5 +181,16 @@ def pp1():
     <h1>Welcome!</h1>
     <a href='FlaskTutorials/'>Back to home</a>'''
 
+
+@app.route('/include_page/')
+def include_page():
+    replies = {'Jack': 'Cool post',
+               'Jane': '+1',
+               'Erika': 'Most definitely',
+               'Bob': 'wow',
+               'Carl': 'amazing!',}
+    return render_template('include_page.html', replies=replies, root_path=root_path)
+
+
 if __name__ == "__main__":
     app.run()
