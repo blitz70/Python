@@ -17,8 +17,9 @@ topics_dict = Content()
 root_path = '/FlaskTutorials'
 
 
+@app.route('/<path:urlpath>/')
 @app.route('/')
-def homepage():
+def homepage(urlpath='/'):
     try:
         if session['logged'] is None:
             session['user'] = False
@@ -182,14 +183,44 @@ def pp1():
     <a href='FlaskTutorials/'>Back to home</a>'''
 
 
-@app.route('/include_page/')
-def include_page():
+@app.route('/part2/')
+def part2():
+    return render_template('part2/part2.html', root_path=root_path)
+
+
+@app.route('/includes/')
+def include():
     replies = {'Jack': 'Cool post',
                'Jane': '+1',
                'Erika': 'Most definitely',
                'Bob': 'wow',
                'Carl': 'amazing!',}
-    return render_template('include_page.html', replies=replies, root_path=root_path)
+    return render_template('part2/includes.html', replies=replies, root_path=root_path)
+
+
+@app.route('/jinja/')
+def jinja():
+    data = [15, '15', 'Python is good', 'Python, Java, PHP, SQL, C++', '<p><strong>Hey There!</strong></p>']
+    return render_template('part2/jinja.html', data=data, root_path=root_path)
+
+
+@app.route('/converters1/')
+@app.route('/converters1/<int:page>/')
+def converters1(page=1):
+    return render_template('part2/converters.html', page=page, root_path=root_path)
+
+
+@app.route('/converters2/')
+@app.route('/converters2/<path:urlpath>/')
+def converters2(urlpath='this/is/a/directory'):
+    return render_template('part2/converters.html', urlpath=urlpath, root_path=root_path)
+
+
+@app.route('/converters3/')
+@app.route('/converters3/<string:article>/<int:page>/')
+def converters3(article='chapter1', page=1):
+    return render_template('part2/converters.html', article=article, page=page, root_path=root_path)
+
 
 
 if __name__ == "__main__":

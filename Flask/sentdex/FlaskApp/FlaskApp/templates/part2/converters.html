@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+
+{% block body %}
+
+<div class="container">
+{% if page %}
+	<p>{{ page }}</p>
+{% endif %}
+{% if urlpath %}
+	<p>{{ urlpath }}</p>
+{% endif %}
+{% if article %}
+	<p>{{ article }}</p>
+{% endif %}
+</div>
+
+{% endblock %}

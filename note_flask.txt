@@ -73,15 +73,22 @@ HTML files
 			{% endfor %}
 			{% with ... %}
 			{% endwith %}
-	Page extension/inheritance
+	Page extensions/inheritance
 		Get other page add extra and use it as current page
 		{% extends 'parent.html' %} : get and use parent.html template as child template
 		{% block body %} : use parent code before block
 		child html : use child code within block
 		{% endblock %} : use parent code after block
-	Page include
+	Page includes
 		Insert another page into current page
-		{% include 'include.html' %}
+		{% include 'includes.html' %}
+
+Bootstrap
+	Front end, CSS & JavaScript framework by Twitter
+	Used to spice up webpage
+	Include jQuery and bootstrap javascript
+	http://getbootstrap.com
+	navbar button glyphicon modal video picture nav-tabs alert
 
 Flash
 	.py
@@ -94,6 +101,23 @@ Flash
 		{% endfor%}
 		{% endif%}
 		{% endwith %}
+
+Jinja
+	HTML rendering engine
+	http://jinja.pocoo.org/docs/2.9/templates/
+	filters macros logic		
+
+URL converters
+	Dynamic routing
+	https://exploreflask.com/en/latest/views.html#built-in-converters
+	Code
+		@app.route('/converters2/')
+		@app.route('/converters2/<path:urlpath>/')
+		def converters2(urlpath='this/is/a/directory'):
+			return render_template('part2/converters.html', urlpath=urlpath, root_path=root_path)
+		@app.route('/converters3/<string:article>/<int:page>/')
+		def converters3(article='chapter1', page=1):
+			return render_template('part2/converters.html', article=article, page=page, root_path=root_path)
 
 Hosting
 	Tools
@@ -111,6 +135,8 @@ Hosting
 			When importing modules add '.' infront of module name
 		Pip
 			pip search ...
+		gc
+			use gc.collect() to enforce server memory management
 		Cron
 			Server scheduler, performs commands automatically
 			crontab -e : edit setup file
@@ -192,10 +218,6 @@ Hosting
 			@login_required
 			def private():
 				return render_template('private.html', user=session['user'])
-
-Bootstrap
-	Overview
-		Front end, CSS & JavaScript framework by Twitter
-		Used to spice up webpage
-		Include jQuery and bootstrap javascript
-	navbar button glyphicon modal video picture nav-tabs alert
+		gc : memory management
+			import gc
+			gc.collect()
