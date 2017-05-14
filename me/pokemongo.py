@@ -3,11 +3,14 @@
 import requests
 from bs4 import BeautifulSoup
 
-def to_file(arg):
-    print(arg)
-    file = open('pokemongo.txt', 'w', encoding='utf-8')
-    file.write(str(arg))
-    file.close()
+content = []
+
+def to_file(_list):
+    print('Writing...')
+    with open('pokemongo_inven.txt', 'w', encoding='utf-8') as f:
+        for item in _list:
+            f.write(str(item) + '\n')
+    print('Writing done')
 
 def pokemongo_inven_spider():
     url = 'http://pokemongo.inven.co.kr/dataninfo/pokemon/'
@@ -33,7 +36,9 @@ def pokemongo_get_skill(url):
         for defense in item.findAll('tr', {'recomm-data': '2', 'row-data': '1'}):
             for skill in defense.findAll('img'):
                 info.append(skill.text.strip())
-    print(info)
+    #print(info)
+    content.append(info)
 
 pokemongo_inven_spider()
+to_file(content)
 #pokemongo_get_skill('http://pokemongo.inven.co.kr/dataninfo/pokemon/detail.php?code=3')

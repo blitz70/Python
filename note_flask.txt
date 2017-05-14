@@ -141,9 +141,10 @@ Hosting
 			Server scheduler, performs commands automatically
 			crontab -e : edit setup file
 			0 */12 * * * means every 5hrs (0 0,12 * * *)
-		service reload vs restart
+		service apache2 reload vs restart
 			reload : faster, configuration update while keeping server running 
 			restart : slower, server stop -> start
+		Chrome : shift+F5, reload chrome ignore cache
 	Default
 		sudo apt-get update
 		sudo apt-get upgrade
@@ -153,19 +154,15 @@ Hosting
 		sudo ln -s /usr/bin/python3 /usr/bin/python
 		sudo a2enmod wsgi
 	Virtual environment
+		Used when python app uses differnet python/module versions
 		Setup : in project directory /var/www/FlaskApp/FlaskApp/
 			sudo pip3 install virtualenv
 			sudo virtualenv venv
 			sudo chown -R ubuntu:ubuntu venv
-		Install packages in venv
+		Install packages/modules in venv
 			source venv/bin/activate
 			pip3 install ...
 			deactivate
-		Packages
-			Flask
-			PyMySQL 
-			flask-WTF
-			passlib
 	Flask-local : check Flask working in venv
 		Files
 			/var/www/FlaskApp/FlaskApp
@@ -188,6 +185,7 @@ Hosting
 			CREATE TABLE users (uid INT(11) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), password VARCHAR(100), email VARCHAR(50), settings VARCHAR(32500), tracking VARCHAR(32500), rank INT(3));
 			DESCRIBE users;
 	Modules/packages : modules used when hosting web server
+		Flask : web framework, medium level
 		PyMySQL : database conncector module, MySQL Python3
 			import pymysql
 			def connect():
@@ -202,7 +200,6 @@ Hosting
 			from passlib.hash import sha256_crypt
 			hash = sha256_crypt.encrypt(password)
 			sha256_crypt.verify(hash, password)
-
 		functools : wrapper
 			from functools import wraps
 			def login_required(f):
@@ -221,3 +218,19 @@ Hosting
 		gc : memory management
 			import gc
 			gc.collect()
+		Flask-Mail : flask SMTP
+			https://pythonhosted.org/Flask-Mail/
+			from flask_mail import Mail, Message
+			app.config.update(
+				MAIL_SERVER=smtp...,
+				MAIL_PORT=465,
+				MAIL_USE_SSL=True,
+				MAIL_USERNAME=...,
+				MAIL_PASSWORD=...
+			)
+			mail = Mail(app)
+			...
+			msg = Message("flask mail title", sender=..., recipients=[...])
+			msg.body = "flask mail content"
+			msg.html = render_template()
+			mail.send(msg)

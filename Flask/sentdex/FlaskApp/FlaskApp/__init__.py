@@ -1,21 +1,28 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
-
 from wtforms import Form, validators, BooleanField, StringField, PasswordField
 from passlib.hash import sha256_crypt as en
 from pymysql import escape_string as es
-import gc
-
 from functools import wraps
-
+import gc
+from flask_mail import Mail, Message
 from .content_management import Content
-from .db_connect import connect
-
-app = Flask(__name__)
-app.config.update(TEMPLATES_AUTO_RELOAD=True)
+from .my_security import connect, mail_info
 
 topics_dict = Content()
 root_path = '/FlaskTutorials'
+info_mail = mail_info()
 
+app = Flask(__name__)
+app.config.update(
+    TEMPLATES_AUTO_RELOAD=True,
+    # Email settings
+    MAIL_SERVER=info_mail[0],
+    MAIL_PORT=465,
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME=info_mail[1],
+    MAIL_PASSWORD=info_mail[2]
+)
+mail = Mail(app)
 
 @app.route('/<path:urlpath>/')
 @app.route('/')
@@ -221,6 +228,18 @@ def converters2(urlpath='this/is/a/directory'):
 def converters3(article='chapter1', page=1):
     return render_template('part2/converters.html', article=article, page=page, root_path=root_path)
 
+
+'''@app.route('/send_mail/')
+def send_mail():
+    try:
+        msg = Message("flask mail title",
+                      sender="",
+                      recipients=["", ""])
+        msg.body = "flask mail content"
+        mail.send(msg)
+        return 'Mail sent'
+    except Exception as e:
+        return str(e)'''
 
 
 if __name__ == "__main__":
