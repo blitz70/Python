@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request, url_for, redirect, session
+from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, send_from_directory
 from wtforms import Form, validators, BooleanField, StringField, PasswordField
 from passlib.hash import sha256_crypt as en
 from pymysql import escape_string as es
@@ -105,7 +105,13 @@ def register():
                 session['logged'] = True
                 session['user'] = user_name
                 flash('Thank you for joining, enjoy!')
-                return redirect(url_for('pp1'))
+                msg = Message("New user joined",
+                              sender="blitz70@hanmail.net",
+                              recipients=["blitz70@hanmail.net"])
+                msg.body = "User: " + user_name
+                msg.html = render_template('join_mail.html', user=[user_name, user_password, user_email])
+                mail.send(msg)
+                return redirect(url_for('private'))
         return render_template('register.html', form=form, root_path=root_path)
     except Exception as e:
         flash(' '.join(['Registration error : ', str(e)]))
@@ -139,17 +145,6 @@ def logout():
     return redirect(url_for('homepage'))
 
 
-
-
-
-
-
-
-
-
-
-
-
 @app.errorhandler(404)
 def error_404(error):
     return render_template('error.html', error=error, error_msg="Opps that page doesn't exist. [404]", root_path=root_path)
@@ -181,13 +176,6 @@ def landed():
 @app.route('/jump/')
 def jump_page():
     return redirect(url_for('landed'))
-
-
-@app.route('/introduction-to-python-programming/')
-def pp1():
-    return '''
-    <h1>Welcome!</h1>
-    <a href='FlaskTutorials/'>Back to home</a>'''
 
 
 @app.route('/part2/')
@@ -229,18 +217,42 @@ def converters3(article='chapter1', page=1):
     return render_template('part2/converters.html', article=article, page=page, root_path=root_path)
 
 
-'''@app.route('/send_mail/')
+@app.route('/send_mail/')
 def send_mail():
     try:
         msg = Message("flask mail title",
-                      sender="",
-                      recipients=["", ""])
+                      sender="blitz70@hanmail.net",
+                      recipients=["blitz70@hanmail.net"])
         msg.body = "flask mail content"
         mail.send(msg)
         return 'Mail sent'
     except Exception as e:
-        return str(e)'''
+        return str(e)
 
+
+@app.route("/file_send/")
+def file_send():
+    return send_file('/var/www/FlaskApp/FlaskApp/static/images/python-programming-tutorials-main.png')
+
+
+def secret(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if session['user'] == 'blitz':
+            return f(*args, **kwargs)
+        else:
+            flash("You ain't blitz")
+            return redirect(url_for('dashboard'))
+    return wrap
+
+
+@app.route("/protected/<path:filename>")
+@secret
+def protected(filename):
+    try:
+        return send_from_directory("/var/www/FlaskApp/FlaskApp/protected/", "secret.jpg")
+    except:
+        return redirect(url_for("homepage"))
 
 if __name__ == "__main__":
     app.run()

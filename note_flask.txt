@@ -186,6 +186,7 @@ Hosting
 			DESCRIBE users;
 	Modules/packages : modules used when hosting web server
 		Flask : web framework, medium level
+			from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, send_from_directory
 		PyMySQL : database conncector module, MySQL Python3
 			import pymysql
 			def connect():
