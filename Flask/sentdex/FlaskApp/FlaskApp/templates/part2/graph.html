@@ -1,0 +1,11 @@
+{% extends 'header.html' %}
+
+{% block body %}
+
+<div class="container">
+{% for chart in charts %}
+   <embed type="image/svg+xml" src= {{ chart }} />
+{% endfor %}
+</div>
+
+{% endblock %}

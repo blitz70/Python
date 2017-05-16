@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, url_for, redirect, session
 from flask import flash, send_file, send_from_directory, jsonify
+
 from wtforms import Form, validators, BooleanField, StringField, PasswordField
 from passlib.hash import sha256_crypt as en
 from pymysql import escape_string as es
 from functools import wraps
+
 import gc
 from flask_mail import Mail, Message
+import pygal
+
 from .content_management import Content
 from .my_security import connect, mail_info
 
@@ -150,7 +154,7 @@ def logout():
 
 @app.errorhandler(404)
 def error_404(error):
-    return render_template('error.html', error=error, error_msg="Opps that page doesn't exist. [404]", root_path=root_path)
+    return render_template('error.html', error=error, error_msg="What page? [404]", root_path=root_path)
 
 
 @app.errorhandler(405)
@@ -160,7 +164,7 @@ def error_405(error):
 
 @app.errorhandler(500)
 def error_500(error):
-    return render_template('error.html', error=error, error_msg="Server is confused right now. [500]", root_path=root_path)
+    return render_template('error.html', error=error, error_msg="I'm confused. [500]", root_path=root_path)
 
 
 @app.route('/flashboard/')
@@ -192,7 +196,7 @@ def include():
                'Jane': '+1',
                'Erika': 'Most definitely',
                'Bob': 'wow',
-               'Carl': 'amazing!',}
+               'Carl': 'amazing!', }
     return render_template('part2/includes.html', replies=replies, root_path=root_path)
 
 
@@ -246,10 +250,11 @@ def file_send():
 def secret(f):
     @wraps(f)
     def wrap(*args, **kwargs):
-        if session['user'] == 'blitz':
-            return f(*args, **kwargs)
-        else:
-            flash("You ain't blitz")
+        try:
+            if session['user'] == 'blitz':
+                return f(*args, **kwargs)
+        except:
+            flash("Try again")
             return redirect(url_for('homepage'))
     return wrap
 
@@ -280,6 +285,23 @@ def _background_process():
     except Exception as e:
         flash(str(e))
         return redirect(url_for('homepage'))
+
+
+@app.route('/graph/')
+def graph():
+    _charts = [pygal.Line(), pygal.Bar(), pygal.Histogram(), pygal.XY(), pygal.Pie(), pygal.Radar(), pygal.Box(),
+               pygal.Dot(), pygal.Funnel(), pygal.SolidGauge(), pygal.Gauge(), pygal.Pyramid(), pygal.Treemap()]
+    charts = []
+    for chart in _charts:
+        chart.title = '% Change Coolness of programming languages over time.'
+        chart.x_labels = ['2011', '2012', '2013', '2014', '2015', '2016']
+        chart.add('Python', [15, 31, 89, 200, 356, 900])
+        chart.add('Java', [15, 45, 76, 80, 91, 95])
+        chart.add('C++', [5, 51, 54, 102, 150, 201])
+        chart.add('All others combined!', [5, 15, 21, 55, 92, 105])
+        charts.append(chart.render_data_uri())
+    return render_template('part2/graph.html', charts=charts, root_path=root_path)
+
 
 if __name__ == "__main__":
     app.run()

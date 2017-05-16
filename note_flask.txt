@@ -263,3 +263,6 @@ Modules/packages : modules used when hosting web server
 		msg.body = "flask mail content"
 		msg.html = render_template()
 		mail.send(msg)
+	pygal : web graph, SVG
+		http://pygal.org/en/stable/
+		import pygal
