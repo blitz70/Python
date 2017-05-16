@@ -1,4 +1,5 @@
-from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, send_from_directory
+from flask import Flask, render_template, request, url_for, redirect, session
+from flask import flash, send_file, send_from_directory, jsonify
 from wtforms import Form, validators, BooleanField, StringField, PasswordField
 from passlib.hash import sha256_crypt as en
 from pymysql import escape_string as es
@@ -24,9 +25,11 @@ app.config.update(
 )
 mail = Mail(app)
 
-@app.route('/<path:urlpath>/')
+
+# @app.route('/<path:urlpath>/')
+# def homepage(urlpath='/'):
 @app.route('/')
-def homepage(urlpath='/'):
+def homepage():
     try:
         if session['logged'] is None:
             session['user'] = False
@@ -227,12 +230,17 @@ def send_mail():
         mail.send(msg)
         return 'Mail sent'
     except Exception as e:
-        return str(e)
+        flash(str(e))
+        return redirect(url_for('homepage'))
 
 
 @app.route("/file_send/")
 def file_send():
-    return send_file('/var/www/FlaskApp/FlaskApp/static/images/python-programming-tutorials-main.png')
+    try:
+        return send_file('/var/www/FlaskApp/FlaskApp/static/images/python-programming-tutorials-main.png')
+    except Exception as e:
+        flash(str(e))
+        return redirect(url_for('homepage'))
 
 
 def secret(f):
@@ -242,17 +250,36 @@ def secret(f):
             return f(*args, **kwargs)
         else:
             flash("You ain't blitz")
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('homepage'))
     return wrap
 
 
-@app.route("/protected/<path:filename>")
+@app.route("/protected/")
 @secret
-def protected(filename):
+def protected():
     try:
         return send_from_directory("/var/www/FlaskApp/FlaskApp/protected/", "secret.jpg")
-    except:
+    except Exception as e:
+        flash(str(e))
         return redirect(url_for("homepage"))
+
+
+@app.route('/interactive/')
+def interactive():
+    return render_template('part2/interactive.html', root_path=root_path)
+
+
+@app.route('/_background_process/')
+def _background_process():
+    try:
+        proglang = request.args.get('proglang')
+        if 'python' in str(proglang).lower():
+            return jsonify(answer='You are wise!(server)')
+        else:
+            return jsonify(answer='Try again (server)')
+    except Exception as e:
+        flash(str(e))
+        return redirect(url_for('homepage'))
 
 if __name__ == "__main__":
     app.run()

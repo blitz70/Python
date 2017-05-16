@@ -25,19 +25,23 @@ passing variables : url with variable
 	def post(post_id):
 		return "This is the contend of post {}".format(post_id)
 
-HTTP methods : post get
-	from flask import Flask, request
-	@app.route('/methods', methods=['GET', 'POST'])
-	def methods():
-		if request.method == 'POST':
-			return "Your request method is POST"
-		else:
-			return '''Your request method is GET
-			<form action='/methods' method='POST'>
-				Press OK!<br>
-				<input type='submit' value='OK'/>
-			</form>'''
-
+HTTP request : object sent by user browser to server
+	request.method : post, get
+		@app.route('/methods', methods=['GET', 'POST'])
+		def methods():
+			if request.method == 'POST':
+				return "Your request method is POST"
+			else:
+				return "Your request method is GET"
+	request.args : parameters
+		@app.route('/_background_process/')
+		def _background_process():
+			proglang = request.args.get('proglang')
+			if 'python' in str(proglang).lower():
+				return jsonify(answer='You are wise!(server)')
+			else:
+				return jsonify(answer='Try again (server)')
+				
 Redirect : sending user to another URL
 	from flask import Flask, redirect, url_for
 	@app.route('/jumped/')
@@ -119,6 +123,41 @@ URL converters
 		def converters3(article='chapter1', page=1):
 			return render_template('part2/converters.html', article=article, page=page, root_path=root_path)
 
+Custom decorators
+	Used to enforce some requirements, made using a wrapper
+	Login requirement
+		def login_required(f):
+			@wraps(f)
+			def wrap(*args, **kwargs):
+				if session['logged'] is True:
+					return f(*args, **kwargs)
+				else:
+					# failed logic
+			return wrap
+		@app.route('/private/')
+		@login_required
+		def private():
+			...	
+	Special requirement
+		def secret(f):
+			@wraps(f)
+			def wrap(*args, **kwargs):
+				if session['user'] == 'blitz':
+					return f(*args, **kwargs)
+				else:
+					# failed logic
+			return wrap
+		@app.route("/protected/")
+		@secret
+		def protected():
+			...			
+			
+File transfer
+	send file from server to user
+	can send any file at any place in server (limit?)
+	not sure about difference of two functions
+	send_file(), send_from_directory()
+
 Hosting
 	Tools
 		PuTTY, Win-SCP
@@ -184,54 +223,43 @@ Hosting
 			USE pythonprogramming
 			CREATE TABLE users (uid INT(11) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), password VARCHAR(100), email VARCHAR(50), settings VARCHAR(32500), tracking VARCHAR(32500), rank INT(3));
 			DESCRIBE users;
-	Modules/packages : modules used when hosting web server
-		Flask : web framework, medium level
-			from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, send_from_directory
-		PyMySQL : database conncector module, MySQL Python3
-			import pymysql
-			def connect():
-				conn = pymysql.connect(...)
-				c = conn.cursor()
-				return c, conn
-		flask_WTF : flask form module, http://flask.pocoo.org/docs/0.10/patterns/wtforms/
-			from wtforms import Form, validators, BooleanField, StringField, PasswordField
-			class RegisterForm(Form):
-				...
-		passlib : security module, password encryption
-			from passlib.hash import sha256_crypt
-			hash = sha256_crypt.encrypt(password)
-			sha256_crypt.verify(hash, password)
-		functools : wrapper
-			from functools import wraps
-			def login_required(f):
-				@wraps(f)
-				def wrap(*args, **kwargs):
-					if session['logged'] is True:
-						return f(*args, **kwargs)
-					else:
-						flash('Members only, login please')
-						return redirect(url_for('login'))
-				return wrap
-			@app.route('/private/')
-			@login_required
-			def private():
-				return render_template('private.html', user=session['user'])
-		gc : memory management
-			import gc
-			gc.collect()
-		Flask-Mail : flask SMTP
-			https://pythonhosted.org/Flask-Mail/
-			from flask_mail import Mail, Message
-			app.config.update(
-				MAIL_SERVER=smtp...,
-				MAIL_PORT=465,
-				MAIL_USE_SSL=True,
-				MAIL_USERNAME=...,
-				MAIL_PASSWORD=...
-			)
-			mail = Mail(app)
+			
+Modules/packages : modules used when hosting web server
+	Flask : web framework, medium level
+		from flask import Flask, render_template, request, url_for, redirect, session
+		from flask import flash, send_file, send_from_directory, jsonify
+	PyMySQL : database conncector module, MySQL Python3
+		import pymysql
+		def connect():
+			conn = pymysql.connect(...)
+			c = conn.cursor()
+			return c, conn
+	flask_WTF : flask form module, http://flask.pocoo.org/docs/0.10/patterns/wtforms/
+		from wtforms import Form, validators, BooleanField, StringField, PasswordField
+		class RegisterForm(Form):
 			...
-			msg = Message("flask mail title", sender=..., recipients=[...])
-			msg.body = "flask mail content"
-			msg.html = render_template()
-			mail.send(msg)
+	passlib : security module, password encryption
+		from passlib.hash import sha256_crypt
+		hash = sha256_crypt.encrypt(password)
+		sha256_crypt.verify(hash, password)
+	functools : wrapper
+		from functools import wraps
+	gc : memory management
+		import gc
+		gc.collect()
+	Flask-Mail : flask SMTP
+		https://pythonhosted.org/Flask-Mail/
+		from flask_mail import Mail, Message
+		app.config.update(
+			MAIL_SERVER=smtp...,
+			MAIL_PORT=465,
+			MAIL_USE_SSL=True,
+			MAIL_USERNAME=...,
+			MAIL_PASSWORD=...
+		)
+		mail = Mail(app)
+		...
+		msg = Message("flask mail title", sender=..., recipients=[...])
+		msg.body = "flask mail content"
+		msg.html = render_template()
+		mail.send(msg)
