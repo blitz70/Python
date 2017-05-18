@@ -158,6 +158,10 @@ File transfer
 	not sure about difference of two functions
 	send_file(), send_from_directory()
 
+To do later
+	Paypal
+	SSL : need registered domain name
+
 Hosting
 	Tools
 		PuTTY, Win-SCP
@@ -172,7 +176,7 @@ Hosting
 			Multi routing : can route multiple URL to same function
 		Import
 			When importing modules add '.' infront of module name
-		Pip
+		pip
 			pip search ...
 		gc
 			use gc.collect() to enforce server memory management
@@ -265,4 +269,13 @@ Modules/packages : modules used when hosting web server
 		mail.send(msg)
 	pygal : web graph, SVG
 		http://pygal.org/en/stable/
-		import pygal
+		python
+			import pygal
+			@app.route('/graph/')
+			def graph():
+				_chart = pygal.Line()
+				_chart...
+				chart = _chart.render_data_uri()
+				return render_template('part2/graph.html', chart=chart, root_path=root_path)
+		html
+			<embed type="image/svg+xml" src= {{ chart }} />
