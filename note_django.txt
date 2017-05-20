@@ -1,0 +1,19 @@
+from . import ... : import from same directory
+
+intro
+	install module : pip install django
+	create project : django-admin startproject mysite
+	run server : python manage.py runserver, http://127.0.0.1:8000/
+	create app : python manage.py startapp webapp
+
+steps
+	create app : python manage.py startapp ...
+	register app
+		mysite/mysite/settings.py
+		mysite/mysite/urls.py
+	app : code stuff
+
+view
+	from django.http import HttpResponse
+	def index(request):
+	    return HttpResponse("<h2>Hello Django!!</h2>")
