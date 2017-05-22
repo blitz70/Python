@@ -6,14 +6,38 @@ intro
 	run server : python manage.py runserver, http://127.0.0.1:8000/
 	create app : python manage.py startapp webapp
 
+project structure
+	mysite : project container
+		manage.py
+		mysite : project app
+			settings.py
+			urls.py
+			wsgi.py
+			__init__.py
+		personal : custom app
+			static/personal : enable relative reference
+			templates/personal
+		app1
+		app2
+		...
+
 steps
 	create app : python manage.py startapp ...
 	register app
-		mysite/mysite/settings.py
+		mysite/mysite/settings.py, INSTALLED_APPS
 		mysite/mysite/urls.py
 	app : code stuff
 
 view
-	from django.http import HttpResponse
-	def index(request):
-	    return HttpResponse("<h2>Hello Django!!</h2>")
+	HttpResponse
+		from django.http import HttpResponse
+		def index(request):
+			return HttpResponse("<h2>Hello Django!!</h2>")
+	render
+		from django.shortcuts import render
+		def home(request):
+			return render(request, 'personal/home.html')		
+
+static
+	{% load staticfiles %}
+	<link href="{% static 'personal/css/bootstrap.min.css' %}" rel="stylesheet">
