@@ -22,11 +22,18 @@ project structure
 		...
 
 steps
-	create app : python manage.py startapp ...
-	register app
-		mysite/mysite/settings.py, INSTALLED_APPS
-		mysite/mysite/urls.py, urlpatterns
-	app : code stuff
+	app
+		create : python manage.py startapp ...
+		register
+			mysite/mysite/settings.py, INSTALLED_APPS
+			mysite/mysite/urls.py, urlpatterns
+		code stuff
+	model
+		python manage.py migrate
+		register
+			mysite/blog/admin.py
+			from .models import Post
+			admin.site.register(Post)
 
 view
 	HttpResponse
@@ -41,3 +48,17 @@ view
 static
 	{% load staticfiles %}
 	<link href="{% static 'personal/css/bootstrap.min.css' %}" rel="stylesheet">
+
+manage.py
+	project management utility
+	python manage.py ...
+	runserver : starts server
+	startapp ... : create app
+	migration : sycronize model/db of project/app
+		migrate : commit update
+		makemigration : prepare update
+		sqlmigrate : simulate update
+	createsuperuser : for admin
+
+model
+	database related, ORM?

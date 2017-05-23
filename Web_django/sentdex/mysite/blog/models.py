@@ -8,8 +8,6 @@ class Post(models.Model):
     body = models.TextField()
     datetime = models.DateTimeField()
 
-    def __repr__(self):
-        return ','.join([self.title, self.body, self.datetime])
-
-    '''def __str__(self):
-        return self.title'''
+    def __str__(self):
+        # return ' , '.join([str(self.datetime), self.title])
+        return self.title

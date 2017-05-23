@@ -1,0 +1,11 @@
+{% extends "personal/header.html" %}
+
+{%block content%}
+    <h3>Welcome to my Blog page!</h3>
+    <hr>
+    <!--{{ object_list }}-->
+    {% for post in object_list %}
+    <h5>{{ post.datetime|date:"Y-m-d" }}<a href="{{ post.id }}"> {{ post.title }}</a></h5>
+    <!--<p>{{ post }}</p>-->
+    {% endfor %}
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends "personal/header.html" %}
+
+{%block content%}
+    <h3>{{ post.title }}</h3>
+    <p>on {{ post.datetime }}</p>
+    <hr>
+    <div class="container">
+        {{ post.body |safe|linebreaks}}
+    </div>
+{%endblock%}
