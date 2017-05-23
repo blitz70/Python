@@ -25,7 +25,7 @@ steps
 	create app : python manage.py startapp ...
 	register app
 		mysite/mysite/settings.py, INSTALLED_APPS
-		mysite/mysite/urls.py
+		mysite/mysite/urls.py, urlpatterns
 	app : code stuff
 
 view
