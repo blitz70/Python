@@ -62,3 +62,23 @@ manage.py
 
 model
 	database related, ORM?
+
+Hosting
+	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
+	Default setup (same as Flask)
+		Default Python3 VirtualEnvironment 
+	Django (in venv)
+		~/myproject/myproject/settings.py
+			add host, ALLOWED_HOSTS
+			add static path, STATIC_ROOR
+		./manage.py makemigrations
+		./manage.py migrate
+		./manage.py createsuperuser
+		./manage.py collectstatic			
+	Apache2
+		/etc/apache2/sites-available/DjangoApp.conf
+			add app info
+			a2ensite DjangoApp
+		~/myproject/myproject/wsgi.py
+			add virtualenviroment part
+	DB permissions (mysql?)
