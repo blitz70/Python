@@ -1,15 +1,15 @@
-from . import ... : import from same directory
+General
+	from . import ... : import from same directory
+	NGINX, PostgreSQL, gunicorn?
+	Server with Flask app?
+	SSL
 
-intro
-	install module : pip install django
-	create project : django-admin startproject mysite
-	run server : python manage.py runserver, http://127.0.0.1:8000/
-	create app : python manage.py startapp webapp
-
-project structure
-	mysite : project container
+Project structure
+	create project
+		django-admin startproject myproject
+	myproject : project container
 		manage.py
-		mysite : project app
+		myproject : project app
 			settings.py
 			urls.py
 			wsgi.py
@@ -21,21 +21,31 @@ project structure
 		app2
 		...
 
-steps
-	app
+Steps
+	App
 		create : python manage.py startapp ...
-		register
-			mysite/mysite/settings.py, INSTALLED_APPS
-			mysite/mysite/urls.py, urlpatterns
+		register : ~/myproject/myproject/
+			settings.py : INSTALLED_APPS
+			urls.py : urlpatterns
 		code stuff
-	model
+	Model
 		python manage.py migrate
 		register
-			mysite/blog/admin.py
+			~/myproject/myproject/blog/admin.py
 			from .models import Post
 			admin.site.register(Post)
 
-view
+manage.py
+	Project management utility
+		windows : python manage.py ...
+		linux : ./manage.py ...
+	runserver ... : starts server
+	startapp ... : create app
+	migrate : commit update
+	makemigration, migrate : prepare, commit db model update (sqlmigrate : simulate update)
+	createsuperuser : for admin
+
+View
 	HttpResponse
 		from django.http import HttpResponse
 		def index(request):
@@ -45,23 +55,18 @@ view
 		def home(request):
 			return render(request, 'personal/home.html')		
 
-static
-	{% load staticfiles %}
-	<link href="{% static 'personal/css/bootstrap.min.css' %}" rel="stylesheet">
+Static
+	Setting : ~/myproject/myproject/settings.py
+		add static path, STATIC_ROOT
+	Collect
+		./manage.py collectstatic			
+	Use
+		{% load staticfiles %}
+		<link href="{% static 'personal/css/bootstrap.min.css' %}" rel="stylesheet">
 
-manage.py
-	project management utility
-	python manage.py ...
-	runserver : starts server
-	startapp ... : create app
-	migration : sycronize model/db of project/app
-		migrate : commit update
-		makemigration : prepare update
-		sqlmigrate : simulate update
-	createsuperuser : for admin
-
-model
-	database related, ORM?
+Model
+	Database related, ORM?
+	Migrate when change in model
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
@@ -70,15 +75,14 @@ Hosting
 	Django (in venv)
 		~/myproject/myproject/settings.py
 			add host, ALLOWED_HOSTS
-			add static path, STATIC_ROOR
-		./manage.py makemigrations
-		./manage.py migrate
-		./manage.py createsuperuser
-		./manage.py collectstatic			
+			add static path, STATIC_ROOT
+		migrate model (makemigration, migrate)
+		collect static
+		create super user
 	Apache2
 		/etc/apache2/sites-available/DjangoApp.conf
 			add app info
 			a2ensite DjangoApp
 		~/myproject/myproject/wsgi.py
-			add virtualenviroment part
+			add virtualenviroment logic
 	DB permissions (mysql?)
