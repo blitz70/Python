@@ -2,8 +2,29 @@
 # Python sendtex 8h 50m
 # Python K-MOOC 13h 34m
 # Python Boot Camp 11h 4m
+
 # Django sendtex 2h 54m
 # Django thenewboston 4h 56m
-# Flask sentdex 2h 4m, 8h 42m
+# Django Max Goodbridge 9h 35m
+
+s# Flask sentdex 2h 4m, 8h 42m
 # Flask thenewboston 44m
 # Flask Pretty Printed 15h 3m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -41,8 +41,7 @@ manage.py
 		linux : ./manage.py ...
 	runserver ... : starts server
 	startapp ... : create app
-	migrate : commit update
-	makemigration, migrate : prepare, commit db model update (sqlmigrate : simulate update)
+	makemigrations, migrate, sqlmigrate : database
 	createsuperuser : for admin
 
 View
@@ -65,8 +64,48 @@ Static
 		<link href="{% static 'personal/css/bootstrap.min.css' %}" rel="stylesheet">
 
 Model
-	Database related, ORM?
-	Migrate when change in model
+	Overview
+		Database schema, ORM?
+		Migrate when change in model
+		class = table, class variables = table columns
+	Column type
+		models.CharField(max_length=...)
+		TextField()
+		DateTimeField
+		ForeignKey() : Primary key of another table
+	Migration
+		update db, on model change always migrate
+		makemigrations : prepare update
+		migrate : commit update
+		sqlmigrate : simulate update
+	[models.py]
+		from django.db import models
+		class Album(models.Model):
+			artist = models.CharField(max_length=250)
+			title = models.CharField(max_length=500)
+			genre = models.CharField(max_length=100)
+			logo = models.CharField(max_length=1000)
+		class Song(models.Model):
+			album = models.ForeignKey(Album, on_delete=models.CASCADE)
+			type = models.CharField(max_length=10)
+			title = models.CharField(max_length=250)
+	DB access : manual (python manage.py shell)
+		from datetime import date as d
+		# insert
+		a1 = Album(artist="Taylor Swift", title="Red", genre="Country", logo="", date=d.today())
+		a2 = Album()
+		a2.artist = "Myth"
+		a2.title = "High School"
+		a2.genre = "Punk"
+		a2.logo = ""
+		a2.date = d.today()
+		# commit
+		a1.save()
+		a2.save()
+		# read
+		Album.objects.all()
+		Album.objects.filter(id=1)
+		Album.objects.filter(artist__startswith="Tayler")
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
