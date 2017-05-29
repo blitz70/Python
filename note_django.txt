@@ -30,10 +30,7 @@ Steps
 		code stuff
 	Model
 		python manage.py migrate
-		register
-			~/myproject/myproject/blog/admin.py
-			from .models import Post
-			admin.site.register(Post)
+		register to admin
 
 manage.py
 	Project management utility
@@ -68,17 +65,17 @@ Model
 		Database schema, ORM?
 		Migrate when change in model
 		class = table, class variables = table columns
-	Column type
-		models.CharField(max_length=...)
-		TextField()
-		DateTimeField
-		ForeignKey() : Primary key of another table
 	Migration
 		update db, on model change always migrate
 		makemigrations : prepare update
 		migrate : commit update
 		sqlmigrate : simulate update
-	[models.py]
+	Column type
+		models.CharField(max_length=...)
+		TextField()
+		DateTimeField
+		ForeignKey() : Primary key of another table
+	Code : ~/mysite/music/models.py
 		from django.db import models
 		class Album(models.Model):
 			artist = models.CharField(max_length=250)
@@ -106,6 +103,13 @@ Model
 		Album.objects.all()
 		Album.objects.filter(id=1)
 		Album.objects.filter(artist__startswith="Tayler")
+    Admin : DB access GUI
+        access : create Admin/superuser account
+            python mange.py createsuperuser
+        register : ~/mysite/music/admin.py
+            from .models import Album, Song
+            admin.site.register(Album)
+            admin.site.register(Song)
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04

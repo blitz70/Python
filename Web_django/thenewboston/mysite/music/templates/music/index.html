@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Albums</title>
+</head>
+<body>
+    {% if album_list %}
+    <ul>
+        {% for album in album_list %}
+        <li><a href="{{album.id}}/">{{album.title}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>You don't have any albums</h3>
+    {% endif %}
+</body>
+</html>
