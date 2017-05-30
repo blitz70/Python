@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Info</title>
+</head>
+<body>
+{% if album %}
+    <img src="{{ album.logo }}">
+    <h1>{{ album.title }}</h1>
+    <h3>by {{ album.artist }}</h3>
+    <p>Genre: {{ album.genre }}</p>
+    <p>Date: {{ album.date }}</p>
+    {% if album.song_set.all %}
+    <ul>
+        {% for song in album.song_set.all %}
+        <li>{{ song.title }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No songs</p>
+    {% endif %}
+{% else %}
+    <h1>{{ error }} </h1>
+{% endif %}
+</body>
+</html>

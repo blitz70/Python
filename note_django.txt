@@ -42,14 +42,30 @@ manage.py
 	createsuperuser : for admin
 
 View
-	HttpResponse
+	Pure HttpResponse
 		from django.http import HttpResponse
 		def index(request):
 			return HttpResponse("<h2>Hello Django!!</h2>")
-	render
-		from django.shortcuts import render
-		def home(request):
-			return render(request, 'personal/home.html')		
+	HttpResponse with render templates
+		from django.http import HttpResponse
+        from django.template import loader
+        from .models import Album
+        def index(request):
+            album_list = Album.objects.all()
+            template = loader.get_template("music/index.html")
+            data = {
+                "album_list": album_list,
+            }
+            return HttpResponse(template.render(data, request))
+    Shortcut render templates
+        from django.shortcuts import render
+        from .models import Album
+        def index(request):
+            album_list = Album.objects.all()
+            data = {
+                "album_list": album_list,
+            }
+            return render(request, "music/index.html", data)
 
 Static
 	Setting : ~/myproject/myproject/settings.py
@@ -66,7 +82,7 @@ Model
 		Migrate when change in model
 		class = table, class variables = table columns
 	Migration
-		update db, on model change always migrate
+		update db, on model(db schema) change always migrate
 		makemigrations : prepare update
 		migrate : commit update
 		sqlmigrate : simulate update
@@ -87,6 +103,7 @@ Model
 			type = models.CharField(max_length=10)
 			title = models.CharField(max_length=250)
 	DB access : manual (python manage.py shell)
+    	from music.models import Album, Song
 		from datetime import date as d
 		# insert
 		a1 = Album(artist="Taylor Swift", title="Red", genre="Country", logo="", date=d.today())
@@ -103,6 +120,12 @@ Model
 		Album.objects.all()
 		Album.objects.filter(id=1)
 		Album.objects.filter(artist__startswith="Tayler")
+		album1 = Album.objects.filter(pk=1).get()
+        song1 = Song(album=album1, type='mp3', title='I hate my boyfriend', date = d.today())
+        song1.save()
+        album1.song_set.all()
+        album1.song_set.create(title="I love bacon", type="mp3", date=d.today())
+
     Admin : DB access GUI
         access : create Admin/superuser account
             python mange.py createsuperuser
@@ -110,6 +133,18 @@ Model
             from .models import Album, Song
             admin.site.register(Album)
             admin.site.register(Song)
+
+Template
+    Dynamic url
+        url.py : ~mysite/music/
+            urlpatterns = [
+                url(r'^$', views.index, name="index"),  # /
+                url(r'^(?P<album_id>[0-9]+)/$', views.detail, name="detail"),  # /'id'/
+            ]
+         detail.html : ~mysite/music/templates/music
+            <a href="{% url 'detail' album.id %}"></a>
+
+Namespace?
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04

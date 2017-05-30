@@ -11,7 +11,7 @@ class Album(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return ":".join([str(self.date), str(self.title), str(self.artist)])
+        return " , ".join([str(self.date), str(self.title), str(self.artist)])
 
 
 class Song(models.Model):
@@ -20,6 +20,7 @@ class Song(models.Model):
     type = models.CharField(max_length=10)
     title = models.CharField(max_length=250)
     date = models.DateField()
+    is_favorite = models.BooleanField(default=False)
 
     def __str__(self):
         return " , ".join([str(self.date), str(self.title)])
