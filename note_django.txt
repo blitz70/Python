@@ -53,10 +53,7 @@ View
         def index(request):
             album_list = Album.objects.all()
             template = loader.get_template("music/index.html")
-            data = {
-                "album_list": album_list,
-            }
-            return HttpResponse(template.render(data, request))
+            return HttpResponse(template.render({"album_list": album_list}, request))
     Shortcut render templates
         from django.shortcuts import render
         from .models import Album
@@ -65,7 +62,7 @@ View
             data = {
                 "album_list": album_list,
             }
-            return render(request, "music/index.html", data)
+            return render(request, "music/index.html", {"album_list": album_list})
 
 Static
 	Setting : ~/myproject/myproject/settings.py
@@ -144,7 +141,58 @@ Template
          detail.html : ~mysite/music/templates/music
             <a href="{% url 'detail' album.id %}"></a>
 
-Namespace?
+Namespace
+    Define at app or controller
+    App : ~mysite/music/url.py
+        app_name = "ns_music"
+    Controller : ~mysite/mysite/url.py
+        urlpatterns = [
+            ...
+            url(r'^music/', include("music.urls", namespace="ns_music")),
+        ]
+    Template : .html
+        {% url 'ns_music:detail' album.id %}
+
+Error handling, views.py
+        from django.shortcuts import render, get_object_or_404
+        from django.http import HttpResponse, Http404
+    Http404 : return error
+        def detail(request, album_id):
+            try:
+                album = Album.objects.filter(pk=album_id).get()
+            except Album.DoesNotExist:
+                raise Http404("Album does not exist!")
+            return render(request, "music/detail.html", {"album": album})
+    get_object_or_404 : get object + Http404
+        def detail(request, album_id):
+            album = get_object_or_404(Album, pk=album_id)
+            return render(request, "music/detail.html", {"album": album})
+
+Form
+    url.py
+        urlpatterns = [url(r'^(?P<pk>[0-9]+)/favorite/$', views.favorite, name="favorite"),]
+    html
+        <form action="{% url 'ns_music:favorite' album.pk %}" method="post">
+            {% csrf_token %}
+            {% for song in album.song_set.all %}
+            <input type="radio" name="song" value="{{ song.pk }}"><strong> {{ song.title }}</strong>
+                {% if song.is_favorite %}
+                <img src="http://findicons.com/files/icons/1665/sweetie_basepack/16/16_star_hot.png">
+                {% endif %}<br>
+            {% endfor %}
+            <input type="submit" value="Favorite !">
+        </form>
+     views.py
+        def favorite(request, pk):
+            album = get_object_or_404(Album, pk=pk)
+            try:
+                song = album.song_set.get(pk=request.POST["song"])
+                if song.is_favorite:
+                    song.is_favorite = False
+                else:
+                    song.is_favorite = True
+                song.save()
+            return render(request, "music/detail.html", {"album": album})
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04

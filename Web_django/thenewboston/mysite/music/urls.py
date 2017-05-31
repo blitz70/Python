@@ -5,6 +5,6 @@ app_name = "ns_music"
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),  # /
-    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name="detail"),  # /<album_id>/
-    url(r'^(?P<album_id>[0-9]+)/favorite/$', views.favorite, name="favorite"),  # /<album_id>/favorite
+    url(r'^(?P<pk>[0-9]+)/$', views.detail, name="detail"),  # /<pk>/
+    url(r'^(?P<pk>[0-9]+)/favorite/$', views.favorite, name="favorite"),  # /<pk>/favorite
 ]
