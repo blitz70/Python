@@ -1,27 +1,22 @@
-<img src="{{ album.logo }}">
-<h1>{{ album.title }}</h1>
-<h2>{{ album.artist }}</h2>
-<p>{{ album.genre }}</p>
-<p>{{ album.date }}</p>
+{% extends "music/base.html" %}
 
-{% if error_message %}
-<p><strong>{{ error_message }}</strong></p>
+{% block head %}
+    <title>Album details</title>
+{% endblock %}
 
-{% else %}
-    {% if album.song_set.all %}
-    <form action="{% url 'ns_music:favorite' album.pk %}" method="post">
-        {% csrf_token %}
-        {% for song in album.song_set.all %}
-        <input type="radio" name="song" value="{{ song.pk }}"><strong> {{ song.title }}</strong>
-            {% if song.is_favorite %}
-            <img src="http://findicons.com/files/icons/1665/sweetie_basepack/16/16_star_hot.png">
-            {% endif %}<br>
-        {% endfor %}
-        <input type="submit" value="Favorite !">
+{% block body %}
 
-    </form>
-    {% else %}
-        <p>No songs</p>
-    {% endif %}
+    <img src="{{ album.logo }}">
 
-{% endif %}
+    <h1>{{ album.title }}</h1>
+    <h2>{{ album.artist }}</h2>
+    <p>{{ album.genre }}, {{ album.date }}</p>
+
+    {% for song in album.song_set.all %}
+        {{ song.title }}
+        {% if song.is_favorite %}
+        <img src="http://findicons.com/files/icons/1665/sweetie_basepack/16/16_star_hot.png">
+        {% endif %}<br>
+    {% endfor %}
+
+{% endblock %}

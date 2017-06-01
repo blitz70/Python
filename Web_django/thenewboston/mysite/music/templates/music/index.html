@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>List of Albums</title>
-</head>
-<body>
-    <h3>List of all Albums</h3>
-    {% if album_list %}
+{% extends "music/base.html" %}
+
+{% block head %}
+    <title>Album list</title>
+{% endblock %}
+
+{% block body %}
+
     <ul>
-        {% for album in album_list %}
-        <!--<li><a href="{{album.id}}/">{{album.title}}</a></li>-->
-        <li><a href="{% url 'ns_music:detail' album.pk %}">{{album.title}}</a></li>
+        {% for album in albums %} {# default = object_list, album_list #}
+        <li><a href="{% url 'music:detail' album.pk %}">{{ album.title }}</a></li>
         {% endfor %}
     </ul>
-    {% else %}
-    <h3>You don't have any albums</h3>
-    {% endif %}
-</body>
-</html>
+
+{% endblock %}
