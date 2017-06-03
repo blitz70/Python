@@ -9,7 +9,7 @@
     <img src="{{ album.logo }}">
 
     <h1>{{ album.title }}</h1>
-    <h2>{{ album.artist }}</h2>
+    <h3>{{ album.artist }}</h3>
     <p>{{ album.genre }}, {{ album.date }}</p>
 
     {% for song in album.song_set.all %}

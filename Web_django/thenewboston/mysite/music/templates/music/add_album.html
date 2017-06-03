@@ -1,0 +1,19 @@
+{% extends "music/base.html" %}
+
+{% block head %}
+    <title>Add album</title>
+{% endblock %}
+
+{% block body %}
+
+        <form action="{% url 'music:add_album' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Title"><br>
+            <input type="text" name="artist" placeholder="Artist"><br>
+            <input type="text" name="genre" placeholder="Genre"><br>
+            <input type="text" name="logo" placeholder="Logo URL">
+            <hr>
+            <input type="submit" value="Add">
+        </form>
+
+{% endblock %}
