@@ -16,8 +16,12 @@
             <div class="caption">
                 <h3>{{ album.title }}</h3>
                 <p>{{ album.artist }}</p>
-                <a href="{% url 'music:detail' album.pk %}" class="btn btn-primary">Details</a>
-                <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+                <a href="{% url 'music:update_album' album.pk %}" class="btn btn-primary">Edit</a>
+                <form action="{% url 'music:delete_album' album.pk %}" style="display: inline;" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="album_pk" value="{{ album.pk }}">
+                    <button type="submit" class="btn btn-default glyphicon glyphicon-trash"></button>
+                </form>
                 <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-star"></span></a>
             </div>
         </div>

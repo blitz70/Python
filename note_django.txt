@@ -64,6 +64,39 @@ View
             }
             return render(request, "music/index.html", {"album_list": album_list})
 
+Generic views
+        from django.views import generic
+        from datetime import date as d
+        from .models import Album
+    ListView : list of objects
+        url.py
+            urlpatterns = [url(r'^$', views.IndexView.as_view(), name="index"),]
+        views.py
+            class IndexView(generic.ListView):
+                template_name = "music/index.html"
+                context_object_name = "albums"
+                model = Album
+    DetailView : info about an object, object primary key
+        url.py
+            urlpatterns = [url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name="detail"),]
+        views.py
+            class DetailView(generic.DetailView):
+                template_name = "music/detail.html"
+                model = Album
+    CreateView : create & save an object, form
+        url.py
+            urlpatterns = [url(r'^album/add/$', views.AlbumCreateView.as_view(), name="add_album"),]
+        views.py
+            class AlbumCreateView(generic.edit.CreateView):
+                model = Album
+                fields = ["artist", "title", "genre", "logo"]
+        models.py : pass primary key of created object, auto date
+            class Album(models.Model):
+                ...
+                date = models.DateField(auto_now_add=True)
+                def get_absolute_url(self):
+                    return reverse('music:detail', kwargs={'pk': self.pk})
+
 Static
 	Setting : ~/myproject/myproject/settings.py
 		add static path, STATIC_ROOT
@@ -169,30 +202,19 @@ Error handling, views.py
             return render(request, "music/detail.html", {"album": album})
 
 Form
-    url.py
-        urlpatterns = [url(r'^(?P<pk>[0-9]+)/favorite/$', views.favorite, name="favorite"),]
-    html
-        <form action="{% url 'ns_music:favorite' album.pk %}" method="post">
-            {% csrf_token %}
-            {% for song in album.song_set.all %}
-            <input type="radio" name="song" value="{{ song.pk }}"><strong> {{ song.title }}</strong>
-                {% if song.is_favorite %}
-                <img src="http://findicons.com/files/icons/1665/sweetie_basepack/16/16_star_hot.png">
-                {% endif %}<br>
-            {% endfor %}
-            <input type="submit" value="Favorite !">
-        </form>
-     views.py
-        def favorite(request, pk):
-            album = get_object_or_404(Album, pk=pk)
-            try:
-                song = album.song_set.get(pk=request.POST["song"])
-                if song.is_favorite:
-                    song.is_favorite = False
-                else:
-                    song.is_favorite = True
-                song.save()
-            return render(request, "music/detail.html", {"album": album})
+    Normal : request
+        url.py
+            urlpatterns = [url(r'^(?P<pk>[0-9]+)/favorite/$', views.favorite, name="favorite"),]
+        html
+            <form action="..." method="post">
+                {% csrf_token %}
+                <input type="text" name="song" ...">
+                <input type="submit" ...>
+            </form>
+         views.py
+            def favorite(request, pk):
+                ...song = request.POST["song"]...
+     Model form : prebuilt, has validation logic
 
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04

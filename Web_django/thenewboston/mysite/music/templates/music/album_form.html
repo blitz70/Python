@@ -1,0 +1,31 @@
+{% extends "music/base.html" %}
+
+{% block head %}
+    <title>Add album</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <form action="" method="post" class="form-horizontal col-sm-12">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <div class="col-sm-12">
+                <span class="text-danger small">{{ field.errors }}</span><!-- not working! -->
+            </div>
+            <label class="control-label col-sm-1">
+                {{ field.label_tag }}
+            </label>
+            <div class="col-sm-11">
+                {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="form-group">
+            <input type="submit" class="btn btn-success col-sm-offset-1 col-sm-2" value="Add">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

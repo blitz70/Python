@@ -1,7 +1,7 @@
 from django.views import generic
+from django.core.urlresolvers import reverse_lazy
+
 from .models import Album
-from django.shortcuts import render
-from datetime import date as d
 
 
 class IndexView(generic.ListView):
@@ -18,13 +18,16 @@ class DetailView(generic.DetailView):
     model = Album
 
 
-def add_album(request):
-    if request.method == "POST":
-        artist = request.POST["artist"]
-        title = request.POST["title"]
-        genre = request.POST["genre"]
-        logo = request.POST["logo"]
-        album = Album(artist=artist, title=title, genre=genre, logo=logo, date=d.today())
-        album.save()
-        return render(request, "music/detail.html", {"album": album})
-    return render(request, "music/add_album.html")
+class AlbumCreateView(generic.edit.CreateView):
+    model = Album
+    fields = ["artist", "title", "genre", "logo"]
+
+
+class AlbumUpdateView(generic.edit.UpdateView):
+    model = Album
+    fields = ["artist", "title", "genre", "logo"]
+
+
+class AlbumDeleteView(generic.edit.DeleteView):
+    model = Album
+    success_url = reverse_lazy("music:index")

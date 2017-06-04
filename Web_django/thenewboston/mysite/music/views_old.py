@@ -31,6 +31,18 @@ def favorite(request, pk):
     return render(request, "music/detail.html", {"album": album})
 
 
+'''def add_album(request):
+    if request.method == "POST":
+        artist = request.POST["artist"]
+        title = request.POST["title"]
+        genre = request.POST["genre"]
+        logo = request.POST["logo"]
+        album = Album(artist=artist, title=title, genre=genre, logo=logo, date=d.today())
+        album.save()
+        return render(request, "music/detail.html", {"album": album})
+    return render(request, "music/add_album.html")'''
+
+
 '''def index(request):
     album_list = Album.objects.all()
     html = "<ul>"
@@ -62,4 +74,3 @@ def favorite(request, pk):
         return render(request, "music/detail.html", {"album": album})
     except Album.DoesNotExist:
         raise Http404("Album does not exist!")'''
-
