@@ -216,6 +216,27 @@ Form
                 ...song = request.POST["song"]...
      Model form : prebuilt, has validation logic
 
+Upload file
+
+File upload
+    Upload file
+        settings.py : ~mysite/mysite/
+            MEDIA_URL = '/media/'
+            MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+        models.py : ~mysite/music/
+            class Album(models.Model):
+                ...
+                logo = models.FileField()
+        html
+            <form ... enctype="multipart/form-data">...</form>
+    Use file
+        urls.py : ~mysite/mysite/
+            if settings.DEBUG:
+                urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        html
+            album.logo -> album.logo.url
+
 Hosting
 	https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
 	Default setup (same as Flask)
@@ -234,3 +255,7 @@ Hosting
 		~/myproject/myproject/wsgi.py
 			add virtualenviroment logic
 	DB permissions (mysql?)
+
+To do
+    general views
+    user registration
