@@ -1,5 +1,6 @@
 # Python thenewboston 6h 13m
 # Python sendtex 8h 50m
+# Python sendtex2 4h 41m
 # Python K-MOOC 13h 34m
 # Python Boot Camp 11h 4m
 
@@ -10,4 +11,24 @@
 # Flask sentdex 8h 42m
 # Flask thenewboston 6h 13m
 # Flask Pretty Printed 15h 3m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -69,33 +69,67 @@ Generic views
         from datetime import date as d
         from .models import Album
     ListView : list of objects
-        url.py
-            urlpatterns = [url(r'^$', views.IndexView.as_view(), name="index"),]
+        default
+            template name : model_list.html
+            template object : model_list
         views.py
             class IndexView(generic.ListView):
                 template_name = "music/index.html"
                 context_object_name = "albums"
                 model = Album
-    DetailView : info about an object, object primary key
         url.py
-            urlpatterns = [url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name="detail"),]
+            urlpatterns = [url(r'^$', views.IndexView.as_view(), name="index"),]
+    DetailView : info about an object, object primary key
+        default
+            template name : model_detail.html
+            template object : model
         views.py
             class DetailView(generic.DetailView):
                 template_name = "music/detail.html"
                 model = Album
-    CreateView : create & save an object, form
         url.py
-            urlpatterns = [url(r'^album/add/$', views.AlbumCreateView.as_view(), name="add_album"),]
-        views.py
-            class AlbumCreateView(generic.edit.CreateView):
-                model = Album
-                fields = ["artist", "title", "genre", "logo"]
+            urlpatterns = [url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name="detail"),]
+    CreateView : create & save an object, form
+        default
+            template name : model_form.html
+            template object : model
         models.py : pass primary key of created object, auto date
             class Album(models.Model):
                 ...
                 date = models.DateField(auto_now_add=True)
                 def get_absolute_url(self):
                     return reverse('music:detail', kwargs={'pk': self.pk})
+        views.py
+            class AlbumCreateView(generic.edit.CreateView):
+                model = Album
+                fields = ["artist", "title", "genre", "logo"]
+        url.py
+            urlpatterns = [url(r'^album/add/$', views.AlbumCreateView.as_view(), name="add_album"),]
+        template
+            <form action="" method="post" ...>
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field.errors }}<!-- not working! -->
+                    {{ field.label_tag }}
+                    {{ field }}
+                {% endfor %}
+                <input type="submit">
+            </form>
+    UpdateView : change an object, form
+        default same as CreateView
+    DeleteView : delete an object
+        views.py
+            from django.core.urlresolvers import reverse_lazy
+            class AlbumDeleteView(generic.edit.DeleteView):
+                model = Album
+                success_url = reverse_lazy("music:index")
+        url.py
+            urlpatterns = [url(r'^album/(?P<pk>\d+)/delete/$', views.AlbumDeleteView.as_view(), name="delete_album"),]
+        template
+            <form action="{% url 'music:delete_album' album.pk %}" method="post">
+                {% csrf_token %}
+                <input type="submit" ...>
+            </form>
 
 Static
 	Setting : ~/myproject/myproject/settings.py
@@ -216,8 +250,6 @@ Form
                 ...song = request.POST["song"]...
      Model form : prebuilt, has validation logic
 
-Upload file
-
 File upload
     Upload file
         settings.py : ~mysite/mysite/
@@ -256,6 +288,50 @@ Hosting
 			add virtualenviroment logic
 	DB permissions (mysql?)
 
+Rest API
+    package : djangorestframework
+    settings.py : ~mysite/mysite
+        INSTALLED_APPS = [
+            'rest_framework',
+            'company.apps.CompanyConfig',
+        ]
+    my_rest_api.py : ~mysite/company
+        from rest_framework import serializers
+        from .models import Stock
+        class StockSerializer(serializers.ModelSerializer):
+            class Meta:
+                model = Stock
+                fields = ['ticker', 'volume']
+                #fields = "__all__"
+    views.py
+        from rest_framework.views import APIView
+        from rest_framework.response import Response
+        from .models import Stock
+        from .my_rest_api import StockSerializer
+        class StockListView(APIView):
+            def get(self, request):  # list
+                stocks = Stock.objects.all()
+                serializer = StockSerializer(stocks, many=True)
+                return Response(serializer.data)
+            def post(self, request):  # create
+                pass
+    url.py
+        from django.conf.urls import url
+        from rest_framework.urlpatterns import format_suffix_patterns
+        from . import views
+        urlpatterns = [
+            url(r'^stocks/$', views.StockListView.as_view(), name="stock_list"),
+        ]
+        urlpatterns = format_suffix_patterns(urlpatterns)
+
+
 To do
-    general views
+    project
+        favorite
+        add, edit, delete songs
+        edit, delete user
+        login, logout
+    general class views
+    model forms
     user registration
+    rest api
