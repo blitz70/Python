@@ -92,7 +92,6 @@ data science module : data analytics
 		]
 		bottom_two = heapq.nsmallest(2, stocks, key=lambda x: x['price'])
 		print(bottom_two) -> [{'ticker': 'F', 'price': 54}, {'ticker': 'AAPL', 'price': 291}]
-	pandas
 
 web module : web analytics
 	requests
@@ -141,3 +140,16 @@ standard module
 	collections
 		get statistics about data structure
 		Counter()
+
+pandas
+    Overview
+        data analysis
+    DataFrame
+            import pandas as pd
+        Create
+            df = pd.DataFrame(data structure)
+        Set index
+            df.set_index("key", inplace=True)
+        Get data, column
+            df["key"]
+            df[["key1","key2"]]

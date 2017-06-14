@@ -12,23 +12,8 @@
 # Flask thenewboston 6h 13m
 # Flask Pretty Printed 15h 3m
 
+# ML sentdex 18h 47, 10h 3m, 8h 44m
+# ML Sung Kim 11h 26m
+# RL Sung Kim 3h 47m
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Pandas sentdex 3:43:20
