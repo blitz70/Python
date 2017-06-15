@@ -149,7 +149,13 @@ pandas
         Create
             df = pd.DataFrame(data structure)
         Set index
-            df.set_index("key", inplace=True)
+            df.set_index("Date", inplace=True)
         Get data, column
-            df["key"]
-            df[["key1","key2"]]
+            df["Visitors"]
+            df[["Visitors", "Bounce_Rate"]]
+        I/O
+            df.to_csv("3.csv", header=False)
+            pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
+            df.to_html(...)
+        Header
+            df.rename(columns={"House_Price": "Price"}, inplace=True)
