@@ -157,5 +157,14 @@ pandas
             df.to_csv("3.csv", header=False)
             pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
             df.to_html(...)
+            pd.read_html() : need lxml, html5lib, BeautifulSoup4 module
         Header
             df.rename(columns={"House_Price": "Price"}, inplace=True)
+        Mixing
+            Simple
+                pd.concat([df1, df2, df3])
+                df1.append(df2)
+            Join/merge
+                df8 = df5.join(df6, how="inner") : combine on index, used at combining tables with same columns
+                pd.merge(df5, df6, on="Year", how="outer") : combine on columns, used at combining tables with same index
+                left, right, inner(and), outer(or)
