@@ -154,10 +154,15 @@ pandas
             df["Visitors"]
             df[["Visitors", "Bounce_Rate"]]
         I/O
-            df.to_csv("3.csv", header=False)
-            pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
-            df.to_html(...)
-            pd.read_html() : need lxml, html5lib, BeautifulSoup4 module
+            CSV
+                df.to_csv("3.csv", header=False)
+                pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
+            HTML : need lxml, html5lib, BeautifulSoup4 module
+                df.to_html("3.html")
+                pd.read_html()
+            Pickle : pandas version
+                HPI_data.to_pickle("state_list2.pickle")
+                HPI_data2 = pd.read_pickle("state_list2.pickle")
         Header
             df.rename(columns={"House_Price": "Price"}, inplace=True)
         Mixing
@@ -168,3 +173,5 @@ pandas
                 df8 = df5.join(df6, how="inner") : combine on index, used at combining tables with same columns
                 pd.merge(df5, df6, on="Year", how="outer") : combine on columns, used at combining tables with same index
                 left, right, inner(and), outer(or)
+
+
