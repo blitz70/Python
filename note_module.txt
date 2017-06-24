@@ -173,5 +173,8 @@ pandas
                 df8 = df5.join(df6, how="inner") : combine on index, used at combining tables with same columns
                 pd.merge(df5, df6, on="Year", how="outer") : combine on columns, used at combining tables with same index
                 left, right, inner(and), outer(or)
-
+        Info
+            df.head() tail()
+            df.corr() : get correlation info
+            df.describe() : get overview info
 
