@@ -175,6 +175,11 @@ pandas
                 left, right, inner(and), outer(or)
         Info
             df.head() tail()
-            df.corr() : get correlation info
-            df.describe() : get overview info
-
+            df.corr() : get correlation data
+            df.describe() : get overview data
+            df.resample(...) : get resampled data, http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
+                df.resample("A").mean() : average, end of year yearly
+                df.resamoke("AS").ohlc() : open-high-low-close, start of year yearly
+        Missing data, NaN
+            df.dropna() : drop rows with NaN
+            df.fillna() : fill NaN with other row values
