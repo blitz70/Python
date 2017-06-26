@@ -4,9 +4,9 @@
 
 ## Core ([notes](https://github.com/blitz70/Python/blob/master/note_core.txt), [module](https://github.com/blitz70/Python/blob/master/note_module.txt))
 
-* Basics, SQLite3 ([sentex, 8h 50m](https://www.youtube.com/playlist?list=PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M))
+* Basics, SQLite3 ([sentdex, 8h 50m](https://www.youtube.com/playlist?list=PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M))
 * Basics ([thenewboston, 6h 13m](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_))
-* Pandas ([sentex, 3h 43m](https://www.youtube.com/playlist?list=PLQVvvaa0QuDc-3szzjeP6N6b0aDrrKyL-))
+* Pandas ([sentdex, 3h 43m](https://www.youtube.com/playlist?list=PLQVvvaa0QuDc-3szzjeP6N6b0aDrrKyL-))
 
 ## Web_flask ([notes](https://github.com/blitz70/Python/blob/master/note_flask.txt))
 

@@ -183,3 +183,8 @@ pandas
         Missing data, NaN
             df.dropna() : drop rows with NaN
             df.fillna() : fill NaN with other row values
+        Rolling stats
+            df.rolling(...).mean()
+            df.rolling(...).std()
+            df.rolling(...).corr()
+
