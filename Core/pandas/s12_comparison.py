@@ -15,7 +15,7 @@ bridge_df["STD"] = bridge_df["meters"].rolling(2).std()
 print(bridge_df)
 print(bridge_df.describe())
 print(bridge_df.describe()["meters"]["std"])
-bridge_df = bridge_df[bridge_df["STD"] < bridge_df.describe()["meters"]["std"]]
+bridge_df = bridge_df[bridge_df["meters"] < bridge_df.describe()["meters"]["std"]]
 print(bridge_df)
 
 bridge_df["meters"].plot()
