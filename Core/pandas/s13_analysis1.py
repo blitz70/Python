@@ -1,6 +1,5 @@
 import pandas as pd
 import quandl
-import matplotlib.pyplot as plt
 
 
 def state_list():
@@ -63,9 +62,8 @@ morg_usa = pd.read_pickle("morg_usa.pickle")
 
 modify_data()
 
-usa_data = hpi_states.join(hpi_usa)
-morg_data = hpi_states.join(morg_usa)
-data = hpi_states.join(hpi_usa).join(morg_usa)
+hpi_states_usa = hpi_states.join(hpi_usa)
+hpi_states_morg = hpi_states.join(morg_usa)
 
 # state = []
 # mean = []
@@ -76,18 +74,16 @@ data = hpi_states.join(hpi_usa).join(morg_usa)
 # stats = pd.DataFrame(stats)
 # stats.set_index("states", inplace=True)
 
-# print("states")
-# print(hpi_states.corr().describe())
-print("usa")
-# print(usa_data.corr()["USA"])
-print(usa_data.corr()["USA"].describe())
-print("morg")
-# print(morg_data.corr()["MORG"])
-print(morg_data.corr()["MORG"].describe())
-print("data")
-# print(data.corr()[["USA", "MORG"]])
-print(data.corr()[["USA", "MORG"]].describe())
-
-
+print("STATES")
+hpi_states_desc = hpi_states.corr().describe()
+print(hpi_states_desc)
+print("USA")
+hpi_states_usa_desc = hpi_states_usa.corr()[["USA"]].describe()
+print(hpi_states_usa_desc)
+print("MORG")
+hpi_states_morg_desc = hpi_states_morg.corr()[["MORG"]].describe()
+print(hpi_states_morg_desc)
+print("Summary")
+print(hpi_states_usa_desc.join(hpi_states_morg_desc))
 
 
