@@ -93,6 +93,63 @@ data science module : data analytics
 		bottom_two = heapq.nsmallest(2, stocks, key=lambda x: x['price'])
 		print(bottom_two) -> [{'ticker': 'F', 'price': 54}, {'ticker': 'AAPL', 'price': 291}]
 
+Pandas : data science, number crunching
+        import pandas as pd
+    Create dataframe
+        df = pd.DataFrame(data structure)
+    Set index
+        df.set_index("Date", inplace=True)
+    Get data, column
+        df["Visitors"]
+        df[["Visitors", "Bounce_Rate"]]
+    File load/save
+        CSV
+            df.to_csv("3.csv", header=False)
+            pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
+        HTML : need lxml, html5lib, BeautifulSoup4 module
+            df.to_html("3.html")
+            pd.read_html()
+        Pickle : pandas version
+            HPI_data.to_pickle("state_list2.pickle")
+            HPI_data2 = pd.read_pickle("state_list2.pickle")
+    Header
+        df.rename(columns={"House_Price": "Price"}, inplace=True)
+    Combine dataframes
+        Simple
+            pd.concat([df1, df2, df3])
+            df1.append(df2)
+        Join/merge
+            df8 = df5.join(df6, how="inner") : combine on index, used at combining tables with same columns
+            pd.merge(df5, df6, on="Year", how="outer") : combine on columns, used at combining tables with same index
+            left, right, inner(and), outer(or)
+    Info
+        df.head() tail()
+        df.corr() : get correlation data
+        df.describe() : get overview data
+        df.resample(...) : get resampled data, http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
+            df.resample("A").mean() : average, end of year yearly
+            df.resamoke("AS").ohlc() : open-high-low-close, start of year yearly
+    Missing data, NaN
+        df.dropna() : drop rows with NaN
+        df.fillna() : fill NaN with other row values
+    Rolling stats
+        df.rolling(...).mean()
+        df.rolling(...).std()
+        df.rolling(...).corr()
+    Comparision
+        df = df[df["left"] > df["right"]]
+    Function mapping, apply
+        from statistics import mean
+        def direction(now, future):
+            if future > now:
+                return 1
+            else:
+                return 0
+        def average(values):
+            return mean(values)
+        hpi["Label"] = list(map(direction, hpi["USA"], hpi["USA_F"]))
+        hpi["MORG_M"] = hpi["MORG"].rolling(10).apply(average)
+
 web module : web analytics
 	requests
 		source = requests.get() : get web source
@@ -141,50 +198,6 @@ standard module
 		get statistics about data structure
 		Counter()
 
-pandas
-    Overview
-        data analysis
-    DataFrame
-            import pandas as pd
-        Create
-            df = pd.DataFrame(data structure)
-        Set index
-            df.set_index("Date", inplace=True)
-        Get data, column
-            df["Visitors"]
-            df[["Visitors", "Bounce_Rate"]]
-        I/O
-            CSV
-                df.to_csv("3.csv", header=False)
-                pd.read_csv("3.csv", names=["Data", "House_Price"], index_col=0)
-            HTML : need lxml, html5lib, BeautifulSoup4 module
-                df.to_html("3.html")
-                pd.read_html()
-            Pickle : pandas version
-                HPI_data.to_pickle("state_list2.pickle")
-                HPI_data2 = pd.read_pickle("state_list2.pickle")
-        Header
-            df.rename(columns={"House_Price": "Price"}, inplace=True)
-        Mixing
-            Simple
-                pd.concat([df1, df2, df3])
-                df1.append(df2)
-            Join/merge
-                df8 = df5.join(df6, how="inner") : combine on index, used at combining tables with same columns
-                pd.merge(df5, df6, on="Year", how="outer") : combine on columns, used at combining tables with same index
-                left, right, inner(and), outer(or)
-        Info
-            df.head() tail()
-            df.corr() : get correlation data
-            df.describe() : get overview data
-            df.resample(...) : get resampled data, http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
-                df.resample("A").mean() : average, end of year yearly
-                df.resamoke("AS").ohlc() : open-high-low-close, start of year yearly
-        Missing data, NaN
-            df.dropna() : drop rows with NaN
-            df.fillna() : fill NaN with other row values
-        Rolling stats
-            df.rolling(...).mean()
-            df.rolling(...).std()
-            df.rolling(...).corr()
+sklean
+    need to install Numpy+MKL, scipy (http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 

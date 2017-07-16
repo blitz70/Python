@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from statistics import mean
 
+
 def direction(now, future):
     if future > now:
         return 1
