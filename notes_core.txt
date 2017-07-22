@@ -1,12 +1,11 @@
 ﻿General
+    '...',"...",'''...''' for multi-line
+    r'...' : treat string as raw, special character turned off, except ' " '''
+    string* : add string multiple times, 'hello'*3 = 'hellohellohello'
 	ALT+P ALT+N : command history (IDLE)
 	comment : # single line, '''multi line'''
 	// : divide with integer answer, rounded down, 5//3 = 1
 	** : power, 2**4 = 16
-	string
-		'...',"...",'''...''' for multi-line
-		r'...' : treat string as raw, special character turned off, except ' " '''
-		string* : add string multiple times, 'hello'*3 = 'hellohellohello'
 
 built-in functions
 	print() : print to console
