@@ -18,10 +18,10 @@ argparse : argument parser, often used in CLI
         args = parser.parse_args()
         print(args)
 
-generators
+list comprehension, generator expression
     overview
-        list : fast but use memory
-        generator : don't use memory, can be slower
+        list : fast but use memory, problems on huge iterations
+        generator : don't use memory, can be slower, works on huge iterations
     code
         list1 = [i for i in range(50000000)]
         print("List1", list1[-10:])
