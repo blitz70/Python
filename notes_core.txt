@@ -327,3 +327,25 @@ binary operation
 	shift(>>right, <<left)
 		b5 = 138      # 10001010
 		b6 = b5>>2    # 00100010
+
+string
+    concatenation
+        names = ["Jeff", "Gary", "Jill", "Samantha"]
+        print(", ".join(names))
+    format
+        who = "Gary"
+        how_many = 12
+        print("{} bought {} apples today!".format(who, how_many))
+        print("{f1} bought {f2} apples today!".format(f2=how_many, f1=who))
+
+list comprehension, generator expression
+    overview
+        list : fast but use memory, problems on huge iterations
+        generator : don't use memory, can be slower, works on huge iterations
+    code
+        list1 = [i for i in range(50000000)]
+        print("List1", list1[-10:])
+        generator1 = (i for i in range(50000000))
+        print("Generator1", generator1)
+        list2 = [i for i in generator1]
+        print("List2", list2[:10])

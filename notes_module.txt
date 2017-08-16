@@ -51,49 +51,48 @@ sqlite3
 		c.close()
 		conn.close()		
 
-image module : image manipulation
-	PIL
-		Image
-			new() : create new image
-			open() save() : open image from, save image to file
-			merge() : merge channels
-			img = ....open(...)
-				show() : show image using OS default viewer
-				size format mode
-				crop() : return cropped image, area = 4 coordinate tuple leftop rightbottom
-				paste() : return combined image, image to add and target area of original image
-				split() : split image into channels, r g b tuple
-				resize() : change image size
-				transpose() : transform image
-				convert() : convert image property, "L" "RGB" "CMYK"
-				filter() : PIL.ImageFilter
-		ImageFilter : apply effects to image
-			BLUR SHARPEN ...
-		ImageTk : Tkinter related
+PIL : image manipulation
+    Image
+        new() : create new image
+        open() save() : open image from, save image to file
+        merge() : merge channels
+        img = ....open(...)
+            show() : show image using OS default viewer
+            size format mode
+            crop() : return cropped image, area = 4 coordinate tuple leftop rightbottom
+            paste() : return combined image, image to add and target area of original image
+            split() : split image into channels, r g b tuple
+            resize() : change image size
+            transpose() : transform image
+            convert() : convert image property, "L" "RGB" "CMYK"
+            filter() : PIL.ImageFilter
+    ImageFilter : apply effects to image
+        BLUR SHARPEN ...
+    ImageTk : Tkinter related
 
-data science module : data analytics
-	numpy : number crunching
-		numpy
- 			array() : convert list to numpy array
-			transpose() : transpose narray
-		numpy.random : random generation
-			seed() : same seed gives same sequence of generated numbers per execution
-			rand()  randint() : generate random numbers
-	heapq
-		smaller version of pandas?
-		nlargest() nsmallest() : find n largest/smallest item in complex list
-		top_three = heapq.nlargest(3, [32, 44, 76, 89, 67, 26, 92, 54])
-		print(top_three) -> [92, 89, 76]
-		stocks = [
-			{'ticker': 'AAPL', 'price': 291},
-			{'ticker': 'GOOG', 'price': 800},
-			{'ticker': 'F', 'price': 54},
-			{'ticker': 'MSFT', 'price': 313}
-		]
-		bottom_two = heapq.nsmallest(2, stocks, key=lambda x: x['price'])
-		print(bottom_two) -> [{'ticker': 'F', 'price': 54}, {'ticker': 'AAPL', 'price': 291}]
+numpy : number crunching, data science module
+    numpy
+        array() : convert list to numpy array
+        transpose() : transpose narray
+    numpy.random : random generation
+        seed() : same seed gives same sequence of generated numbers per execution
+        rand()  randint() : generate random numbers
 
-Pandas : data science, number crunching
+heapq
+    smaller version of pandas?
+    nlargest() nsmallest() : find n largest/smallest item in complex list
+    top_three = heapq.nlargest(3, [32, 44, 76, 89, 67, 26, 92, 54])
+    print(top_three) -> [92, 89, 76]
+    stocks = [
+        {'ticker': 'AAPL', 'price': 291},
+        {'ticker': 'GOOG', 'price': 800},
+        {'ticker': 'F', 'price': 54},
+        {'ticker': 'MSFT', 'price': 313}
+    ]
+    bottom_two = heapq.nsmallest(2, stocks, key=lambda x: x['price'])
+    print(bottom_two) -> [{'ticker': 'F', 'price': 54}, {'ticker': 'AAPL', 'price': 291}]
+
+pandas : number crunching, data science
         import pandas as pd
     Create dataframe
         df = pd.DataFrame(data structure)
@@ -198,7 +197,21 @@ standard module
 		get statistics about data structure
 		Counter()
 
-sklean
+sklean : machine learning
     need to install Numpy+MKL, scipy (http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
+argparse : argument parser, often used in CLI
+    import argpasre
+    def parse():
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--x", type=float, default=1.0, help="first number")
+        parser.add_argument("--y", type=float, default=1.0, help="second number")
+        parser.add_argument("--operation", type=str, default="add", help="operation (add, sub, mul, div)")
+        args = parser.parse_args()
+        print(args)
 
+timit : measures code execution speed, test module (all code must be self contained)
+    import timit
+    print(timeit.timeit('''
+        ...code...
+    ''', number=1000))
