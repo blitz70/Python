@@ -247,8 +247,7 @@ data structures
 				my_dictionary.values() : list of values
 			key must be string, value can be another data structure
 		zip
-			combine two lists with index matched
-			drops left overs
+			combine multiple data structures by shared index, drops left overs elements
 				names = ['Jessica', 'Daniel', 'Edward', 'Oscar', 'Henry']
 				ages = ['15', '27', '77', '102']
 				personDict2 = {a:b for a,b in zip(names,ages)}
@@ -349,3 +348,11 @@ list comprehension, generator expression
         print("Generator1", generator1)
         list2 = [i for i in generator1]
         print("List2", list2[:10])
+
+enumerate
+    overview
+        applied on iterable, returns count and value
+        often used when index is needed on iterable
+    code
+        example_list = ["left", "right", "up", "down"]
+        [print(i, j) for i, j in enumerate(example_list)]
