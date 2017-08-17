@@ -348,6 +348,14 @@ list comprehension, generator expression
         print("Generator1", generator1)
         list2 = [i for i in generator1]
         print("List2", list2[:10])
+    code2
+        def generator_example():
+            yield "this"
+            yield "is"
+            yield "a"
+            yield "generator"
+            yield "example"
+        [print(i) for i in generator_example()]
 
 enumerate
     overview
