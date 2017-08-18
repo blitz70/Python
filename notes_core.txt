@@ -364,3 +364,7 @@ enumerate
     code
         example_list = ["left", "right", "up", "down"]
         [print(i, j) for i, j in enumerate(example_list)]
+
+multiprocessing
+    overview
+        "truly" use CPU power (vs threading?)
