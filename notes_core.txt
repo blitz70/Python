@@ -368,3 +368,18 @@ enumerate
 multiprocessing
     overview
         "truly" use CPU power (vs threading?)
+    code1 : start a process
+        import multiprocessing
+        def spawn(no):
+            ...
+        p = multiprocessing.Process(target=spawn, args=(...))
+        p.start()
+        p.join()
+    code2 : prepare and get process results
+        import multiprocessing
+        def job(param):
+            ...
+        p = multiprocessing.Pool(processes=20)
+        data1 = p.map(job, range(20))
+        print(data1)
+        p.close()
