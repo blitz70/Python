@@ -383,3 +383,15 @@ multiprocessing
         data1 = p.map(job, range(20))
         print(data1)
         p.close()
+
+decorator/wrapper
+    overview
+        add extra logic around a function
+    code
+        def wrapper(item):
+            def _wrapped_item():
+                return "a box of {}".format(str(item()))
+            return _wrapped_item
+        @wrapper
+        def new_gpu(): return "a new GPU"
+        print(new_gpu())
