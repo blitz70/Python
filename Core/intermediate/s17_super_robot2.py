@@ -1,6 +1,6 @@
 # unittest
 
-from Core.intermediate.super_robot1 import Robot, CleaningRobot
+from Core.intermediate.s17_super_robot1 import Robot, CleaningRobot
 import unittest
 
 
