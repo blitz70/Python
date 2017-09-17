@@ -397,3 +397,14 @@ decorator/wrapper
         print(new_gpu())
 
 iterators
+
+logging
+    overview
+        program execution analysis module
+        5 levels : DEBUG INFO WARNING ERROR CRITICAL
+    code
+        import logging
+        logging.basicConfig(level=logging.INFO, filename="s24_logging.txt")
+            get info and above(no debug), and save to file
+        logging.debug("...")
+        logging.info("...")
