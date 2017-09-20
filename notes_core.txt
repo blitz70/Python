@@ -284,7 +284,7 @@ csv
 
 error/exception handling
 	overview
-		process non sytax errors
+		process non syntax errors
 		do code1, if error in code1 do code2, always do code3
 		'except' can process error as whole or specific errors
 		'finally' logic will always be done
