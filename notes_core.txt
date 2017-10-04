@@ -336,6 +336,7 @@ string
         how_many = 12
         print("{} bought {} apples today!".format(who, how_many))
         print("{f1} bought {f2} apples today!".format(f2=how_many, f1=who))
+        "[{s.color}, {s.size}, ({s.x}, {s.y})]".format(s=self), self is an object
 
 list comprehension, generator expression
     overview
@@ -396,8 +397,6 @@ decorator/wrapper
         def new_gpu(): return "a new GPU"
         print(new_gpu())
 
-iterators
-
 logging
     overview
         program execution analysis module
@@ -408,3 +407,13 @@ logging
             get info and above(no debug), and save to file
         logging.debug("...")
         logging.info("...")
+
+special methods
+    General
+        __init__(self, ...): constructor
+    Iterators
+        __iter__(self):
+        __next__(self):
+    Info : info about object
+        __repr__(self): concise, for debugging,
+        __str__(self): detailed, if not set -> repr(...), print(...)
